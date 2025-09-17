@@ -41,6 +41,6 @@
 - 68070083 นัธทวัฒน์ พละเดช
 - 68070150 เมธา ภัทรพิชญกุล
 
-- ### Video
+### Video
 - <a href="https://www.youtube.com/watch?v=q25i2CCNvis" target="_blank" >Export Python pygame Game to Web with WebAssembly (pygbag tutorial)
 </a>
