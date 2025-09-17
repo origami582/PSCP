@@ -40,3 +40,7 @@
 - 68070035 ฐิติวัฒน์ มนต์วิเศษ
 - 68070083 นัธทวัฒน์ พละเดช
 - 68070150 เมธา ภัทรพิชญกุล
+
+- ### Video
+- <a hraf="https://www.youtube.com/watch?v=q25i2CCNvis">Export Python pygame Game to Web with WebAssembly (pygbag tutorial)
+</a>
