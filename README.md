@@ -35,6 +35,21 @@
 - **Unity** (with plugins - Python for Unity, IronPytohn) (C# heavy logic)
 - **Godot** (with GDscript similair to Python)
 
+## Engine Notes
+### RPG Maker MV/MZ
+- Easiest for time constraints (already has battle system, inventory, events).
+- Downside: Limited flexibility, but enough for a dungeon-crawler.
+
+### Pygame
+- Gives max freedom but eats most time → risky for a final project unless the team is very experienced.
+
+### Unity
+- Strong choice if team is okay with C#. Many existing roguelike frameworks to borrow ideas from.
+
+### Godot
+- Good balance (GDScript is Python-like, rapid prototyping possible).
+- Strong 2D support, easier than Unity for this scope.
+
 ### Members
 - 68070003 กฤตภาส ไพรสาลี
 - 68070035 ฐิติวัฒน์ มนต์วิเศษ
@@ -45,3 +60,4 @@
 - <a href="https://www.youtube.com/watch?v=q25i2CCNvis" target="_blank" >Export Python pygame Game to Web with WebAssembly (pygbag tutorial)</a>
 - <a href="https://www.youtube.com/watch?v=2-UltIb7k5g&list=PLltVQYLz1BMChq8HEmg28yxDEaxk3DVaa" target="_blank" > สร้างเกม 2 มิติด้วยภาษา Python | สำหรับผู้เริ่มต้น [FULL COURSE]
  </a>
+- [Tips for Dungoen Crawler](https://forums.rpgmakerweb.com/index.php?threads/tips-for-a-dungeon-crawler.91343/)
