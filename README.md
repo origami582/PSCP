@@ -30,10 +30,10 @@
 	- ในแต่ละ encounter/event ตัวเลือกของผู้เล่นจะส่งผลต่อเหตุการณ์ต่อๆ ไปในเกม
 
 ## Proposed Engine
-- RPG Maker MV/MZ (No direct Python integration) (JavaScript heavy, Python to manipulate files/saves externally) (Premade turn-based framework, significant time saved)
-- Pygame (Native Python) (Build from scratch, full system control, most time consuming)
-- Unity (with plugins - Python for Unity, IronPytohn) (C# heavy logic)
-- Godot (with GDscript similair to Python)
+- **RPG Maker MV/MZ** (No direct Python integration) (JavaScript heavy, Python to manipulate files/saves externally) (Premade turn-based framework, significant time saved)
+- **Pygame** (Native Python) (Build from scratch, full system control, most time consuming)
+- **Unity** (with plugins - Python for Unity, IronPytohn) (C# heavy logic)
+- **Godot** (with GDscript similair to Python)
 
 ### Members
 - 68070003 กฤตภาส ไพรสาลี
