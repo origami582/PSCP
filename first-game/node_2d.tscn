@@ -1,10 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://dna4wh2x4tp6w"]
+[gd_scene load_steps=3 format=3 uid="uid://dna4wh2x4tp6w"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_y32ns"]
-load_path = "res://.godot/imported/Think-removebg-preview.png-f880ff835cd9834a4013bcc017bf802d.ctex"
+[ext_resource type="Texture2D" uid="uid://otmjpatkw2md" path="res://icon.svg" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://djtcmx0kr1s7p" path="res://521651263_1007438211330480_4814923652174447020_n.jpg" id="2_epypp"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="ThinkRemovebgPreview" type="Sprite2D" parent="."]
-position = Vector2(-303, 260)
-texture = SubResource("CompressedTexture2D_y32ns")
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(-70900, -71574)
+texture = ExtResource("1_0e48y")
+
+[node name="52165126310074382113304804814923652174447020N" type="Sprite2D" parent="."]
+position = Vector2(-69552, -71718)
+texture = ExtResource("2_epypp")
