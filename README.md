@@ -1,3 +1,6 @@
+# Latest Update
+- **19 Nov 2025** | Update movements and animations
+
 # Proposed Ideas
 ## <u><i>NOTE: Ideas ทั้งหมดอาจมีการเปลี่ยนแปลงตามความยากง่ายของการทำ และเวลาที่เหลือในการทำ</i></u>
 ## Proposed Names
