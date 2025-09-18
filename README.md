@@ -57,10 +57,6 @@
 - 68070150 เมธา ภัทรพิชญกุล
 
 ### Video
-- <a href="https://www.youtube.com/watch?v=q25i2CCNvis" target="_blank" >Export Python pygame Game to Web with WebAssembly (pygbag tutorial)</a>
-- <a href="https://www.youtube.com/watch?v=2-UltIb7k5g&list=PLltVQYLz1BMChq8HEmg28yxDEaxk3DVaa" target="_blank" > สร้างเกม 2 มิติด้วยภาษา Python | สำหรับผู้เริ่มต้น [FULL COURSE]
- </a>
-
 ### Related Topics
 - <a href="https://forums.rpgmakerweb.com/index.php?threads/tips-for-a-dungeon-crawler.91343" target="_blank">Tips for Dungoen Crawler</a>
 - <a href="https://www.youtube.com/watch?v=5HR4rQ52T2k" target="_blank">7 Levels of Indie Games</a>
