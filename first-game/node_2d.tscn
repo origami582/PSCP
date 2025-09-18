@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dna4wh2x4tp6w"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_y32ns"]
+load_path = "res://.godot/imported/Think-removebg-preview.png-f880ff835cd9834a4013bcc017bf802d.ctex"
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ThinkRemovebgPreview" type="Sprite2D" parent="."]
+position = Vector2(-303, 260)
+texture = SubResource("CompressedTexture2D_y32ns")
