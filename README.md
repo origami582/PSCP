@@ -4,7 +4,7 @@
 - [Add here]
 
 ## Docs
-- https://docs.google.com/document/d/1u1e4y8OHD7AM01kfzar3d4c-t54qUJg0uEwbkN6Fz34/edit?tab=t.0
+- https://docs.google.com/document/d/1u1e4y8OHD7AM01kfzar3d4c-t54qUJg0uEwbkN6Fz34/edit?usp=sharing
 ## Main Theme: <u>Rogue-Like / Turn-Based Dungeon Crawler</u>
 ### Objective Goal
 - ลงดันเจี้ยนเป็๋นชั้นๆลึกลงไปเรื่อยๆ, เป้าหมายคือไปให้ลึกที่สุด เก็บ High Score เป็นความลึกที่ลงได้มากที่สุดก่อนจบเกม
