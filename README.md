@@ -1,3 +1,5 @@
+# Docs
+- https://docs.google.com/document/d/1u1e4y8OHD7AM01kfzar3d4c-t54qUJg0uEwbkN6Fz34/edit?tab=t.0
 # Latest Update
 - **19 Nov 2025** | Update movements and animations
 
