@@ -234,7 +234,7 @@ transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition
 
 [node name="PlayerCat" type="CharacterBody2D"]
 script = ExtResource("1_u0lhy")
-move_speed = 75.0
+move_speed = 65.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_k8dsg")
@@ -253,5 +253,5 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_10mfh")
 anim_player = NodePath("../AnimationPlayer")
-parameters/idle/blend_position = Vector2(-0.00514579, 1)
-parameters/walk/blend_position = Vector2(-0.109777, -0.172646)
+parameters/idle/blend_position = Vector2(0.0240138, -0.186813)
+parameters/walk/blend_position = Vector2(-0.0171527, 0.568132)
