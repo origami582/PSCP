@@ -233,6 +233,7 @@ states/walk/position = Vector2(640, 100)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_u0lhy"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_hhb2n"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_gx6m4")]
 
 [node name="PlayerCat" type="CharacterBody2D"]
+position = Vector2(387, 270)
 script = ExtResource("1_u0lhy")
 move_speed = 65.0
 
