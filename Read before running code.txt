@@ -1,3 +1,0 @@
-จะเริ่มเขียนเกมอย่าลืมโหลด
-- pygame
-pip install pygame
