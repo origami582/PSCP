@@ -1,0 +1,103 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmv346dxq5u14"]
+
+[ext_resource type="Script" path="res://main.py" id="1_epypp"]
+[ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Gemini_Generated_Image_txd7lxtxd7lxtxd7.png" id="1_wtcfe"]
+[ext_resource type="FontFile" uid="uid://c3xq2g0h1idc6" path="res://font/TA 8 bit.otf" id="2_0e48y"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_epypp"]
+texture = ExtResource("1_wtcfe")
+
+[node name="Node2D" type="Node2D"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = 0
+light_mask = 1
+visibility_layer = 1
+z_index = 0
+z_as_relative = true
+y_sort_enabled = false
+texture_filter = 0
+texture_repeat = 0
+use_parent_material = false
+position = Vector2(0, 0)
+rotation = 0.0
+scale = Vector2(1, 1)
+skew = 0.0
+script = ExtResource("1_epypp")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11.0
+offset_top = -10.0
+offset_right = 1223.0
+offset_bottom = 708.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_epypp")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 40.0
+offset_top = 279.0
+offset_right = 410.0
+offset_bottom = 572.0
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_0e48y")
+theme_override_font_sizes/font_size = 40
+text = "New Game"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_0e48y")
+theme_override_font_sizes/font_size = 40
+text = "Continew"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_0e48y")
+theme_override_font_sizes/font_size = 40
+text = "Option"
+
+[node name="Button4" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_0e48y")
+theme_override_font_sizes/font_size = 40
+text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 22.0
+offset_top = 164.0
+offset_right = 632.0
+offset_bottom = 226.0
+theme_override_fonts/font = ExtResource("2_0e48y")
+theme_override_font_sizes/font_size = 45
+text = "Integrated Strategy (IS)"
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_newgame_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_Continew_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_lederbord_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_exit_pressed"]
