@@ -20,9 +20,20 @@ class main(Control):
 		print("Leaderboard")
 
 	def _on_closepop_pressed(self):
-		#close game
+		#close popup
 		self.get_node("CanvasLayer").visible = False
 
-
+	#exitgame
 	def _on_exitgame_pressed(self):
 		self.get_tree().quit()
+
+	#Level
+	def _on_easy_pressed(self):
+		pass
+	#Level
+	def _on_medium_pressed(self):
+		pass
+
+	#Level
+	def _on_hard_pressed(self):
+		pass

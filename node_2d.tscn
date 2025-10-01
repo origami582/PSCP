@@ -265,4 +265,7 @@ text = "X"
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_Continew_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_lederbord_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_exitgame_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button2" to="." method="_on_easy_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_medium_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button3" to="." method="_on_hard_pressed"]
 [connection signal="pressed" from="CanvasLayer/Button4" to="." method="_on_closepop_pressed"]
