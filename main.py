@@ -3,15 +3,22 @@ from py4godot.classes.Control import Control
 
 @gdclass
 class main(Control):
-
+	# popup close
+	def _ready(self):
+		#ready game this pop up close
+		self.get_node("CanvasLayer").visible = False
 	def _on_newgame_pressed(self):
-		self.get_tree().change_scene_to_file("stage\\stage1.tscn")
+		#open popup
+		self.get_node("CanvasLayer").visible = True
 
 	def _on_Continew_pressed(self):
+		#pass
 		print("Continue")
 
 	def _on_lederbord_pressed(self):
+		#pass
 		print("Leaderboard")
-	def _on_exit_pressed(self):
-		 ### exit
-		self.get_tree().quit()
+
+	def _on_closepop_pressed(self):
+		#close game
+		self.get_node("CanvasLayer").visible = False

@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmv346dxq5u14"]
+[gd_scene load_steps=7 format=3 uid="uid://cmv346dxq5u14"]
 
 [ext_resource type="Script" path="res://main.py" id="1_epypp"]
 [ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Gemini_Generated_Image_txd7lxtxd7lxtxd7.png" id="1_wtcfe"]
 [ext_resource type="FontFile" uid="uid://c3xq2g0h1idc6" path="res://font/TA 8 bit.otf" id="2_0e48y"]
+[ext_resource type="Script" path="res://Level.py" id="4_q6r6c"]
+[ext_resource type="Script" path="res://UI/LEVEL.py" id="5_kdubu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_epypp"]
 texture = ExtResource("1_wtcfe")
@@ -96,8 +98,171 @@ text = "Integrated Strategy (IS)"
 
 [node name="Node2D" type="Node2D" parent="."]
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_newgame_pressed"]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
+layer = 1
+visible = true
+offset = Vector2(0, 0)
+rotation = 0.0
+scale = Vector2(1, 1)
+transform = Transform2D(1, 0, 0, 1, 0, 0)
+follow_viewport_enabled = false
+follow_viewport_scale = 1.0
+script = ExtResource("4_q6r6c")
+
+[node name="Panel2" type="Panel" parent="CanvasLayer"]
+offset_right = 1206.0
+offset_bottom = 696.0
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 2
+auto_translate_mode = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = 0
+light_mask = 1
+visibility_layer = 1
+z_index = 0
+z_as_relative = true
+y_sort_enabled = false
+texture_filter = 0
+texture_repeat = 0
+use_parent_material = false
+clip_contents = false
+custom_minimum_size = Vector2(0, 0)
+layout_direction = 0
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -431.25
+offset_top = -198.5
+offset_right = 431.25
+offset_bottom = 198.5
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.0
+scale = Vector2(1, 1)
+pivot_offset = Vector2(0, 0)
+size_flags_horizontal = 1
+size_flags_vertical = 1
+size_flags_stretch_ratio = 1.0
+localize_numeral_system = true
+tooltip_text = ""
+tooltip_auto_translate_mode = 0
+focus_neighbor_left = NodePath("")
+focus_neighbor_top = NodePath("")
+focus_neighbor_right = NodePath("")
+focus_neighbor_bottom = NodePath("")
+focus_next = NodePath("")
+focus_previous = NodePath("")
+focus_mode = 0
+focus_behavior_recursive = 0
+mouse_filter = 0
+mouse_behavior_recursive = 0
+mouse_force_pass_scroll_events = true
+mouse_default_cursor_shape = 0
+accessibility_name = ""
+accessibility_description = ""
+accessibility_live = 0
+accessibility_controls_nodes = Array[NodePath]([])
+accessibility_described_by_nodes = Array[NodePath]([])
+accessibility_labeled_by_nodes = Array[NodePath]([])
+accessibility_flow_to_nodes = Array[NodePath]([])
+theme_type_variation = &""
+script = ExtResource("5_kdubu")
+
+[node name="Button2" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -362.0
+offset_top = -87.0
+offset_right = -151.0
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_0e48y")
+theme_override_font_sizes/font_size = 40
+text = "EASY"
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -105.5
+offset_top = -84.0
+offset_right = 105.5
+offset_bottom = 127.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_0e48y")
+theme_override_font_sizes/font_size = 40
+text = "MEDIUM"
+
+[node name="Button3" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 150.0
+offset_top = -87.0
+offset_right = 361.0
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_0e48y")
+theme_override_font_sizes/font_size = 40
+text = "HARD"
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 142.0
+offset_top = 128.0
+offset_right = 1008.0
+offset_bottom = 234.0
+theme_override_fonts/font = ExtResource("2_0e48y")
+theme_override_font_sizes/font_size = 50
+text = "LEVEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button4" type="Button" parent="CanvasLayer"]
+offset_left = 950.0
+offset_top = 126.0
+offset_right = 1010.0
+offset_bottom = 189.0
+theme_override_fonts/font = ExtResource("2_0e48y")
+theme_override_font_sizes/font_size = 40
+text = "X"
+
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_newgame_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_Continew_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_lederbord_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button4" to="." method="_on_closepop_pressed"]
