@@ -27,13 +27,13 @@ class main(Control):
 	def _on_exitgame_pressed(self):
 		self.get_tree().quit()
 
-	#Level
+	#difficult select and var to scale with exp_gain and monster status 
 	def _on_easy_pressed(self):
 		pass
-	#Level
+	
 	def _on_medium_pressed(self):
 		pass
 
-	#Level
+	
 	def _on_hard_pressed(self):
 		pass
