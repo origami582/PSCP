@@ -22,3 +22,7 @@ class main(Control):
 	def _on_closepop_pressed(self):
 		#close game
 		self.get_node("CanvasLayer").visible = False
+
+
+	def _on_exitgame_pressed(self):
+		self.get_tree().quit()
