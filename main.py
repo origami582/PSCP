@@ -29,8 +29,11 @@ class main(Control):
 
 	#difficult select and var to scale with exp_gain and monster status 
 	def _on_easy_pressed(self):
+		difficult = 1
 		self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
 	def _on_medium_pressed(self):
+		difficult = 1.5
 		self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
 	def _on_hard_pressed(self):
+		difficult = 2
 		self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
