@@ -29,11 +29,11 @@ class main(Control):
 
 	#Level
 	def _on_easy_pressed(self):
-		pass
+		self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
 	#Level
 	def _on_medium_pressed(self):
-		pass
+		self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
 
 	#Level
 	def _on_hard_pressed(self):
-		pass
+		self.get_tree().change_scene_to_file("res://stage/stage1.tscn")

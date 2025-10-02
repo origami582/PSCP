@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://db4komuwe55g4"]
+[gd_scene load_steps=6 format=3 uid="uid://db4komuwe55g4"]
 
 [ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Gemini_Generated_Image_txd7lxtxd7lxtxd7.png" id="1_lsu2v"]
+[ext_resource type="Script" path="res://stage/maingame.py" id="1_w447a"]
 [ext_resource type="Texture2D" uid="uid://cgraxhlwf7k7g" path="res://img/Gemini_Generated_Image_vzxnsdvzxnsdvzxn-Photoroom.png" id="2_sp8fs"]
 [ext_resource type="FontFile" uid="uid://c3xq2g0h1idc6" path="res://font/TA 8 bit.otf" id="3_bcaf5"]
 
@@ -8,6 +9,34 @@
 texture = ExtResource("1_lsu2v")
 
 [node name="Node2D" type="Node2D"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = 0
+light_mask = 1
+visibility_layer = 1
+z_index = 0
+z_as_relative = true
+y_sort_enabled = false
+texture_filter = 0
+texture_repeat = 0
+use_parent_material = false
+position = Vector2(0, 0)
+rotation = 0.0
+scale = Vector2(1, 1)
+skew = 0.0
+script = ExtResource("1_w447a")
 
 [node name="Panel" type="Panel" parent="."]
 anchors_preset = -1
@@ -64,3 +93,6 @@ theme_override_fonts/font = ExtResource("3_bcaf5")
 theme_override_font_sizes/font_size = 70
 text = "Next"
 alignment = 0
+
+[connection signal="pressed" from="Button" to="." method="_on_skip_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_next_pressed"]
