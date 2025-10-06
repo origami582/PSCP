@@ -1,32 +1,46 @@
-"""character"""
-def character_status():
-	# char statsu here
-	max_hp = 100		# input this later na
-	strenght = 10		# This too
-	# other status to scale here too
+from py4godot.classes import gdclass
 
-def level_char():
-	# Level system
+@gdclass
+class Globals:
+	hp = 100
+	strength = 10
+
 	level = 1
-	exp = 0											# exp char have between lv.
+	exp = 0
 	exp_total = 0
-	exp_req = get_req_exp(level+1)					# exp req for next lv.
+	exp_req = 0
+	# new
+	difficult = 1
 
-def get_req_exp(level):
-	# exp req per next lv. which we need to cal later
-	return round((level **1.8) + level * 4)			# formula to scale exp_req per level
+	@staticmethod
+	def get_req_exp(level):
+		return round((level ** 1.8) + level * 4)
 
-def gain_exp(amount):
-	# gain amout of exp per one lv.
-	exp_total += amount
-	exp += amount									# gain EXP
-	while exp >= exp_req:							# loop for exp if exp that >= exp_req
-		exp -= exp_req								# minus exp that >= exp_req for >1 lv.
-		level_up()
+	@staticmethod
+	def init_character():
+		Globals.level = 1
+		Globals.exp = 0
+		Globals.exp_total = 0
+		Globals.exp_req = Globals.get_req_exp(Globals.level + 1)
+
+	@staticmethod
+	def gain_exp(amount: int):
+		Globals.exp_total += amount
+		Globals.exp += amount
+
+		while Globals.exp >= Globals.exp_req:
+			Globals.exp -= Globals.exp_req
+			Globals.level_up()
+
+	@staticmethod
+	def level_up():
+		Globals.level += 1
+		Globals.exp_req = Globals.get_req_exp(Globals.level + 1)
+	
+	@staticmethod
+	def skip_penalty():
+		# HP reduction
+		print("Penalized")
+		Globals.hp -= 10
+		return Globals.hp
 		
-def level_up():
-	# lv. up func
-	level += 1
-	exp_req = get_req_exp(level+1)					# set a new req exp from formula
-
-### doing status later
