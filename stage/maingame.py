@@ -1,6 +1,6 @@
 from py4godot.classes import gdclass
 from py4godot.classes.Control import Control
-
+from ..main import main
 @gdclass
 class maingame(Control):
 
