@@ -1,34 +1,33 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1759730164
-icon.svg::CompressedTexture2D/CompressedTexture2D::8365038792927059551::1759224553::1759729922::1::::<><><>0<>0<>0176cf9c6e8990b7be86bee517bca520<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-Level.py::PyScriptExtension::-1::1759319161::0::1::::<><><>0<>0<><>::
-LICENSE.md::TextFile::-1::1759224553::0::1::::<><><>0<>0<><>::
-main.py::PyScriptExtension::-1::1759431926::0::1::::<><><>0<>0<><>::
-new_script.gd::GDScript::5875621909093019719::1759224553::0::1::::<>Node<><>0<>0<><>::
-node_2d.tscn::PackedScene::5660212921624415985::1759427918::0::1::::<><><>0<>0<><>::res://main.py<>uid://dd846kfv6n6bx::::res://img/Gemini_Generated_Image_txd7lxtxd7lxtxd7.png<>uid://c3xq2g0h1idc6::::res://font/TA 8 bit.otf<>res://Level.py<>res://UI/LEVEL.py
-README.md::TextFile::-1::1759224553::0::1::::<><><>0<>0<><>::
-::res://__pycache__/::1759431926
-::res://addons/::1759224777
-::res://addons/py4godot/::1759318055
-dependencies.txt::TextFile::-1::1759224909::0::1::::<><><>0<>0<><>::
-get_pip.py::PyScriptExtension::-1::1759224909::0::1::::<><><>0<>0<><>::
-install_dependencies.py::PyScriptExtension::-1::1759224909::0::1::::<><><>0<>0<><>::
-python.gdextension::GDExtension::6472151811709684144::1759224909::0::1::::<><><>0<>0<><>::
-Python.svg::CompressedTexture2D::4386461389802967443::1759224777::1759224949::1::::<><><>0<>0<>df22998e81729e1eb174ecf2d0029843<>res://.godot/imported/Python.svg-681cb785c113434a7384dcc1fd345d19.ctex::
-::res://addons/py4godot/__pycache__/::1759318058
-::res://font/::1759224597
-TA 8 bit.otf::FontFile::6786629720027501295::1759224553::1759224597::1::::<><><>0<>0<>3178899bed5ef7129b2283d97f6807c2<>res://.godot/imported/TA 8 bit.otf-dea3c7c9938bec16c966902285816d7f.fontdata::
-TA 8 bit.ttf::FontFile::2112663380445996841::1759224553::1759224597::1::::<><><>0<>0<>de70cd4b0f950f29191c3bb7bab735b3<>res://.godot/imported/TA 8 bit.ttf-986023c4adc44f6427927ffd71b14fd1.fontdata::
-::res://img/::1759224597
-Gemini_Generated_Image_txd7lxtxd7lxtxd7.png::CompressedTexture2D::7439769734232292845::1759224553::1759224597::1::::<><><>0<>0<>f037cad8f0177f9ba8ecea32207a724e<>res://.godot/imported/Gemini_Generated_Image_txd7lxtxd7lxtxd7.png-3670f96064a4675e1b61ae5fa066e8c9.ctex::
-Gemini_Generated_Image_vzxnsdvzxnsdvzxn-Photoroom.png::CompressedTexture2D::5229110309957056190::1759224553::1759224597::1::::<><><>0<>0<>7d863296da748cc96c38815e9e1c08e5<>res://.godot/imported/Gemini_Generated_Image_vzxnsdvzxnsdvzxn-Photoroom.png-e6fc40e4630ed4379459c7fa26c8ed43.ctex::
-::res://stage/::1759432198
-Button2.py::PyScriptExtension::-1::1759432118::0::1::::<><><>0<>0<><>::
-charactor.py::PyScriptExtension::-1::1759431695::0::1::::<><><>0<>0<><>::
-maingame.py::PyScriptExtension::-1::1759432198::0::1::::<><><>0<>0<><>::
-stage1.tscn::PackedScene::7289950682809830993::1759432147::0::1::::<><><>0<>0<><>::uid://dd846kfv6n6bx::::res://img/Gemini_Generated_Image_txd7lxtxd7lxtxd7.png<>res://stage/maingame.py<>uid://cgraxhlwf7k7g::::res://img/Gemini_Generated_Image_vzxnsdvzxnsdvzxn-Photoroom.png<>uid://c3xq2g0h1idc6::::res://font/TA 8 bit.otf<>res://stage/Button2.py
-::res://stage/__pycache__/::1759432198
-::res://UI/::1759319161
-LEVEL.py::PyScriptExtension::-1::1759319161::0::1::::<><><>0<>0<><>::
-Level.tscn::PackedScene::6812561648204145828::1759319161::0::1::::<><><>0<>0<><>::res://UI/level.gd<>uid://c3xq2g0h1idc6::::res://font/TA 8 bit.otf<>res://UI/LEVEL.py
-::res://UI/__pycache__/::1759431718
+::res://::1759730123
+icon.svg::CompressedTexture2D/CompressedTexture2D::8365038792927059551::1759150137::1759730126::1::::<><><>0<>0<>0176cf9c6e8990b7be86bee517bca520<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+Level.py::PyScriptExtension::-1::1759308113::0::1::::<><><>0<>0<><>::
+LICENSE.md::TextFile::-1::1759223957::0::1::::<><><>0<>0<><>::
+main.py::PyScriptExtension::-1::1759418301::0::1::::<><><>0<>0<><>::
+new_script.gd::GDScript::5875621909093019719::1759157143::0::1::::<>Node<><>0<>0<><>::
+node_2d.tscn::PackedScene::5660212921624415985::1759418179::0::1::::<><><>0<>0<><>::res://main.py<>uid://dd846kfv6n6bx::::res://img/Gemini_Generated_Image_txd7lxtxd7lxtxd7.png<>uid://c3xq2g0h1idc6::::res://font/TA 8 bit.otf<>res://Level.py<>res://UI/LEVEL.py
+README.md::TextFile::-1::1759223957::0::1::::<><><>0<>0<><>::
+::res://__pycache__/::1759418301
+::res://addons/::1759223980
+::res://addons/py4godot/::1759301097
+dependencies.txt::TextFile::-1::1759295330::0::1::::<><><>0<>0<><>::
+get_pip.py::PyScriptExtension::-1::1759295330::0::1::::<><><>0<>0<><>::
+install_dependencies.py::PyScriptExtension::-1::1759295330::0::1::::<><><>0<>0<><>::
+python.gdextension::GDExtension::6472151811709684144::1759295330::0::1::::<><><>0<>0<><>::
+Python.svg::CompressedTexture2D::4386461389802967443::1759294755::1759294763::1::::<><><>0<>0<>df22998e81729e1eb174ecf2d0029843<>res://.godot/imported/Python.svg-681cb785c113434a7384dcc1fd345d19.ctex::
+::res://addons/py4godot/__pycache__/::1759301099
+::res://font/::1759224104
+TA 8 bit.otf::FontFile::6786629720027501295::1759150137::1759151484::1::::<><><>0<>0<>3178899bed5ef7129b2283d97f6807c2<>res://.godot/imported/TA 8 bit.otf-dea3c7c9938bec16c966902285816d7f.fontdata::
+TA 8 bit.ttf::FontFile::2112663380445996841::1759150137::1759151484::1::::<><><>0<>0<>de70cd4b0f950f29191c3bb7bab735b3<>res://.godot/imported/TA 8 bit.ttf-986023c4adc44f6427927ffd71b14fd1.fontdata::
+::res://img/::1759223979
+Gemini_Generated_Image_txd7lxtxd7lxtxd7.png::CompressedTexture2D::7439769734232292845::1759150137::1759151484::1::::<><><>0<>0<>f037cad8f0177f9ba8ecea32207a724e<>res://.godot/imported/Gemini_Generated_Image_txd7lxtxd7lxtxd7.png-3670f96064a4675e1b61ae5fa066e8c9.ctex::
+Gemini_Generated_Image_vzxnsdvzxnsdvzxn-Photoroom.png::CompressedTexture2D::5229110309957056190::1759157675::1759157678::1::::<><><>0<>0<>7d863296da748cc96c38815e9e1c08e5<>res://.godot/imported/Gemini_Generated_Image_vzxnsdvzxnsdvzxn-Photoroom.png-e6fc40e4630ed4379459c7fa26c8ed43.ctex::
+::res://stage/::1759418462
+charactor.py::PyScriptExtension::-1::1759293762::0::1::::<><><>0<>0<><>::
+maingame.py::PyScriptExtension::-1::1759403110::0::1::::<><><>0<>0<><>::
+stage1.tscn::PackedScene::7289950682809830993::1759418462::0::1::::<><><>0<>0<><>::uid://dd846kfv6n6bx::::res://img/Gemini_Generated_Image_txd7lxtxd7lxtxd7.png<>res://stage/maingame.py<>uid://cgraxhlwf7k7g::::res://img/Gemini_Generated_Image_vzxnsdvzxnsdvzxn-Photoroom.png<>uid://c3xq2g0h1idc6::::res://font/TA 8 bit.otf
+::res://stage/__pycache__/::1759403110
+::res://UI/::1759308779
+LEVEL.py::PyScriptExtension::-1::1759304418::0::1::::<><><>0<>0<><>::
+Level.tscn::PackedScene::6812561648204145828::1759308779::0::1::::<><><>0<>0<><>::res://UI/level.gd<>uid://c3xq2g0h1idc6::::res://font/TA 8 bit.otf<>res://UI/LEVEL.py
+::res://UI/__pycache__/::1759304418
