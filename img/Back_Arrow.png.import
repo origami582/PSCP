@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd846kfv6n6bx"
-path="res://.godot/imported/Gemini_Generated_Image_txd7lxtxd7lxtxd7.png-3670f96064a4675e1b61ae5fa066e8c9.ctex"
+uid="uid://dd2nxf1vyo2l8"
+path="res://.godot/imported/Back_Arrow.png-68fd5522ff76d95bcc3a5ca6292201a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Gemini_Generated_Image_txd7lxtxd7lxtxd7.png"
-dest_files=["res://.godot/imported/Gemini_Generated_Image_txd7lxtxd7lxtxd7.png-3670f96064a4675e1b61ae5fa066e8c9.ctex"]
+source_file="res://img/Back_Arrow.png"
+dest_files=["res://.godot/imported/Back_Arrow.png-68fd5522ff76d95bcc3a5ca6292201a8.ctex"]
 
 [params]
 

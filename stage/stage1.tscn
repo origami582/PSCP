@@ -1,13 +1,26 @@
-[gd_scene load_steps=7 format=3 uid="uid://db4komuwe55g4"]
+[gd_scene load_steps=13 format=3 uid="uid://db4komuwe55g4"]
 
-[ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Gemini_Generated_Image_txd7lxtxd7lxtxd7.png" id="1_lsu2v"]
 [ext_resource type="Script" path="res://stage/maingame.py" id="1_w447a"]
-[ext_resource type="Texture2D" uid="uid://cgraxhlwf7k7g" path="res://img/Gemini_Generated_Image_vzxnsdvzxnsdvzxn-Photoroom.png" id="2_sp8fs"]
-[ext_resource type="FontFile" uid="uid://c3xq2g0h1idc6" path="res://font/TA 8 bit.otf" id="3_bcaf5"]
-[ext_resource type="Script" path="res://stage/Button2.py" id="5_ekfnk"]
+[ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Background/Background.png" id="2_3ikxw"]
+[ext_resource type="Texture2D" uid="uid://cgraxhlwf7k7g" path="res://img/Chu.png" id="2_sp8fs"]
+[ext_resource type="Texture2D" uid="uid://net6eb56261a" path="res://img/Overlay_Textures/dungeon0_base.png" id="3_e7fe8"]
+[ext_resource type="Texture2D" uid="uid://bg5termtb5hyc" path="res://img/Buttons/dungeon0_flee.png" id="5_3ikxw"]
+[ext_resource type="Texture2D" uid="uid://dd2nxf1vyo2l8" path="res://img/Back_Arrow.png" id="5_ekfnk"]
+[ext_resource type="FontFile" uid="uid://qtpe31n1naif" path="res://font/PixelifySans-VariableFont_wght.ttf" id="6_6b4x6"]
+[ext_resource type="Texture2D" uid="uid://bg3iw3mviox0t" path="res://img/Buttons/dungeon0_go.png" id="8_bwayr"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sp8fs"]
-texture = ExtResource("1_lsu2v")
+[sub_resource type="Environment" id="Environment_3ikxw"]
+background_mode = 3
+adjustment_contrast = 1.33
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekfnk"]
+bg_color = Color(0, 0, 0, 0.8509804)
+
+[sub_resource type="FontVariation" id="FontVariation_a70no"]
+base_font = ExtResource("6_6b4x6")
+
+[sub_resource type="FontVariation" id="FontVariation_3ikxw"]
+base_font = ExtResource("6_6b4x6")
 
 [node name="Node2D" type="Node2D"]
 _import_path = NodePath("")
@@ -39,143 +52,105 @@ scale = Vector2(1, 1)
 skew = 0.0
 script = ExtResource("1_w447a")
 
-[node name="Panel" type="Panel" parent="."]
-anchors_preset = -1
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -11.0
-offset_top = -10.0
-offset_right = 1223.0
-offset_bottom = 708.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-theme_override_styles/panel = SubResource("StyleBoxTexture_sp8fs")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_3ikxw")
 
-[node name="Panel" type="Panel" parent="Panel"]
-layout_mode = 0
-offset_left = 13.0
-offset_top = 12.0
-offset_right = 253.39053
-offset_bottom = 91.915375
+[node name="Background" type="TextureRect" parent="."]
+z_index = -4096
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_3ikxw")
+expand_mode = 1
 
-[node name="Label" type="Label" parent="Panel/Panel"]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 4.0
-offset_right = 237.0
-offset_bottom = 77.0
-theme_override_font_sizes/font_size = 23
-text = "Level : n
-Room : n"
+[node name="Overlay" type="TextureRect" parent="."]
+editor_description = "Overlay Need edit
+cleaning + reedit"
+z_index = -4095
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("3_e7fe8")
+expand_mode = 1
 
-[node name="GeminiGeneratedImageVzxnsdvzxnsdvzxnPhotoroom" type="Sprite2D" parent="Panel"]
-position = Vector2(978, 502)
-scale = Vector2(1.4070711, 1.4269835)
+[node name="Main_Chu" type="Sprite2D" parent="."]
+texture_filter = 6
+position = Vector2(897.00006, 465)
+scale = Vector2(1.146199, 1.0995212)
 texture = ExtResource("2_sp8fs")
 
-[node name="Button" type="Button" parent="."]
-offset_left = 424.0
-offset_top = 476.0
-offset_right = 751.0
-offset_bottom = 575.0
-theme_override_fonts/font = ExtResource("3_bcaf5")
-theme_override_font_sizes/font_size = 70
-text = "SKIP"
-alignment = 0
+[node name="Flee_Button" type="TextureButton" parent="."]
+offset_left = 325.0
+offset_top = 495.0
+offset_right = 680.0
+offset_bottom = 583.0
+texture_normal = ExtResource("5_3ikxw")
 
-[node name="Button2" type="Button" parent="."]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 2
-auto_translate_mode = 0
-editor_description = ""
-visible = true
-modulate = Color(1, 1, 1, 1)
-self_modulate = Color(1, 1, 1, 1)
-show_behind_parent = false
-top_level = false
-clip_children = 0
-light_mask = 1
-visibility_layer = 1
-z_index = 0
-z_as_relative = true
-y_sort_enabled = false
-texture_filter = 0
-texture_repeat = 0
-use_parent_material = false
-clip_contents = false
-custom_minimum_size = Vector2(0, 0)
-layout_direction = 0
-layout_mode = 3
-anchors_preset = 0
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 403.0
-offset_top = 366.0
-offset_right = 730.0
-offset_bottom = 465.0
-grow_horizontal = 1
-grow_vertical = 1
-rotation = 0.0
-scale = Vector2(1, 1)
-pivot_offset = Vector2(0, 0)
-size_flags_horizontal = 1
-size_flags_vertical = 1
-size_flags_stretch_ratio = 1.0
-localize_numeral_system = true
-tooltip_text = ""
-tooltip_auto_translate_mode = 0
-focus_neighbor_left = NodePath("")
-focus_neighbor_top = NodePath("")
-focus_neighbor_right = NodePath("")
-focus_neighbor_bottom = NodePath("")
-focus_next = NodePath("")
-focus_previous = NodePath("")
-focus_mode = 2
-focus_behavior_recursive = 0
-mouse_filter = 0
-mouse_behavior_recursive = 0
-mouse_force_pass_scroll_events = true
-mouse_default_cursor_shape = 0
-accessibility_name = ""
-accessibility_description = ""
-accessibility_live = 0
-accessibility_controls_nodes = Array[NodePath]([])
-accessibility_described_by_nodes = Array[NodePath]([])
-accessibility_labeled_by_nodes = Array[NodePath]([])
-accessibility_flow_to_nodes = Array[NodePath]([])
-theme_type_variation = &""
-theme_override_fonts/font = ExtResource("3_bcaf5")
-theme_override_font_sizes/font_size = 70
-disabled = false
-toggle_mode = false
-button_pressed = false
-action_mode = 1
-button_mask = 1
-keep_pressed_outside = false
-shortcut_feedback = true
-shortcut_in_tooltip = true
-text = "Next"
-flat = false
-alignment = 0
-text_overrun_behavior = 0
-autowrap_mode = 0
-autowrap_trim_flags = 128
-clip_text = false
-icon_alignment = 0
-vertical_icon_alignment = 1
-expand_icon = false
-text_direction = 0
-language = ""
-script = ExtResource("5_ekfnk")
+[node name="Next_Button" type="TextureButton" parent="."]
+offset_left = 255.0
+offset_top = 389.0
+offset_right = 684.0
+offset_bottom = 496.0
+texture_normal = ExtResource("8_bwayr")
+stretch_mode = 0
 
-[connection signal="pressed" from="Button" to="." method="_on_skip_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_next_pressed"]
+[node name="Back_Button" type="Button" parent="."]
+offset_left = 1050.0
+offset_top = -6.0
+offset_right = 1159.0
+offset_bottom = 104.0
+icon = ExtResource("5_ekfnk")
+flat = true
+expand_icon = true
+
+[node name="dead_panel" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Panel" type="Panel" parent="dead_panel"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -335.0
+offset_top = -191.0
+offset_right = 308.0
+offset_bottom = 205.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ekfnk")
+
+[node name="died_back_to_menu" type="Button" parent="dead_panel/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.81200004
+anchor_right = 0.50200003
+anchor_bottom = 0.814
+offset_left = -115.5
+offset_top = -26.552002
+offset_right = 114.21399
+offset_bottom = 31.656006
+theme_override_fonts/font = SubResource("FontVariation_a70no")
+theme_override_font_sizes/font_size = 25
+text = "Back to Main Menu"
+
+[node name="Label" type="Label" parent="dead_panel/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.505
+anchor_top = 0.24200001
+anchor_right = 0.505
+anchor_bottom = 0.24200001
+offset_left = -228.715
+offset_top = -55.83201
+offset_right = 229.285
+offset_bottom = 56.16799
+theme_override_fonts/font = SubResource("FontVariation_3ikxw")
+theme_override_font_sizes/font_size = 75
+text = "You Died"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Flee_Button" to="." method="_on_flee_button_pressed"]
+[connection signal="pressed" from="Next_Button" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="Back_Button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="dead_panel/Panel/died_back_to_menu" to="." method="_on_died_back_to_menu_pressed"]

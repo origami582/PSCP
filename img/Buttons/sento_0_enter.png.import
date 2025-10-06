@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgraxhlwf7k7g"
-path="res://.godot/imported/Gemini_Generated_Image_vzxnsdvzxnsdvzxn-Photoroom.png-e6fc40e4630ed4379459c7fa26c8ed43.ctex"
+uid="uid://ce0sp6112yj7p"
+path="res://.godot/imported/sento_0_enter.png-337b5190e5ddd69f46eae5245ca3553e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Gemini_Generated_Image_vzxnsdvzxnsdvzxn-Photoroom.png"
-dest_files=["res://.godot/imported/Gemini_Generated_Image_vzxnsdvzxnsdvzxn-Photoroom.png-e6fc40e4630ed4379459c7fa26c8ed43.ctex"]
+source_file="res://img/Buttons/sento_0_enter.png"
+dest_files=["res://.godot/imported/sento_0_enter.png-337b5190e5ddd69f46eae5245ca3553e.ctex"]
 
 [params]
 
