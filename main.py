@@ -12,7 +12,9 @@ class main(Control):
 	def _on_newgame_pressed(self):
 		#open popup
 		self.get_node("CanvasLayer").visible = True
-
+		Globals.hp = 100
+		strength = 10
+		
 	def _on_Continew_pressed(self):
 		#pass
 		print("Continue")
