@@ -1,6 +1,2 @@
-res://main_menu.tscn
-res://stage/maingame.py
-res://Prototype_logic_py/random_events.py
-res://stage/random_events.py
-res://stage/charactor.py
 res://main.py
+res://main_menu.tscn
