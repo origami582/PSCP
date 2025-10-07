@@ -1,2 +1,2 @@
-res://main.py
-res://main_menu.tscn
+res://stage/stage1.tscn
+res://stage/maingame.py

@@ -1,8 +1,11 @@
+TextureButton
+Sprite2D
+CanvasLayer
+Control
+Container
 HSlider
 AudioStreamPlayer
-CanvasLayer
 AnimationTree
 AnimationPlayer
 CollisionShape2D
-Sprite2D
 CharacterBody2D
