@@ -2,6 +2,7 @@ from py4godot.classes import gdclass
 from py4godot.classes.Control import Control
 #Connect files to charactor
 from stage.charactor import Globals
+
 @gdclass
 class main(Control):
 	# popup close

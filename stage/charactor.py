@@ -40,7 +40,7 @@ class Globals:
 	@staticmethod
 	def skip_penalty():
 		# HP reduction
-		print("Penalized")
+		print("Penalized")		# Debug
 		Globals.hp -= 10
 		return Globals.hp
 		
