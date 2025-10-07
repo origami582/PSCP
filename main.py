@@ -12,9 +12,10 @@ class main(Control):
 		self.get_node("Setting").visible = False 
 		#music 
 		self.music = self.get_node("AudioStreamPlayer")
+
 	def _on_newgame_pressed(self):
 		#open popup
-		self.get_node("CanvasLayer").visible = True
+		self.get_node("Level_select").visible = True
 		Globals.hp = 100
 		strength = 10
 		
@@ -28,7 +29,7 @@ class main(Control):
 
 	def _on_closepop_pressed(self):
 		#close popup
-		self.get_node("CanvasLayer").visible = False 
+		self.get_node("Level_select").visible = False 
 
 	#exitgame
 	def _on_exitgame_pressed(self):
@@ -47,7 +48,6 @@ class main(Control):
 		#add Globals. forward
 		Globals.difficult = 2
 		self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
-
 
 	def _on_music_changed(self, value: float):
 		db_value = -80 + value 
