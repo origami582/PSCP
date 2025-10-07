@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://db4komuwe55g4"]
+[gd_scene load_steps=17 format=3 uid="uid://db4komuwe55g4"]
 
 [ext_resource type="Script" path="res://stage/maingame.py" id="1_w447a"]
 [ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Background/Background.png" id="2_3ikxw"]
@@ -7,7 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://bg5termtb5hyc" path="res://img/Buttons/dungeon0_flee.png" id="5_3ikxw"]
 [ext_resource type="Texture2D" uid="uid://dd2nxf1vyo2l8" path="res://img/Back_Arrow.png" id="5_ekfnk"]
 [ext_resource type="FontFile" uid="uid://qtpe31n1naif" path="res://font/PixelifySans-VariableFont_wght.ttf" id="6_6b4x6"]
+[ext_resource type="Texture2D" uid="uid://ce1neujqiuv2m" path="res://img/Buttons/omoide2_1battle.png" id="7_vf5ng"]
 [ext_resource type="Texture2D" uid="uid://bg3iw3mviox0t" path="res://img/Buttons/dungeon0_go.png" id="8_bwayr"]
+[ext_resource type="FontFile" uid="uid://dh1e1hmltgft6" path="res://font/PixelMplus12-Regular.ttf" id="8_e7fe8"]
+[ext_resource type="Texture2D" uid="uid://ditq7phywajbl" path="res://img/Enemies/sento_m27.png" id="8_vf5ng"]
 
 [sub_resource type="Environment" id="Environment_3ikxw"]
 background_mode = 3
@@ -17,10 +20,14 @@ adjustment_contrast = 1.33
 bg_color = Color(0, 0, 0, 0.8509804)
 
 [sub_resource type="FontVariation" id="FontVariation_a70no"]
-base_font = ExtResource("6_6b4x6")
+base_font = ExtResource("8_e7fe8")
 
 [sub_resource type="FontVariation" id="FontVariation_3ikxw"]
 base_font = ExtResource("6_6b4x6")
+
+[sub_resource type="LabelSettings" id="LabelSettings_bwayr"]
+font = ExtResource("8_e7fe8")
+font_size = 60
 
 [node name="Node2D" type="Node2D"]
 _import_path = NodePath("")
@@ -73,8 +80,8 @@ expand_mode = 1
 
 [node name="Main_Chu" type="Sprite2D" parent="."]
 texture_filter = 6
-position = Vector2(897.00006, 465)
-scale = Vector2(1.146199, 1.0995212)
+position = Vector2(892, 465)
+scale = Vector2(1.116959, 1.0995212)
 texture = ExtResource("2_sp8fs")
 
 [node name="Flee_Button" type="TextureButton" parent="."]
@@ -92,6 +99,16 @@ offset_bottom = 496.0
 texture_normal = ExtResource("8_bwayr")
 stretch_mode = 0
 
+[node name="Battle_Button" type="TextureButton" parent="."]
+visible = false
+offset_left = 192.0
+offset_top = 345.0
+offset_right = 330.0
+offset_bottom = 476.0
+texture_normal = ExtResource("7_vf5ng")
+ignore_texture_size = true
+stretch_mode = 4
+
 [node name="Back_Button" type="Button" parent="."]
 offset_left = 1050.0
 offset_top = -6.0
@@ -100,6 +117,15 @@ offset_bottom = 104.0
 icon = ExtResource("5_ekfnk")
 flat = true
 expand_icon = true
+
+[node name="Monster_control" type="CanvasLayer" parent="."]
+
+[node name="Monster" type="Sprite2D" parent="Monster_control"]
+editor_description = "Need change"
+texture_filter = 6
+position = Vector2(523, 202)
+scale = Vector2(0.5196246, 0.5081659)
+texture = ExtResource("8_vf5ng")
 
 [node name="dead_panel" type="CanvasLayer" parent="."]
 visible = false
@@ -147,10 +173,12 @@ offset_bottom = 56.16799
 theme_override_fonts/font = SubResource("FontVariation_3ikxw")
 theme_override_font_sizes/font_size = 75
 text = "You Died"
+label_settings = SubResource("LabelSettings_bwayr")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="pressed" from="Flee_Button" to="." method="_on_flee_button_pressed"]
 [connection signal="pressed" from="Next_Button" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="Battle_Button" to="." method="_on_battle_button_pressed"]
 [connection signal="pressed" from="Back_Button" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="dead_panel/Panel/died_back_to_menu" to="." method="_on_died_back_to_menu_pressed"]
