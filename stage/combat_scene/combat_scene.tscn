@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://dj12ttrjw3ksc" path="res://img/Enemies/sento_m8.png" id="2_estmv"]
 [ext_resource type="Script" path="res://stage/combat_scene/monster.py" id="3_estmv"]
 [ext_resource type="Texture2D" uid="uid://cgraxhlwf7k7g" path="res://img/Chu.png" id="4_n3c6q"]
-[ext_resource type="Texture2D" uid="uid://ce1neujqiuv2m" path="res://img/Buttons/omoide2_1battle.png" id="5_estmv"]
-[ext_resource type="Script" path="res://stage/combat_scene/attack_button.py" id="5_it1vf"]
+[ext_resource type="Texture2D" uid="uid://ce1neujqiuv2m" path="res://img/Buttons/omoide2_1battle.png" id="6_estmv"]
+[ext_resource type="Script" path="res://stage/combat_scene/HP_monster_label.py" id="7_601pc"]
 
 [node name="Node2D" type="Node2D"]
 _import_path = NodePath("")
@@ -92,7 +92,15 @@ position = Vector2(988, 495)
 scale = Vector2(1.116959, 1.0995212)
 texture = ExtResource("4_n3c6q")
 
-[node name="Attack" type="Button" parent="."]
+[node name="Attack_Button" type="Button" parent="."]
+offset_left = 177.0
+offset_top = 344.0
+offset_right = 408.0
+offset_bottom = 575.0
+icon = ExtResource("6_estmv")
+flat = true
+
+[node name="HP_monster" type="Label" parent="."]
 _import_path = NodePath("")
 unique_name_in_owner = false
 process_mode = 0
@@ -125,17 +133,17 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 245.0
-offset_top = 362.0
-offset_right = 476.0
-offset_bottom = 593.0
+offset_left = 419.0
+offset_top = 145.0
+offset_right = 617.0
+offset_bottom = 250.0
 grow_horizontal = 1
 grow_vertical = 1
 rotation = 0.0
 scale = Vector2(1, 1)
 pivot_offset = Vector2(0, 0)
 size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_vertical = 4
 size_flags_stretch_ratio = 1.0
 localize_numeral_system = true
 tooltip_text = ""
@@ -146,9 +154,9 @@ focus_neighbor_right = NodePath("")
 focus_neighbor_bottom = NodePath("")
 focus_next = NodePath("")
 focus_previous = NodePath("")
-focus_mode = 2
+focus_mode = 0
 focus_behavior_recursive = 0
-mouse_filter = 0
+mouse_filter = 2
 mouse_behavior_recursive = 0
 mouse_force_pass_scroll_events = true
 mouse_default_cursor_shape = 0
@@ -160,27 +168,27 @@ accessibility_described_by_nodes = Array[NodePath]([])
 accessibility_labeled_by_nodes = Array[NodePath]([])
 accessibility_flow_to_nodes = Array[NodePath]([])
 theme_type_variation = &""
-disabled = false
-toggle_mode = false
-button_pressed = false
-action_mode = 1
-button_mask = 1
-keep_pressed_outside = false
-shortcut_feedback = true
-shortcut_in_tooltip = true
 text = ""
-icon = ExtResource("5_estmv")
-flat = false
-alignment = 1
-text_overrun_behavior = 0
+horizontal_alignment = 0
+vertical_alignment = 0
 autowrap_mode = 0
-autowrap_trim_flags = 128
+autowrap_trim_flags = 192
+justification_flags = 163
+paragraph_separator = "\\n"
 clip_text = false
-icon_alignment = 0
-vertical_icon_alignment = 1
-expand_icon = false
+text_overrun_behavior = 0
+ellipsis_char = "…"
+uppercase = false
+tab_stops = PackedFloat32Array()
+lines_skipped = 0
+max_lines_visible = -1
+visible_characters = -1
+visible_characters_behavior = 0
+visible_ratio = 1.0
 text_direction = 0
 language = ""
-script = ExtResource("5_it1vf")
+structured_text_bidi_override = 0
+structured_text_bidi_override_options = Array[NodePath]([])
+script = ExtResource("7_601pc")
 
-[connection signal="pressed" from="Attack" to="." method="_on_attack_pressed"]
+[connection signal="pressed" from="Attack_Button" to="." method="_on_button_pressed"]

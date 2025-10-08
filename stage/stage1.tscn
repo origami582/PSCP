@@ -93,6 +93,7 @@ offset_bottom = 583.0
 texture_normal = ExtResource("5_3ikxw")
 
 [node name="Next_Button" type="TextureButton" parent="."]
+visible = false
 offset_left = 255.0
 offset_top = 389.0
 offset_right = 684.0
@@ -101,7 +102,6 @@ texture_normal = ExtResource("8_bwayr")
 stretch_mode = 0
 
 [node name="Battle_Button" type="TextureButton" parent="."]
-visible = false
 offset_left = 192.0
 offset_top = 345.0
 offset_right = 330.0
@@ -119,7 +119,7 @@ icon = ExtResource("5_ekfnk")
 flat = true
 expand_icon = true
 
-[node name="Label" type="Label" parent="."]
+[node name="Level" type="Label" parent="."]
 _import_path = NodePath("")
 unique_name_in_owner = false
 process_mode = 0
@@ -217,13 +217,13 @@ visible = false
 
 [node name="Monster" type="Sprite2D" parent="Monster_control"]
 editor_description = "Need change"
+visible = false
 texture_filter = 6
 position = Vector2(523, 202)
 scale = Vector2(0.5196246, 0.5081659)
 texture = ExtResource("8_vf5ng")
 
 [node name="dead_panel" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Panel" type="Panel" parent="dead_panel"]
 anchors_preset = 8
