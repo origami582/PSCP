@@ -319,7 +319,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8qtwp")
 
-[node name="Continew" type="Button" parent="Setting"]
+[node name="Back button" type="Button" parent="Setting"]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -333,8 +333,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_qe12f")
 theme_override_font_sizes/font_size = 40
-text = "Continew
-"
+text = "Back"
 
 [node name="Setting" type="Label" parent="Setting"]
 offset_left = 156.0
@@ -379,5 +378,5 @@ autoplay = true
 [connection signal="pressed" from="Level_select/Medium" to="." method="_on_medium_pressed"]
 [connection signal="pressed" from="Level_select/Hard" to="." method="_on_hard_pressed"]
 [connection signal="pressed" from="Level_select/close_button" to="." method="_on_closepop_pressed"]
-[connection signal="pressed" from="Setting/Continew" to="." method="_on_continew_pressed"]
+[connection signal="pressed" from="Setting/Back button" to="." method="_on_continew_pressed"]
 [connection signal="value_changed" from="Setting/Setting/HSlider" to="." method="_on_music_changed"]
