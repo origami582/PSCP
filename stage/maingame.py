@@ -40,7 +40,7 @@ class maingame(Control):
 			case 'monster_encounter':
 				# Still need monster randomization
 				print('monster')
-				self.get_tree().change_scene_to_file("res://stage/combat_scene/combat.tscn")
+				self.get_tree().change_scene_to_file("res://stage/combat_scene/combat_scene.tscn")
 				self.get_node("Flee_Button").visible = False
 				self.get_node("Next_Button").visible = False
 				self.get_node("Battle_Button").visible = True
