@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://80o0vrx8ov3h"]
+[gd_scene load_steps=8 format=3 uid="uid://80o0vrx8ov3h"]
 
+[ext_resource type="Script" path="res://stage/combat_scene/combat_scene.py" id="1_601pc"]
 [ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Background/Background.png" id="1_j8b3c"]
 [ext_resource type="Texture2D" uid="uid://dj12ttrjw3ksc" path="res://img/Enemies/sento_m8.png" id="2_estmv"]
 [ext_resource type="Script" path="res://stage/combat_scene/monster.py" id="3_estmv"]
@@ -8,6 +9,34 @@
 [ext_resource type="Script" path="res://stage/combat_scene/attack_button.py" id="5_it1vf"]
 
 [node name="Node2D" type="Node2D"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = 0
+light_mask = 1
+visibility_layer = 1
+z_index = 0
+z_as_relative = true
+y_sort_enabled = false
+texture_filter = 0
+texture_repeat = 0
+use_parent_material = false
+position = Vector2(0, 0)
+rotation = 0.0
+scale = Vector2(1, 1)
+skew = 0.0
+script = ExtResource("1_601pc")
 
 [node name="Background" type="TextureRect" parent="."]
 z_index = -4096
@@ -154,4 +183,4 @@ text_direction = 0
 language = ""
 script = ExtResource("5_it1vf")
 
-[connection signal="pressed" from="Attack" to="Attack" method="_on_pressed"]
+[connection signal="pressed" from="Attack" to="." method="_on_attack_pressed"]
