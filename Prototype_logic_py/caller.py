@@ -2,11 +2,11 @@
 import random_events
 
 events = {
-    "monster_encounter": 60,
-    "treasure_chest": 40,
-    # "trap": 30,
-    # "friendly_npc": 10,
-    # "rest_stop": 5,
+	"monster_encounter": 60,
+	"treasure_chest": 40,
+	# "trap": 30,
+	# "friendly_npc": 10,
+	# "rest_stop": 5,
 }
 
 selected = random_events.pick_random_event(events)

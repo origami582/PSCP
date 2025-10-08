@@ -1,1 +1,2 @@
-res://main_menu.tscn
+res://stage/combat_scene/combat_scene.tscn
+res://stage/combat_scene/attack_button.py

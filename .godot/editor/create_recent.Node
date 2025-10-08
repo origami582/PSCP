@@ -1,5 +1,6 @@
-TextureButton
+Button
 Sprite2D
+TextureButton
 CanvasLayer
 Control
 Container
