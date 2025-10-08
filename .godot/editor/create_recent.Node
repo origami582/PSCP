@@ -1,6 +1,7 @@
-Button
-Sprite2D
+ProgressBar
+Label
 TextureButton
+Sprite2D
 CanvasLayer
 Control
 Container

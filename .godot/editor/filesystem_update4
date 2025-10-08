@@ -1,2 +1,3 @@
-res://stage/combat_scene/combat_scene.tscn
-res://stage/combat_scene/attack_button.py
+res://stage/stage1.tscn
+res://stage/Level.py
+res://stage/exp.py
