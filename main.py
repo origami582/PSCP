@@ -17,7 +17,7 @@ class main(Control):
 		#open popup
 		self.get_node("Level_select").visible = True
 		Globals.hp = 100
-		strength = 10
+		Globals.strength = 10
 		
 	def _on_Continew_pressed(self):
 		#pass

@@ -6,6 +6,7 @@ from py4godot.classes.Label import Label
 
 @gdclass
 class combat_scene(Control):
+	Cuurent_HP = Monster.slime_hp
 	def _on_button_pressed(self):		#button pressed to attack monster
 		if Monster.slime_hp <= 0:		#check monster hp for change scence
 			print("Monster Defeated")
@@ -16,5 +17,5 @@ class combat_scene(Control):
 			print(f"Total EXP: {Globals.exp_total}")
 			self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
 		Monster.slime_hp -= Globals.strength		#damage
-		Cuurent_HP = Monster.slime_hp
-		print(f"HP remainig: {Cuurent_HP}")
+		combat_scene.Cuurent_HP = Monster.slime_hp
+		print(f"HP remainig: {combat_scene.Cuurent_HP}")
