@@ -17,4 +17,4 @@ class combat_scene(Control):
 			self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
 		Monster.slime_hp -= Globals.strength		#damage
 		Cuurent_HP = Monster.slime_hp
-		print(Cuurent_HP)
+		print(f"HP remainig: {Cuurent_HP}")

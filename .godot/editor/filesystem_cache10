@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1759953135
+::res://::1759956235
 icon.svg::CompressedTexture2D/CompressedTexture2D::8365038792927059551::1759783748::1759783748::1::::<><><>0<>0<>0176cf9c6e8990b7be86bee517bca520<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 Level.py::PyScriptExtension::-1::1759783743::0::1::::<><><>0<>0<><>::
 LICENSE.md::TextFile::-1::1759783743::0::1::::<><><>0<>0<><>::
@@ -88,22 +88,23 @@ random_events.py::PyScriptExtension::-1::1759852091::0::1::::<><><>0<>0<><>::
 ::res://script/::1759866132
 ::res://Sound/::1759852091
 _    __.mp3::AudioStreamMP3::7600580456551018747::1759852091::1759852091::1::::<><><>0<>0<>83ea0b278c61d8c61e173763bd987bcc<>res://.godot/imported/_    __.mp3-e7d2fff4b4049b3bb8a96b2ed51bcb78.mp3str::
-::res://stage/::1759930142
+::res://stage/::1759955879
 __init__.py::PyScriptExtension::-1::1759783748::0::1::::<><><>0<>0<><>::
 Button2.py::PyScriptExtension::-1::1759783748::0::1::::<><><>0<>0<><>::
 charactor.py::PyScriptExtension::-1::1759861370::0::1::::<><><>0<>0<><>::
 Level.py::PyScriptExtension::-1::1759929939::0::1::::<><><>0<>0<><>::
-maingame.py::PyScriptExtension::-1::1759930142::0::1::::<><><>0<>0<><>::
-main_menu.tscn::PackedScene::5660212921624415985::1759930104::0::1::::<><><>0<>0<><>::res://main.py<>uid://dh1e1hmltgft6::::res://font/PixelMplus12-Regular.ttf<>uid://c3xq2g0h1idc6::::res://font/TA 8 bit.otf<>res://Level.py<>res://UI/LEVEL.py<>uid://bvvhka477bxcl::::res://img/Background/BG1_dungeonsotoN.png<>uid://dgj1pj2p1ir60::::res://Sound/_    __.mp3
+maingame.py::PyScriptExtension::-1::1759954865::0::1::::<><><>0<>0<><>::
+main_menu.tscn::PackedScene::5660212921624415985::1759954244::0::1::::<><><>0<>0<><>::res://main.py<>uid://dh1e1hmltgft6::::res://font/PixelMplus12-Regular.ttf<>uid://c3xq2g0h1idc6::::res://font/TA 8 bit.otf<>res://Level.py<>res://UI/LEVEL.py<>uid://bvvhka477bxcl::::res://img/Background/BG1_dungeonsotoN.png<>uid://dgj1pj2p1ir60::::res://Sound/_    __.mp3
 random_events.py::PyScriptExtension::-1::1759852091::0::1::::<><><>0<>0<><>::
-stage1.tscn::PackedScene::7289950682809830993::1759929939::0::1::::<><><>0<>0<><>::res://stage/maingame.py<>uid://dd846kfv6n6bx::::res://img/Background/Background.png<>uid://cgraxhlwf7k7g::::res://img/Chu.png<>uid://net6eb56261a::::res://img/Overlay_Textures/dungeon0_base.png<>uid://bg5termtb5hyc::::res://img/Buttons/dungeon0_flee.png<>uid://dd2nxf1vyo2l8::::res://img/Back_Arrow.png<>uid://qtpe31n1naif::::res://font/PixelifySans-VariableFont_wght.ttf<>uid://ce1neujqiuv2m::::res://img/Buttons/omoide2_1battle.png<>uid://bg3iw3mviox0t::::res://img/Buttons/dungeon0_go.png<>uid://dh1e1hmltgft6::::res://font/PixelMplus12-Regular.ttf<>uid://ditq7phywajbl::::res://img/Enemies/sento_m27.png<>res://stage/Level.py
-::res://stage/__pycache__/::1759931477
-::res://stage/combat_scene/::1759931522
-combat_scene.py::PyScriptExtension::-1::1759931461::0::1::::<><><>0<>0<><>::
-combat_scene.tscn::PackedScene::2368737096994633395::1759931522::0::1::::<><><>0<>0<><>::res://stage/combat_scene/combat_scene.py<>uid://dd846kfv6n6bx::::res://img/Background/Background.png<>uid://dj12ttrjw3ksc::::res://img/Enemies/sento_m8.png<>res://stage/combat_scene/monster.py<>uid://cgraxhlwf7k7g::::res://img/Chu.png
-monster.py::PyScriptExtension::-1::1759929223::0::1::::<><><>0<>0<><>::
-monster_stat.py::PyScriptExtension::-1::1759929194::0::1::::<><><>0<>0<><>::
-::res://stage/combat_scene/__pycache__/::1759931477
+stage1.tscn::PackedScene::7289950682809830993::1759955879::0::1::::<><><>0<>0<><>::res://stage/maingame.py<>uid://dd846kfv6n6bx::::res://img/Background/Background.png<>uid://cgraxhlwf7k7g::::res://img/Chu.png<>uid://net6eb56261a::::res://img/Overlay_Textures/dungeon0_base.png<>uid://bg5termtb5hyc::::res://img/Buttons/dungeon0_flee.png<>uid://dd2nxf1vyo2l8::::res://img/Back_Arrow.png<>uid://qtpe31n1naif::::res://font/PixelifySans-VariableFont_wght.ttf<>uid://ce1neujqiuv2m::::res://img/Buttons/omoide2_1battle.png<>uid://bg3iw3mviox0t::::res://img/Buttons/dungeon0_go.png<>uid://dh1e1hmltgft6::::res://font/PixelMplus12-Regular.ttf<>uid://ditq7phywajbl::::res://img/Enemies/sento_m27.png<>res://stage/Level.py
+::res://stage/__pycache__/::1759954865
+::res://stage/combat_scene/::1759956061
+combat_scene.py::PyScriptExtension::-1::1759955913::0::1::::<><><>0<>0<><>::
+combat_scene.tscn::PackedScene::2368737096994633395::1759956061::0::1::::<><><>0<>0<><>::res://stage/combat_scene/combat_scene.py<>uid://dd846kfv6n6bx::::res://img/Background/Background.png<>uid://dj12ttrjw3ksc::::res://img/Enemies/sento_m8.png<>res://stage/combat_scene/monster.py<>uid://cgraxhlwf7k7g::::res://img/Chu.png<>uid://ce1neujqiuv2m::::res://img/Buttons/omoide2_1battle.png<>res://stage/combat_scene/HP_monster_label.py
+HP_monster_label.py::PyScriptExtension::-1::1759956050::0::1::::<><><>0<>0<><>::
+monster.py::PyScriptExtension::-1::1759956030::0::1::::<><><>0<>0<><>::
+monster_stat.py::PyScriptExtension::-1::1759956030::0::1::::<><><>0<>0<><>::
+::res://stage/combat_scene/__pycache__/::1759956050
 ::res://UI/::1759783743
 LEVEL.py::PyScriptExtension::-1::1759783743::0::1::::<><><>0<>0<><>::
 Level.tscn::PackedScene::6812561648204145828::1759783743::0::1::::<><><>0<>0<><>::res://UI/level.gd<>uid://c3xq2g0h1idc6::::res://font/TA 8 bit.otf<>res://UI/LEVEL.py
