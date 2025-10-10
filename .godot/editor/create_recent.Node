@@ -1,7 +1,7 @@
-Label
 Button
-ProgressBar
 TextureButton
+Label
+ProgressBar
 Sprite2D
 CanvasLayer
 Control

@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4cb5ov2b2t3y"]
+[gd_scene load_steps=3 format=3 uid="uid://c4cb5ov2b2t3y"]
 
-[ext_resource type="Script" path="res://UI/level.gd" id="1_ipxv0"]
 [ext_resource type="FontFile" uid="uid://c3xq2g0h1idc6" path="res://font/TA 8 bit.otf" id="1_jn2ws"]
 [ext_resource type="Script" path="res://UI/LEVEL.py" id="2_4om7d"]
 
@@ -11,7 +10,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ipxv0")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 _import_path = NodePath("")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dt2xcisrtlom2"
-path="res://.godot/imported/Chu.png-2ab812f7bbe86915023ce9f1ec5b1f50.ctex"
+uid="uid://cdgx0bl4aj7jv"
+path="res://.godot/imported/dungeon0_exit.png-6e4bfc7f020c5608f996b6d284fb364b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Chu.png"
-dest_files=["res://.godot/imported/Chu.png-2ab812f7bbe86915023ce9f1ec5b1f50.ctex"]
+source_file="res://img/Buttons/dungeon0_exit.png"
+dest_files=["res://.godot/imported/dungeon0_exit.png-6e4bfc7f020c5608f996b6d284fb364b.ctex"]
 
 [params]
 
