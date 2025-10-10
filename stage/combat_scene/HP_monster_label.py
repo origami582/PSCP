@@ -15,4 +15,4 @@ class HP_monster_label(Label):
 	
 	def update_level(self):
 		#print update_level
-		self.text = f"Slime HP remaining: {combat_scene.Cuurent_HP}"
+		self.text = f"HP remaining: {combat_scene.Cuurent_HP}"
