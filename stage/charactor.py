@@ -2,7 +2,8 @@ from py4godot.classes import gdclass
 
 @gdclass
 class Globals:
-	hp = 100
+	max_hp = None
+	actual_hp = None
 	strength = 10
 
 	level = 1
@@ -19,6 +20,8 @@ class Globals:
 	@staticmethod
 	def init_character():
 		Globals.level = 1
+		Globals.max_hp = 100
+		Globals.actual_hp = Globals.max_hp
 		Globals.exp = 0
 		Globals.exp_total = 0
 		Globals.exp_req = Globals.get_req_exp(Globals.level + 1)
@@ -38,9 +41,18 @@ class Globals:
 		Globals.exp_req = Globals.get_req_exp(Globals.level + 1)
 	
 	@staticmethod
-	def skip_penalty():
+	def flee_penalty():
 		# HP reduction
 		print("Penalized")		# Debug
-		Globals.hp -= 10
-		return Globals.hp
-		
+		remaining_hp = Globals.max_hp
+		if remaining_hp >= 20:		# Penalize by 25% of current hp if hp >= 20
+			print("penalty 1")	# Debug
+			penalty = int(Globals.actual_hp * ((25/100)))
+			Globals.actual_hp -= penalty
+		else:		# Penalize by constant when hp is lower than 20 for more strategic thinking
+			print("Penalty 2")	# Debug
+			penalty = 5		# need adjustment based on deficulty level later
+			Globals.actual_hp -= penalty
+		if Globals.actual_hp < 0:
+			Globals.actual_hp = 0
+		return Globals.actual_hp
