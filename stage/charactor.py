@@ -12,6 +12,9 @@ class Globals:
 	exp_req = 0
 	# new
 	difficult = 1
+	#
+	room = 1
+	floor = 1
 
 	@staticmethod
 	def get_req_exp(level):

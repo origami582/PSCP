@@ -23,6 +23,7 @@ class combat_scene(Control):
 		if Monster.slime_hp <= 0:		#check monster hp for change scence
 			print("Monster Defeated")
 			print(f"You gained 50 EXP!!!")
+			Globals.room += 1
 			Globals.gain_exp(50)		#Gained EXP after defeated monster
 			# Status report will always trigger after returning to maingame (stage1.tscn) :)
 			self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
