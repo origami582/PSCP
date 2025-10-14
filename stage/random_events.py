@@ -17,8 +17,8 @@ class random_event_picker:
 	STANDARD_ENCOUNTER_POOL = {
 		# Encounter structure is:
 		# 'Encounter name': probability(int, float)
-		"slime": 60,
-		'goblin': 50
+		"slime": 100,
+		'goblin': 0
 		# Add more encounters here
 	}
 	@staticmethod
