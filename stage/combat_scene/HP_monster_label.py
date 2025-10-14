@@ -4,16 +4,12 @@ from py4godot.classes.Label import Label
 
 @gdclass
 class HP_monster_label(Label):
-	combat_scene_node: object = None
+	def __init__(self):
+		self.text = ""
 
 	def _ready(self):
-		# Get the parent node, which is the combat_scene.
-		self.combat_scene_node = self.get_parent()
-		self.update_hp_label()
+		# The label starts empty. It will be updated by a signal.
+		self.text = ""
 
-	def update_hp_label(self):
-		"""Updates the label's text. This is called by combat_scene."""
-		# Check if the monster exists to avoid errors.
-		if self.combat_scene_node and self.combat_scene_node.monster:
-			monster = self.combat_scene_node.monster
-			self.text = f"Monster HP: {int(monster.hp)} / {int(monster.max_hp)}"
+	def _on_monster_hp_changed(self, current_hp: int, max_hp: int):
+		self.text = f"Monster HP: {current_hp} / {max_hp}"
