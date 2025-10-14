@@ -5,3 +5,4 @@ addons/py4godot/cpython-3.12.4-linuxarm64
 addons/py4godot/cpython-3.12.4-linux64
 addons/py4godot/cpython-3.12.4-darwin64
 *.pyc
+*.exe
