@@ -1,0 +1,5 @@
+res://stage/combat_scene/combat_scene.py
+res://stage/combat_scene/HP_monster_label.py
+res://stage/combat_scene/Monster_HP_Label.gd
+res://stage/combat_scene/combat_scene.tscn
+res://stage/combat_scene/hp_monster.gd
