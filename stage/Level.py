@@ -5,13 +5,13 @@ from .charactor import Globals
 
 @gdclass
 class Level(Label):
-	def _ready(self):
-		self.update_level()
+    def _ready(self):
+        self.update_level()
 
-	def _process(self, delta):
-		#loop print update_level
-		self.update_level()
+    def _process(self, delta):
+        #loop print update_level
+        self.update_level()
 
-	def update_level(self):
-		#print update_level
-		self.text = f"Level: {Globals.level}"
+    def update_level(self):
+        #print update_level
+        self.text = f"Level: {Globals.level}"
