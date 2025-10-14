@@ -5,7 +5,7 @@ from ..charactor import Globals
 from py4godot.classes.Label import Label
 from ..maingame import maingame
 from ..random_events import random_event_picker
-
+from .HP_monster_label import HP_monster_label
 
 @gdclass
 class combat_scene(Control):
@@ -13,9 +13,11 @@ class combat_scene(Control):
 		self.get_node("Attack_Button").disabled = False
 		self.get_node("Flee_Button").disabled = False
 		self.get_node("dead_screen").visible = False
-		# Randomly pick monster from avaliable pool and change here
-		self.pick_monster()
 
+		self.hp_label = self.get_node("HP_monster")
+		# Randomly pick monster from available pool and create an instance
+		selected_encounter = self.pick_monster()
+		self.monster = Monster().setup_monster(selected_encounter)
 
 	def player_died(self):
 		'''call this function when player is dead'''
@@ -25,22 +27,25 @@ class combat_scene(Control):
 
 	def pick_monster(self):
 		'''picking random monster and display on screen'''
+		# Picking which monster encounter
 		selected_encounter = random_event_picker.pick_random_encounter()
-		print(selected_encounter)	# Debug
+		print(f"Encountering: {selected_encounter}")	# Debug
+		return selected_encounter
 
-
-	Cuurent_HP = Monster.slime_hp
 	def _on_attack_button_pressed(self):        #button pressed to attack monster
-		if Monster.slime_hp <= 0:       #check monster hp for change scence
+		# Player attacks monster
+		self.monster.take_damage(Globals.strength)
+
+		if self.monster.is_dead:
 			print("Monster Defeated")
-			print(f"You gained 50 EXP!!!")
+			print(f"You gained {self.monster.exp_reward} EXP!!!")
 			Globals.room += 1
-			Globals.gain_exp(50)        #Gained EXP after defeated monster
+			Globals.gain_exp(self.monster.exp_reward) # Gained EXP after defeating monster
 			# Status report will always trigger after returning to maingame (stage1.tscn) :)
 			self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
-		Monster.slime_hp -= Globals.strength        #damage
-		combat_scene.Cuurent_HP = Monster.slime_hp
-		print(f"HP remainig: {combat_scene.Cuurent_HP}")
+		else:
+			# Monster is not dead, it's their turn to attack! (We can add this logic here)
+			print("Monster Attack!")
 
 	def _on_flee_button_pressed(self):
 		remain_hp = Globals.flee_penalty()
