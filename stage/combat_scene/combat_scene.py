@@ -1,23 +1,32 @@
 from py4godot.classes import gdclass
+from py4godot.methods import private
 from py4godot.classes.Control import Control
-from .monster import Monster
-from ..charactor import Globals
 from py4godot.classes.Label import Label
+from py4godot.signals import signal, SignalArg
+from ..charactor import Globals
 from ..maingame import maingame
 from ..random_events import random_event_picker
+from .monster import Monster
 from .HP_monster_label import HP_monster_label
 
 @gdclass
 class combat_scene(Control):
-	def _ready(self):
+	# Define the signal at the class level so the Godot editor can see it.
+	monster_hp_changed = signal([SignalArg("current_hp", int), SignalArg("max_hp", int)])
+	def _ready(self) -> None:
+		# Connect the signal to the label's update method.
+		# Make sure your HP_monster_label node is named "HP_monster_label" in the scene.
+		self.monster_hp_changed.connect(self.get_node("HP_monster_label").on_monster_hp_changed)
 		self.get_node("Attack_Button").disabled = False
 		self.get_node("Flee_Button").disabled = False
 		self.get_node("dead_screen").visible = False
 
-		self.hp_label = self.get_node("HP_monster")
 		# Randomly pick monster from available pool and create an instance
 		selected_encounter = self.pick_monster()
 		self.monster = Monster().setup_monster(selected_encounter)
+
+		# Emit the signal with the initial HP values
+		self.monster_hp_changed.emit(self.monster.hp, self.monster.max_hp)
 
 	def player_died(self):
 		'''call this function when player is dead'''
@@ -32,9 +41,12 @@ class combat_scene(Control):
 		print(f"Encountering: {selected_encounter}")	# Debug
 		return selected_encounter
 
-	def _on_attack_button_pressed(self):        #button pressed to attack monster
+	def _on_attack_button_pressed(self) -> None:
 		# Player attacks monster
 		self.monster.take_damage(Globals.strength)
+
+		# Emit the signal with the new HP values
+		self.monster_hp_changed.emit(self.monster.hp, self.monster.max_hp)
 
 		if self.monster.is_dead:
 			print("Monster Defeated")
