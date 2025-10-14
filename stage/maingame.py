@@ -32,7 +32,7 @@ class maingame(Control):
 		print(selected_event)       # Debug
 		match selected_event:
 			case 'monster_encounter':
-				# Still need monster randomization
+				# Change to combat scene
 				print('monster')
 				self.get_tree().change_scene_to_file("res://stage/combat_scene/combat_scene.tscn")
 			case 'treasure_chest':
