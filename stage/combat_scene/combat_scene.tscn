@@ -53,7 +53,6 @@ rotation = 0.0
 scale = Vector2(1, 1)
 skew = 0.0
 script = ExtResource("1_601pc")
-Cuurent_HP = 0
 
 [node name="Background" type="TextureRect" parent="."]
 z_index = -4096

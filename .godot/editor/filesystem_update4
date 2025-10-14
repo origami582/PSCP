@@ -1,5 +1,6 @@
-res://stage/stage1.tscn
-res://stage/charactor.py
-res://stage/maingame.py
-res://stage/room.py
 res://stage/combat_scene/combat_scene.py
+res://stage/combat_scene/monster.py
+res://stage/combat_scene/combat_scene.tscn
+res://stage/combat_scene/monster_stat.py
+res://stage/combat_scene/HP_monster_label.py
+res://stage/maingame.py
