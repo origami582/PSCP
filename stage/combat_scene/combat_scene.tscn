@@ -61,7 +61,7 @@ offset_bottom = 648.0
 texture = ExtResource("1_j8b3c")
 expand_mode = 1
 
-[node name="slime" type="Sprite2D" parent="."]
+[node name="Monster" type="Sprite2D" parent="."]
 _import_path = NodePath("")
 unique_name_in_owner = false
 process_mode = 0
@@ -193,7 +193,7 @@ accessibility_described_by_nodes = Array[NodePath]([])
 accessibility_labeled_by_nodes = Array[NodePath]([])
 accessibility_flow_to_nodes = Array[NodePath]([])
 theme_type_variation = &""
-text = ""
+text = "Floating Text here"
 horizontal_alignment = 0
 vertical_alignment = 0
 autowrap_mode = 0
@@ -266,6 +266,7 @@ label_settings = SubResource("LabelSettings_pjunm")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[connection signal="monster_hp_changed" from="." to="HP_monster" method="_on_monster_hp_changed"]
 [connection signal="pressed" from="Attack_Button" to="." method="_on_attack_button_pressed"]
 [connection signal="pressed" from="Flee_Button" to="." method="_on_flee_button_pressed"]
 [connection signal="pressed" from="dead_screen/dead_screen_panel/died_back_to_menu" to="." method="_on_died_back_to_menu_pressed"]
