@@ -9,9 +9,9 @@ class random_event_picker:
 	STANDARD_EVENT_POOL = {
 		# Event structure is:
 		# 'Event name' : probability(int, float)
-		"monster_encounter": 60,
-		"treasure_chest": 30,
-		"rest_stop": 10
+		"monster_encounter": 50,
+		"treasure_chest": 50,
+		"rest_stop": 0
 		# Add more events here
 	}
 	STANDARD_ENCOUNTER_POOL = {
@@ -21,6 +21,7 @@ class random_event_picker:
 		'goblin': 0
 		# Add more encounters here
 	}
+
 	@staticmethod
 	def pick_random_event(event_pool: dict = None) -> str:
 		"""
@@ -64,3 +65,5 @@ class random_event_picker:
 
 		chosen_encounter = random.choices(encounter, weights=weights, k=1)[0]
 		return chosen_encounter
+
+	# maybe should add card randomizer here
