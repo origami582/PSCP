@@ -20,10 +20,12 @@ class maingame(Control):
 
 	def status_update(self):
 		'''for unify debuging purpose'''
+		print("\n-------------------------------------")
 		print(f"Level: {Globals.level}")
 		print(f"HP: {Globals.actual_hp}/{Globals.max_hp}")
 		print(f"EXP: {Globals.exp}/{Globals.exp_req}")
 		print(f"Total EXP: {Globals.exp_total}")
+		print("-------------------------------------\n")
 
 	# Possibly the heart of the game sit here in this function
 	def _on_next_pressed(self):
@@ -38,6 +40,7 @@ class maingame(Control):
 			case 'treasure_chest':
 				print('treasure')
 				# Change scene to tresure chest
+				self.get_tree().change_scene_to_file("res://stage/treasure_scene/treasure_scene.tscn")
 			case 'rest_stop':
 				print('rest_stop')
 				# Change scene to rest stop

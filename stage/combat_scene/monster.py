@@ -18,8 +18,10 @@ class Monster:
 
 	def debug_report(self):
 		'''for unify debuging purpose'''
+		print("\n-------------------------------------")
 		print(f"Monster Type: {self.monster_type}")
 		print(f"HP: {self.hp}/{self.max_hp}")
+		print("-------------------------------------\n")
 
 	def setup_monster(self, monster_type:str):
 		'''Setup a monster'''
@@ -52,5 +54,3 @@ class Monster:
 	@property
 	def is_dead(self):
 		return self.hp <= 0
-
-	### print(f"Slime HP: {slime_hp}")		# Debug print
