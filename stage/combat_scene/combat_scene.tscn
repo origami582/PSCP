@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://80o0vrx8ov3h"]
+[gd_scene load_steps=15 format=3 uid="uid://80o0vrx8ov3h"]
 
 [ext_resource type="Script" path="res://stage/combat_scene/combat_scene.py" id="1_601pc"]
 [ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Background/Background.png" id="1_j8b3c"]
 [ext_resource type="Texture2D" uid="uid://dj12ttrjw3ksc" path="res://img/Enemies/sento_m8.png" id="2_estmv"]
+[ext_resource type="Texture2D" uid="uid://xob4ygnoylmu" path="res://img/Overlay_Textures/dungeon0_baseT.png" id="3_4pwfs"]
 [ext_resource type="Texture2D" uid="uid://dt2xcisrtlom2" path="res://img/Chu.png" id="4_n3c6q"]
 [ext_resource type="Texture2D" uid="uid://ce1neujqiuv2m" path="res://img/Buttons/omoide2_1battle.png" id="6_estmv"]
 [ext_resource type="Script" uid="uid://bsw6oxfvctpbr" path="res://stage/combat_scene/hp_monster.gd" id="7_it1vf"]
@@ -58,6 +59,12 @@ z_index = -4096
 offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("1_j8b3c")
+expand_mode = 1
+
+[node name="Overlay" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("3_4pwfs")
 expand_mode = 1
 
 [node name="Monster" type="Sprite2D" parent="."]

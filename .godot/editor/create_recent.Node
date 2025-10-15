@@ -1,6 +1,7 @@
-Label
+TextureRect
 Button
 TextureButton
+Label
 ProgressBar
 Sprite2D
 CanvasLayer
@@ -11,4 +12,3 @@ AudioStreamPlayer
 AnimationTree
 AnimationPlayer
 CollisionShape2D
-CharacterBody2D
