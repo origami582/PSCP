@@ -5,6 +5,7 @@ from ..charactor import Globals
 from ..maingame import maingame
 from ..random_events import random_event_picker
 from .monster import Monster
+from py4godot.classes import Input
 
 @gdclass
 class combat_scene(Control):
@@ -12,6 +13,7 @@ class combat_scene(Control):
 		self.get_node("Attack_Button").disabled = False
 		self.get_node("Flee_Button").disabled = False
 		self.get_node("dead_screen").visible = False
+		self.get_node("Textbox").visible = False
 
 		# Get a reference to the label node
 		self.hp_label = self.get_node("HP_monster")
@@ -39,6 +41,12 @@ class combat_scene(Control):
 	def _on_attack_button_pressed(self) -> None:
 		# Player attacks monster
 		self.monster.take_damage(Globals.strength)
+		# Add Textbox here to use as swich turn
+		self.get_node("Textbox").visible = True
+		def _input(self, event):
+			if event.is_action_pressed("ui_accept"):
+				print("Text")
+				self.get_node("Textbox").visible = False
 
 		# Update the label with the new HP values
 		self.hp_label.call("update_hp", self.monster.hp, self.monster.max_hp)
@@ -67,3 +75,7 @@ class combat_scene(Control):
 
 	def _on_died_back_to_menu_pressed(self):
 		self.get_tree().change_scene_to_file("res://stage/main_menu.tscn")
+
+
+	def _on_textbox_hidden(self):
+		pass

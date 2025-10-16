@@ -1,7 +1,8 @@
-TextureRect
-Button
-TextureButton
 Label
+Panel
+Button
+TextureRect
+TextureButton
 ProgressBar
 Sprite2D
 CanvasLayer
@@ -11,4 +12,3 @@ HSlider
 AudioStreamPlayer
 AnimationTree
 AnimationPlayer
-CollisionShape2D

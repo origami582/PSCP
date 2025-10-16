@@ -1,11 +1,40 @@
-[gd_scene load_steps=5 format=3 uid="uid://bdeaj1vkixvub"]
+[gd_scene load_steps=6 format=3 uid="uid://bdeaj1vkixvub"]
 
+[ext_resource type="Script" path="res://stage/treasure_scene/treasure.py" id="1_c0vhm"]
 [ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Background/Background.png" id="1_gcyud"]
 [ext_resource type="Texture2D" uid="uid://net6eb56261a" path="res://img/Overlay_Textures/dungeon0_base.png" id="2_0kw27"]
 [ext_resource type="Texture2D" uid="uid://dt2xcisrtlom2" path="res://img/Chu.png" id="3_c0vhm"]
 [ext_resource type="Texture2D" uid="uid://cp5fv22vjrg24" path="res://img/Buttons/rysh_1_1.png" id="4_c0vhm"]
 
 [node name="Node2D" type="Node2D"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = 0
+light_mask = 1
+visibility_layer = 1
+z_index = 0
+z_as_relative = true
+y_sort_enabled = false
+texture_filter = 0
+texture_repeat = 0
+use_parent_material = false
+position = Vector2(0, 0)
+rotation = 0.0
+scale = Vector2(1, 1)
+skew = 0.0
+script = ExtResource("1_c0vhm")
 
 [node name="Background" type="TextureRect" parent="."]
 z_index = -4096
@@ -38,3 +67,12 @@ offset_bottom = 471.0
 icon = ExtResource("4_c0vhm")
 flat = true
 expand_icon = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = 357.0
+offset_top = 478.0
+offset_right = 516.0
+offset_bottom = 542.0
+text = "OPEN"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

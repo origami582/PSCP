@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://80o0vrx8ov3h"]
+[gd_scene load_steps=16 format=3 uid="uid://80o0vrx8ov3h"]
 
 [ext_resource type="Script" path="res://stage/combat_scene/combat_scene.py" id="1_601pc"]
 [ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Background/Background.png" id="1_j8b3c"]
@@ -23,6 +23,14 @@ base_font = ExtResource("10_g7ypw")
 [sub_resource type="LabelSettings" id="LabelSettings_pjunm"]
 font = ExtResource("9_4pwfs")
 font_size = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4pwfs"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
 
 [node name="Node2D" type="Node2D"]
 _import_path = NodePath("")
@@ -154,6 +162,22 @@ text = "You Died"
 label_settings = SubResource("LabelSettings_pjunm")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Textbox" type="Panel" parent="."]
+visible = false
+offset_left = 332.0
+offset_top = 362.0
+offset_right = 740.0
+offset_bottom = 560.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4pwfs")
+
+[node name="Text" type="Label" parent="Textbox"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 21.0
+offset_right = 148.0
+offset_bottom = 71.0
+text = "add text"
 
 [connection signal="pressed" from="Attack_Button" to="." method="_on_attack_button_pressed"]
 [connection signal="pressed" from="Flee_Button" to="." method="_on_flee_button_pressed"]

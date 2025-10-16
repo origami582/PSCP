@@ -1,5 +1,4 @@
 res://stage/treasure_scene/treasure_scene.tscn
-res://stage/maingame.py
-res://stage/backpack_scene/backpack_scene.tscn
-res://stage/combat_scene/hp_monster.gd
-res://stage/combat_scene/monster.py
+res://stage/treasure_scene/treasure.py
+res://stage/combat_scene/combat_scene.tscn
+res://stage/combat_scene/combat_scene.py
