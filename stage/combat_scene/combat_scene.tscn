@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://80o0vrx8ov3h"]
+[gd_scene load_steps=17 format=3 uid="uid://80o0vrx8ov3h"]
 
 [ext_resource type="Script" path="res://stage/combat_scene/combat_scene.py" id="1_601pc"]
 [ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Background/Background.png" id="1_j8b3c"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bg5termtb5hyc" path="res://img/Buttons/dungeon0_flee.png" id="7_n3c6q"]
 [ext_resource type="FontFile" uid="uid://dh1e1hmltgft6" path="res://font/PixelMplus12-Regular.ttf" id="9_4pwfs"]
 [ext_resource type="FontFile" uid="uid://qtpe31n1naif" path="res://font/PixelifySans-VariableFont_wght.ttf" id="10_g7ypw"]
+[ext_resource type="Script" path="res://stage/combat_scene/textpanel.py" id="11_g7ypw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gapb1"]
 bg_color = Color(0, 0, 0, 0.8509804)
@@ -164,7 +165,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Textbox" type="Panel" parent="."]
-visible = false
 offset_left = 332.0
 offset_top = 362.0
 offset_right = 740.0
@@ -172,12 +172,95 @@ offset_bottom = 560.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_4pwfs")
 
 [node name="Text" type="Label" parent="Textbox"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 2
+auto_translate_mode = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = 0
+light_mask = 1
+visibility_layer = 1
+z_index = 0
+z_as_relative = true
+y_sort_enabled = false
+texture_filter = 0
+texture_repeat = 0
+use_parent_material = false
+clip_contents = false
+custom_minimum_size = Vector2(0, 0)
+layout_direction = 0
 layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 offset_left = 24.0
 offset_top = 21.0
 offset_right = 148.0
 offset_bottom = 71.0
+grow_horizontal = 1
+grow_vertical = 1
+rotation = 0.0
+scale = Vector2(1, 1)
+pivot_offset = Vector2(0, 0)
+size_flags_horizontal = 1
+size_flags_vertical = 4
+size_flags_stretch_ratio = 1.0
+localize_numeral_system = true
+tooltip_text = ""
+tooltip_auto_translate_mode = 0
+focus_neighbor_left = NodePath("")
+focus_neighbor_top = NodePath("")
+focus_neighbor_right = NodePath("")
+focus_neighbor_bottom = NodePath("")
+focus_next = NodePath("")
+focus_previous = NodePath("")
+focus_mode = 0
+focus_behavior_recursive = 0
+mouse_filter = 2
+mouse_behavior_recursive = 0
+mouse_force_pass_scroll_events = true
+mouse_default_cursor_shape = 0
+accessibility_name = ""
+accessibility_description = ""
+accessibility_live = 0
+accessibility_controls_nodes = Array[NodePath]([])
+accessibility_described_by_nodes = Array[NodePath]([])
+accessibility_labeled_by_nodes = Array[NodePath]([])
+accessibility_flow_to_nodes = Array[NodePath]([])
+theme_type_variation = &""
 text = "add text"
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 0
+autowrap_trim_flags = 192
+justification_flags = 163
+paragraph_separator = "\\n"
+clip_text = false
+text_overrun_behavior = 0
+ellipsis_char = "…"
+uppercase = false
+tab_stops = PackedFloat32Array()
+lines_skipped = 0
+max_lines_visible = -1
+visible_characters = -1
+visible_characters_behavior = 0
+visible_ratio = 1.0
+text_direction = 0
+language = ""
+structured_text_bidi_override = 0
+structured_text_bidi_override_options = Array[NodePath]([])
+script = ExtResource("11_g7ypw")
 
 [connection signal="pressed" from="Attack_Button" to="." method="_on_attack_button_pressed"]
 [connection signal="pressed" from="Flee_Button" to="." method="_on_flee_button_pressed"]
