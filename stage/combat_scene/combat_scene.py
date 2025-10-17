@@ -41,12 +41,16 @@ class combat_scene(Control):
 	def _on_attack_button_pressed(self) -> None:
 		# Player attacks monster
 		self.monster.take_damage(Globals.strength)
-		# Add Textbox here to use as swich turn
+		self.get_node("Attack_Button").visible = False
+		self.get_node("Flee_Button").visible = False
+		# Add Textbox here to use as switch turn
 		self.get_node("Textbox").visible = True
 		def _input(self, event):
 			if event.is_action_pressed("ui_accept"):
 				print("Text")
 				self.get_node("Textbox").visible = False
+				self.get_node("Attack_Button").visible = True
+				self.get_node("Flee_Button").visible = True
 
 		# Update the label with the new HP values
 		self.hp_label.call("update_hp", self.monster.hp, self.monster.max_hp)

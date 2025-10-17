@@ -188,7 +188,6 @@ structured_text_bidi_override_options = Array[NodePath]([])
 script = ExtResource("9_an8mi")
 
 [node name="room" type="Label" parent="."]
-_import_path = NodePath("")
 unique_name_in_owner = false
 process_mode = 0
 process_priority = 0
