@@ -1,17 +1,19 @@
 from py4godot.classes import gdclass
 from py4godot.classes.Label import Label
-### idk where file about dmg mon
+from ..charactor import Globals
 from .monster import Monster
 
 @gdclass
 class textpanel(Label):
 	def _ready(self):
-		self.update_textpanel()
+		# You can set some default text or leave it blank
+		self.text = ""
 
-	def _process(self, delta):
-		#loop print update_textpanel
-		self.update_textpanel()
+	'''Development note:
+		There are absoluteky no need to waste every single frame to
+		update text panel with '_process()'
+	'''
 
-	def update_textpanel(self):
-		#print update_textpanel
-		self.text = f"test"
+	def show_player_attack(self, monster_name: str, damage: int):
+		"""Updates the label to show the player's attack."""
+		self.text = f"{monster_name} took {damage} damage!"

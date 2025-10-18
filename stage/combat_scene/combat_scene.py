@@ -20,7 +20,7 @@ class combat_scene(Control):
 
 		# Randomly pick monster from available pool and create an instance
 		selected_encounter = self.pick_monster()
-		self.monster = Monster().setup_monster(selected_encounter)
+		self.monster = Monster().setup_monster(monster_type=selected_encounter)
 
 		# Update the label with the initial HP values
 		self.hp_label.call("update_hp", self.monster.hp, self.monster.max_hp)
@@ -40,17 +40,16 @@ class combat_scene(Control):
 
 	def _on_attack_button_pressed(self) -> None:
 		# Player attacks monster
-		self.monster.take_damage(Globals.strength)
+		self.monster.take_damage(amount=Globals.strength)
 		self.get_node("Attack_Button").visible = False
 		self.get_node("Flee_Button").visible = False
-		# Add Textbox here to use as switch turn
-		self.get_node("Textbox").visible = True
-		def _input(self, event):
-			if event.is_action_pressed("ui_accept"):
-				print("Text")
-				self.get_node("Textbox").visible = False
-				self.get_node("Attack_Button").visible = True
-				self.get_node("Flee_Button").visible = True
+
+		# Get the textbox and its label, then update the text
+		textbox_node = self.get_node("Textbox")
+		textbox_node.get_node("Text").call("show_player_attack",\
+										  self.monster.monster_type,\
+											Globals.strength)
+		textbox_node.visible = True
 
 		# Update the label with the new HP values
 		self.hp_label.call("update_hp", self.monster.hp, self.monster.max_hp)
@@ -59,7 +58,7 @@ class combat_scene(Control):
 			print("Monster Defeated")
 			print(f"You gained {self.monster.exp_reward} EXP!!!")
 			Globals.room += 1
-			Globals.gain_exp(self.monster.exp_reward) # Gained EXP after defeating monster
+			Globals.gain_exp(amount=self.monster.exp_reward) # Gained EXP after defeating monster
 			# Status report will always trigger after returning to maingame (stage1.tscn) :)
 			self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
 		else:
@@ -80,6 +79,12 @@ class combat_scene(Control):
 	def _on_died_back_to_menu_pressed(self):
 		self.get_tree().change_scene_to_file("res://stage/main_menu.tscn")
 
+	def _input(self, event):
+			if event.is_action_pressed("ui_accept"):
+				print("Text")
+				self.get_node("Textbox").visible = False
+				self.get_node("Attack_Button").visible = True
+				self.get_node("Flee_Button").visible = True
 
 	def _on_textbox_hidden(self):
 		pass
