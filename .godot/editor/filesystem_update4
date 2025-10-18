@@ -3,3 +3,10 @@ res://stage/combat_scene/monster.py
 res://stage/combat_scene/combat_scene.tscn
 res://stage/combat_scene/textpanel.py
 res://stage/combat_scene/monster_stat.py
+res://stage/maingame.py
+res://main.py
+res://stage/Level.py
+res://stage/room.py
+res://stage/main_menu.tscn
+res://stage/player_stats.py
+res://stage/charactor.py
