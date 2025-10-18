@@ -1,7 +1,7 @@
 from py4godot.classes import gdclass
 from py4godot.classes.Control import Control
 from py4godot.classes.Label import Label
-from ..charactor import Globals
+from ..charactor import Character, Globals
 from ..maingame import maingame
 from ..random_events import random_event_picker
 from .monster import Monster
@@ -43,7 +43,7 @@ class combat_scene(Control):
 	def _on_attack_button_pressed(self) -> None:
 		"""Handles the event when the player's attack button is pressed."""
 		# Player attacks monster
-		self.monster.take_damage(amount=Globals.strength)
+		self.monster.take_damage(amount=Globals.player.strength)
 		self.get_node("Attack_Button").visible = False
 		self.get_node("Flee_Button").visible = False
 
@@ -51,7 +51,7 @@ class combat_scene(Control):
 		textbox_node = self.get_node("Textbox")
 		textbox_node.get_node("Text").call("show_player_attack",\
 										  self.monster.monster_type,\
-											Globals.strength)
+											Globals.player.strength)
 		textbox_node.visible = True
 
 		# Update the label with the new HP values
@@ -61,7 +61,7 @@ class combat_scene(Control):
 			print("Monster Defeated")
 			print(f"You gained {self.monster.exp_reward} EXP!!!")
 			Globals.room += 1
-			Globals.gain_exp(amount=self.monster.exp_reward) # Gained EXP after defeating monster
+			Globals.player.gain_exp(amount=self.monster.exp_reward) # Gained EXP after defeating monster
 			# Status report will always trigger after returning to maingame (stage1.tscn) :)
 			self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
 		else:
@@ -70,7 +70,7 @@ class combat_scene(Control):
 
 	def _on_flee_button_pressed(self):
 		"""Handles the event when the flee button is pressed."""
-		remain_hp = Globals.flee_penalty()
+		remain_hp = Globals.player.flee_penalty()
 		print(f"Debug player hp: {remain_hp}")
 		if remain_hp <= 0:
 			print("died")
@@ -87,7 +87,6 @@ class combat_scene(Control):
 	def _input(self, event):
 			"""Handles player input for advancing dialogue in the textbox."""
 			if event.is_action_pressed("ui_accept"):
-				print("Text")
 				self.get_node("Textbox").visible = False
 				self.get_node("Attack_Button").visible = True
 				self.get_node("Flee_Button").visible = True

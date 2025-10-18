@@ -13,18 +13,18 @@ class maingame(Control):
 		self.get_node("Back_Button").disabled = False
 		self.get_node("Next_Button").disabled = False
 		self.get_node("Return_Button").disabled = False
-		# ONLY initialize if the character hasn't been set up yet (a simple check)
-		if Globals.max_hp is None:
-			Globals.init_character()
+		# Initialize a new game/character if one doesn't already exist.
+		if Globals.player is None:
+			Globals.new_game()
 		self.status_update()
 
 	def status_update(self):
 		'''for unify debuging purpose'''
 		print("\n-------------------------------------")
-		print(f"Level: {Globals.level}")
-		print(f"HP: {Globals.actual_hp}/{Globals.max_hp}")
-		print(f"EXP: {Globals.exp}/{Globals.exp_req}")
-		print(f"Total EXP: {Globals.exp_total}")
+		print(f"Level: {Globals.player.level}")
+		print(f"HP: {Globals.player.actual_hp}/{Globals.player.max_hp}")
+		print(f"EXP: {Globals.player.exp}/{Globals.player.exp_req}")
+		print(f"Total EXP: {Globals.player.exp_total}")
 		print("-------------------------------------\n")
 
 	# Possibly the heart of the game sit here in this function
@@ -47,7 +47,7 @@ class maingame(Control):
 
 		# Only execute this block if the scene did NOT change
 		### --- Debug ---
-		Globals.gain_exp(50) # Assuming you gain EXP from non-combat events
+		Globals.player.gain_exp(amount=10) # Assuming you gain EXP from non-combat events
 		self.status_update() # Prints the HP *after* the non-combat event
 		### --- Debug ---
 
@@ -59,7 +59,7 @@ class maingame(Control):
 	def _on_skip_pressed(self):
 		print("skip")
 		#check difficult
-		print(Globals.difficult)
+		print(Globals.difficulty)
 		### Residue code block (Awaiting delete) ###
 
 	def _on_back_button_pressed(self):
