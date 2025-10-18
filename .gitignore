@@ -1,8 +1,22 @@
-/__pycache__
-__pycache__/
-addons/py4godot/cpython-3.12.4-windows64
-addons/py4godot/cpython-3.12.4-linuxarm64
-addons/py4godot/cpython-3.12.4-linux64
-addons/py4godot/cpython-3.12.4-darwin64
+# Godot-specific
+.godot/
+*.translation
+
+# Exported game files
 *.pyc
 *.exe
+*.pck
+
+# Python
+__pycache__/
+venv/
+.venv/
+
+# py4godot - CPython distributions
+addons/py4godot/cpython-3.12.4-windows64/
+addons/py4godot/cpython-3.12.4-linuxarm64/
+addons/py4godot/cpython-3.12.4-linux64/
+addons/py4godot/cpython-3.12.4-darwin64/
+
+# IDE-specific
+.vscode/
