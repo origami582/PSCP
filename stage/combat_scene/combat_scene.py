@@ -9,8 +9,10 @@ from py4godot.classes import Input
 
 @gdclass
 class combat_scene(Control):
+	"""Manages the combat sequence between the player and a monster."""
 	def _ready(self) -> None:
-		self.get_node("Attack_Button").disabled = False
+		"""Initializes the combat scene by setting up UI and spawning a monster."""
+		self.get_node("Attack_Button").disabled = False # type: ignore
 		self.get_node("Flee_Button").disabled = False
 		self.get_node("dead_screen").visible = False
 		self.get_node("Textbox").visible = False
@@ -26,19 +28,20 @@ class combat_scene(Control):
 		self.hp_label.call("update_hp", self.monster.hp, self.monster.max_hp)
 
 	def player_died(self):
-		'''call this function when player is dead'''
+		"""Disables combat buttons and shows the death screen."""
 		self.get_node("Attack_Button").disabled = True
 		self.get_node("Flee_Button").disabled = True
 		self.get_node("dead_screen").visible = True
 
 	def pick_monster(self):
-		'''picking random monster and display on screen'''
+		"""Picks a random monster from the encounter pool."""
 		# Picking which monster encounter
 		selected_encounter = random_event_picker.pick_random_encounter()
 		print(f"Encountering: {selected_encounter}")	# Debug
 		return selected_encounter
 
 	def _on_attack_button_pressed(self) -> None:
+		"""Handles the event when the player's attack button is pressed."""
 		# Player attacks monster
 		self.monster.take_damage(amount=Globals.strength)
 		self.get_node("Attack_Button").visible = False
@@ -66,6 +69,7 @@ class combat_scene(Control):
 			print("Monster Attack!")
 
 	def _on_flee_button_pressed(self):
+		"""Handles the event when the flee button is pressed."""
 		remain_hp = Globals.flee_penalty()
 		print(f"Debug player hp: {remain_hp}")
 		if remain_hp <= 0:
@@ -77,9 +81,11 @@ class combat_scene(Control):
 			self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
 
 	def _on_died_back_to_menu_pressed(self):
+		"""Handles returning to the main menu from the death screen."""
 		self.get_tree().change_scene_to_file("res://stage/main_menu.tscn")
 
 	def _input(self, event):
+			"""Handles player input for advancing dialogue in the textbox."""
 			if event.is_action_pressed("ui_accept"):
 				print("Text")
 				self.get_node("Textbox").visible = False
@@ -87,4 +93,5 @@ class combat_scene(Control):
 				self.get_node("Flee_Button").visible = True
 
 	def _on_textbox_hidden(self):
+		"""Callback for when the textbox is hidden (currently unused)."""
 		pass

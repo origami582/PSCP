@@ -1,10 +1,11 @@
 from py4godot.classes import gdclass
-'''
-Here store a master dictionary for every monsters stats e.g. hp scaler, atk damage scaler, etc.
-'''
+
 @gdclass	#monster base stat here to scale in monster cause we can't create var to keeo the scaled stat
 class Monster_stat:
-	'''A central data store for all monsters'''
+	"""
+	A static class that holds the master dictionary for all monster stats.
+	This acts as a central data store for monster blueprints.
+	"""
 	BASE_HP = 100
 
 	MONSTER_DATA = {

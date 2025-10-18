@@ -5,6 +5,7 @@ from .monster import Monster
 
 @gdclass
 class textpanel(Label):
+	"""A UI label for displaying combat text, like attack messages."""
 	def _ready(self):
 		# You can set some default text or leave it blank
 		self.text = ""

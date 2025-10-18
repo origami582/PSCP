@@ -2,3 +2,4 @@ res://stage/combat_scene/combat_scene.py
 res://stage/combat_scene/monster.py
 res://stage/combat_scene/combat_scene.tscn
 res://stage/combat_scene/textpanel.py
+res://stage/combat_scene/monster_stat.py

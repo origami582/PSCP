@@ -4,12 +4,13 @@ from .monster_stat import Monster_stat
 @gdclass
 class Monster:
 	"""
-	This will store a blueprint for a monster.
-	appearance(later), and state.
+	Represents a single monster instance in combat.
+	This class stores its type, stats, and current state.
 	"""
 	BASE_HP = 100
 
 	def __init__(self):
+		"""Initializes a new monster with default empty stats."""
 		self.monster_type:str = ''
 		self.hp:float = 0
 		self.max_hp:float = 0
@@ -17,14 +18,14 @@ class Monster:
 		self.exp_reward:int = 0
 
 	def debug_report(self):
-		'''for unify debuging purpose'''
+		"""Prints the current stats of the monster for debugging."""
 		print("\n-------------------------------------")
 		print(f"Monster Type: {self.monster_type}")
 		print(f"HP: {self.hp}/{self.max_hp}")
 		print("-------------------------------------\n")
 
 	def setup_monster(self, monster_type:str):
-		'''Setup a monster'''
+		"""Configures the monster's stats based on its type."""
 		self.monster_type = monster_type
 
 		if monster_type in Monster_stat.MONSTER_DATA:
@@ -42,6 +43,7 @@ class Monster:
 		return self
 
 	def take_damage(self, amount: int):
+		"""Reduces the monster's HP by a given amount."""
 		self.hp -= amount
 		if self.hp < 0:
 			self.hp = 0
@@ -53,4 +55,5 @@ class Monster:
 
 	@property
 	def is_dead(self):
+		"""Returns True if the monster's HP is 0 or less."""
 		return self.hp <= 0
