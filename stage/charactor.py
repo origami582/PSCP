@@ -64,6 +64,7 @@ class Globals:
 	difficulty = 1
 	room = 1
 	floor = 1
+	previous_scene_path = ""
 
 	@staticmethod
 	def new_game():
@@ -72,3 +73,6 @@ class Globals:
 		Globals.difficulty = 1
 		Globals.room = 1
 		Globals.floor = 1
+		Globals.previous_scene_path = ""
+
+	
