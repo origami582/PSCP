@@ -91,6 +91,12 @@ class combat_scene(Control):
 				self.get_node("Attack_Button").visible = True
 				self.get_node("Flee_Button").visible = True
 
+			# Check if the 'Press_B' action is pressed (mapped to 'B' key in Project Settings)
+			if event.is_action_pressed("Press_B"):
+				print("Debug: 'B' key pressed, chaning to backpack scene")
+				Globals.previous_scene_path = "res://stage/combat_scene/combat_scene.tscn"
+				self.get_tree().change_scene_to_file("res://stage/backpack_scene/backpack_scene.tscn")
+
 	def _on_textbox_hidden(self):
 		"""Callback for when the textbox is hidden (currently unused)."""
 		pass

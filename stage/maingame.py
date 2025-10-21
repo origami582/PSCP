@@ -18,6 +18,13 @@ class maingame(Control):
 			Globals.new_game()
 		self.status_update()
 
+	def _input(self, event):
+		# Check if the 'Press_B' action is pressed (mapped to 'B' key in Project Settings)
+			if event.is_action_pressed("Press_B"):
+				print("Debug: 'B' key pressed, chaning to backpack scene")
+				Globals.previous_scene_path = "res://stage/stage1.tscn"
+				self.get_tree().change_scene_to_file("res://stage/backpack_scene/backpack_scene.tscn")
+
 	def status_update(self):
 		'''for unify debuging purpose'''
 		print("\n-------------------------------------")
