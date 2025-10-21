@@ -1,11 +1,93 @@
-[gd_scene load_steps=2 format=3 uid="uid://cawfn7vhu6nku"]
+[gd_scene load_steps=4 format=3 uid="uid://cawfn7vhu6nku"]
 
 [ext_resource type="Texture2D" uid="uid://x6byjci325bg" path="res://img/Overlay_Textures/RS_N0_1baseS.png" id="1_8h6ve"]
+[ext_resource type="Script" path="res://stage/backpack_scene/backpack_scene.py" id="1_cqwot"]
+[ext_resource type="PackedScene" uid="uid://btws4a6lckvuf" path="res://stage/UI/cardslot.tscn" id="2_5psn5"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Backpack" type="Node2D"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = 0
+light_mask = 1
+visibility_layer = 1
+z_index = 0
+z_as_relative = true
+y_sort_enabled = false
+texture_filter = 0
+texture_repeat = 0
+use_parent_material = false
+position = Vector2(0, 0)
+rotation = 0.0
+scale = Vector2(1, 1)
+skew = 0.0
+script = ExtResource("1_cqwot")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
+z_index = -4096
 offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("1_8h6ve")
 expand_mode = 1
+
+[node name="Cards" type="CanvasLayer" parent="."]
+
+[node name="CardFlowContainer" type="FlowContainer" parent="Cards"]
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.079
+anchor_right = 0.86800003
+anchor_bottom = 0.721
+offset_top = -0.19200134
+offset_right = 0.063964844
+offset_bottom = -0.20800781
+grow_horizontal = 2
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 15
+
+[node name="CardSlot0" parent="Cards/CardFlowContainer" instance=ExtResource("2_5psn5")]
+layout_mode = 2
+
+[node name="CardSlot2" parent="Cards/CardFlowContainer" instance=ExtResource("2_5psn5")]
+layout_mode = 2
+
+[node name="CardSlot3" parent="Cards/CardFlowContainer" instance=ExtResource("2_5psn5")]
+layout_mode = 2
+
+[node name="CardSlot4" parent="Cards/CardFlowContainer" instance=ExtResource("2_5psn5")]
+layout_mode = 2
+
+[node name="CardSlot5" parent="Cards/CardFlowContainer" instance=ExtResource("2_5psn5")]
+layout_mode = 2
+
+[node name="CardSlot6" parent="Cards/CardFlowContainer" instance=ExtResource("2_5psn5")]
+layout_mode = 2
+
+[node name="CardSlot1" parent="Cards/CardFlowContainer" instance=ExtResource("2_5psn5")]
+layout_mode = 2
+
+[node name="CardSlot7" parent="Cards/CardFlowContainer" instance=ExtResource("2_5psn5")]
+layout_mode = 2
+
+[node name="CardSlot8" parent="Cards/CardFlowContainer" instance=ExtResource("2_5psn5")]
+layout_mode = 2
+
+[node name="CardSlot9" parent="Cards/CardFlowContainer" instance=ExtResource("2_5psn5")]
+layout_mode = 2
+
+[node name="CardSlot10" parent="Cards/CardFlowContainer" instance=ExtResource("2_5psn5")]
+layout_mode = 2
+
+[node name="CardSlot11" parent="Cards/CardFlowContainer" instance=ExtResource("2_5psn5")]
+layout_mode = 2
