@@ -25,4 +25,4 @@ class room(Label):
 		if Globals.room >= 10:
 			Globals.room = 1
 			Globals.floor += 1
-		self.text = f"Floot:{Globals.floor} Room: {Globals.room}"
+		self.text = f"Floor:{Globals.floor} Room: {Globals.room}"
