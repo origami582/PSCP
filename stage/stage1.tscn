@@ -5,15 +5,12 @@
 [ext_resource type="Texture2D" uid="uid://dt2xcisrtlom2" path="res://img/Chu.png" id="2_sp8fs"]
 [ext_resource type="Texture2D" uid="uid://net6eb56261a" path="res://img/Overlay_Textures/dungeon0_base.png" id="3_e7fe8"]
 [ext_resource type="Texture2D" uid="uid://cdgx0bl4aj7jv" path="res://img/Buttons/dungeon0_exit.png" id="5_bwayr"]
-[ext_resource type="Texture2D" uid="uid://dd2nxf1vyo2l8" path="res://img/Back_Arrow.png" id="5_ekfnk"]
-[ext_resource type="FontFile" uid="uid://qtpe31n1naif" path="res://font/PixelifySans-VariableFont_wght.ttf" id="6_6b4x6"]
+[ext_resource type="Texture2D" uid="uid://rcjc53x31xm1" path="res://img/Buttons/rysh_0base_7X.png" id="7_vf5ng"]
 [ext_resource type="Texture2D" uid="uid://bg3iw3mviox0t" path="res://img/Buttons/dungeon0_go.png" id="8_bwayr"]
+[ext_resource type="FontFile" uid="uid://cic7ggie57dq1" path="res://font/PixelMplus12-Bold.ttf" id="8_vf5ng"]
 [ext_resource type="Script" path="res://stage/Level.py" id="9_an8mi"]
+[ext_resource type="FontFile" uid="uid://x2aerthebyse" path="res://font/PixelMplus10-Bold.ttf" id="10_an8mi"]
 [ext_resource type="Script" path="res://stage/room.py" id="10_bwayr"]
-
-[sub_resource type="Environment" id="Environment_3ikxw"]
-background_mode = 3
-adjustment_contrast = 1.33
 
 [node name="Node2D" type="Node2D"]
 _import_path = NodePath("")
@@ -44,9 +41,6 @@ rotation = 0.0
 scale = Vector2(1, 1)
 skew = 0.0
 script = ExtResource("1_w447a")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_3ikxw")
 
 [node name="Background" type="TextureRect" parent="."]
 z_index = -4096
@@ -86,11 +80,11 @@ texture_normal = ExtResource("8_bwayr")
 stretch_mode = 0
 
 [node name="Back_Button" type="Button" parent="."]
-offset_left = 1050.0
-offset_top = -6.0
-offset_right = 1159.0
-offset_bottom = 104.0
-icon = ExtResource("5_ekfnk")
+offset_left = 1025.0
+offset_top = 597.0
+offset_right = 1154.0
+offset_bottom = 649.0
+icon = ExtResource("7_vf5ng")
 flat = true
 expand_icon = true
 
@@ -127,10 +121,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 6.0
-offset_top = 15.0
-offset_right = 240.0
-offset_bottom = 73.0
+offset_left = 9.0
+offset_top = 23.0
+offset_right = 243.0
+offset_bottom = 81.0
 grow_horizontal = 1
 grow_vertical = 1
 rotation = 0.0
@@ -162,9 +156,9 @@ accessibility_described_by_nodes = Array[NodePath]([])
 accessibility_labeled_by_nodes = Array[NodePath]([])
 accessibility_flow_to_nodes = Array[NodePath]([])
 theme_type_variation = &""
-theme_override_fonts/font = ExtResource("6_6b4x6")
+theme_override_fonts/font = ExtResource("8_vf5ng")
 theme_override_font_sizes/font_size = 35
-text = ""
+text = "Defualt"
 horizontal_alignment = 0
 vertical_alignment = 0
 autowrap_mode = 0
@@ -220,10 +214,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 2.0
-offset_top = 76.0
-offset_right = 238.0
-offset_bottom = 131.0
+offset_left = 9.0
+offset_top = 84.0
+offset_right = 245.0
+offset_bottom = 139.0
 grow_horizontal = 1
 grow_vertical = 1
 rotation = 0.0
@@ -255,7 +249,9 @@ accessibility_described_by_nodes = Array[NodePath]([])
 accessibility_labeled_by_nodes = Array[NodePath]([])
 accessibility_flow_to_nodes = Array[NodePath]([])
 theme_type_variation = &""
-text = ""
+theme_override_fonts/font = ExtResource("10_an8mi")
+theme_override_font_sizes/font_size = 18
+text = "Defualt"
 horizontal_alignment = 0
 vertical_alignment = 0
 autowrap_mode = 0
