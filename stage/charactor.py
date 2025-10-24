@@ -59,9 +59,12 @@ class Character:
 
 @gdclass
 class Globals:
-	"""A class for storing true global game state and singletons."""
+	"""
+	A class for storing true global game state and singletons.
+	This very much enable continue function!
+	"""
 	player: Character = None  # This will hold the instance of the player's Character
-	difficulty = 1
+	difficulty = 1.0
 	room = 1
 	floor = 1
 	previous_scene_path = ""
@@ -70,9 +73,7 @@ class Globals:
 	def new_game():
 		"""Initializes a new game, creating a new player character."""
 		Globals.player = Character(strength=10, max_hp=100)
-		Globals.difficulty = 1
+		Globals.difficulty = 1.0
 		Globals.room = 1
 		Globals.floor = 1
 		Globals.previous_scene_path = ""
-
-	
