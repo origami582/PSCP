@@ -2,6 +2,7 @@ from py4godot.classes import gdclass
 from py4godot.classes.Control import Control
 from .charactor import Globals
 from .random_events import random_event_picker
+from .save_reload import save_game
 
 
 @gdclass
@@ -16,6 +17,7 @@ class maingame(Control):
 		# Initialize a new game/character if one doesn't already exist.
 		if Globals.player is None:
 			Globals.new_game()
+		self.save = save_game()
 		self.status_update()
 
 	def _input(self, event):
@@ -24,6 +26,9 @@ class maingame(Control):
 				print("Debug: 'B' key pressed, chaning to backpack scene")
 				Globals.previous_scene_path = "res://stage/stage1.tscn"
 				self.get_tree().change_scene_to_file("res://stage/backpack_scene/backpack_scene.tscn")
+			if event.is_action_pressed("Press_X"):
+				print("Debug: 'X' key pressed, returning to title")
+				self._on_back_button_pressed()		# Basically the same as pressing the back button itself.
 
 	def status_update(self):
 		'''for unify debuging purpose'''
@@ -71,4 +76,7 @@ class maingame(Control):
 
 	def _on_back_button_pressed(self):
 		print("Back")
+		print("Debug: Progress automatically saved!")
+		Globals.previous_scene_path = "res://stage/stage1.tscn"
+		self.save.save(character=Globals.player)
 		self.get_tree().change_scene_to_file("res://stage/main_menu.tscn")
