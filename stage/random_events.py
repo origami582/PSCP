@@ -6,6 +6,9 @@ Using standard python random module.
 """
 @gdclass
 class random_event_picker:
+	"""
+	A utility class with static methods to handle weighted random selections for game events and encounters.
+	"""
 	STANDARD_EVENT_POOL = {
 		# Event structure is:
 		# 'Event name' : probability(int, float)

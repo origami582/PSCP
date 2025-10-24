@@ -8,6 +8,12 @@ class Character:
 	FLEE_PENALTY_FLAT = 5
 
 	def __init__(self, strength=10, max_hp=100):
+		"""
+		Initializes a new character.
+		Args:
+			strength (int): The character's strength attribute.
+			max_hp (int): The character's maximum health points.
+		"""
 		self.strength = strength
 		self.max_hp = max_hp
 		self.actual_hp = max_hp

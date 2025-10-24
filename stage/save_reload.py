@@ -10,7 +10,15 @@ from .charactor import Character, Globals
 SAVE_PATH = "save/save.txt"
 @gdclass
 class save_game:
+    """Handles the logic for saving the game state to a file."""
     def save(self, character: Character):
+        """
+		Saves the current character and global game state to a file.
+		The data is saved as a base64 encoded JSON string.
+
+		Args:
+			character (Character): The player character instance to save.
+		"""
         error = False
         try:
             # 1. Consolidate all data into a dictionary
@@ -51,7 +59,12 @@ class save_game:
 
 @gdclass
 class load_game:
+    """Handles the logic for loading the game state from a file."""
     def load(self):
+        """
+		Loads the game state from the save file.
+		It populates the Globals.player and other global variables.
+		"""
         try:
             with open(file=SAVE_PATH, mode="rb") as file: # 'rb' for reading bytes
                 encoded_data = file.read()
