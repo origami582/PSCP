@@ -18,12 +18,8 @@ class main(Control):
 
 	def _ready(self):
 		"""Called when the node is 'ready', i.e., when both the node and its children have entered the scene tree."""
-		#ready game this pop up close
-		self.get_node("CanvasLayer").visible = False
-		self.get_node("Setting").visible = False
 		#music
-		self.music = self.get_node("AudioStreamPlayer")
-
+		self.music = self.get_node("soundbgm")
 	def _on_newgame_pressed(self):
 		"""Handles the 'New Game' button press, showing the difficulty/level selection popup."""
 		#open popup
@@ -73,8 +69,6 @@ class main(Control):
 		#add Globals. forward
 		Globals.difficulty = 2
 		self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
-
-	def _on_music_changed(self, value: float):
-		"""Adjusts the music volume based on the slider's value."""
-		db_value = -80 + (value * 1.5)
-		self.music.volume_db = db_value
+	def _on_sound_changed(self, value: float):
+		updown = -80 + (value / 50 * 80)
+		self.music.volume_db = updown

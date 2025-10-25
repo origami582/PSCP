@@ -1,6 +1,2 @@
+res://stage/main_menu.tscn
 res://main.py
-res://stage/charactor.py
-res://stage/Level.py
-res://stage/maingame.py
-res://save/save.txt
-res://stage/room.py

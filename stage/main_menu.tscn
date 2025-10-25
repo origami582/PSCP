@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://main.py" id="1_glbon"]
 [ext_resource type="FontFile" uid="uid://dh1e1hmltgft6" path="res://font/PixelMplus12-Regular.ttf" id="3_nlkkf"]
 [ext_resource type="FontFile" uid="uid://c3xq2g0h1idc6" path="res://font/TA 8 bit.otf" id="3_qe12f"]
+[ext_resource type="AudioStream" uid="uid://coev0y8ow6415" path="res://Sound/mo-fa-shi-itozhen-rizi-shi-ji-128-ytshorts.savetube.me (1).mp3" id="5_fmypw"]
 [ext_resource type="Texture2D" uid="uid://bvvhka477bxcl" path="res://img/Background/BG1_dungeonsotoN.png" id="5_glbon"]
-[ext_resource type="AudioStream" uid="uid://dgj1pj2p1ir60" path="res://Sound/_    __.mp3" id="7_qe12f"]
 
 [sub_resource type="Environment" id="Environment_nlkkf"]
 background_mode = 3
@@ -271,13 +271,13 @@ offset_top = 116.0
 offset_right = 846.0
 offset_bottom = 185.0
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_qe12f")
-volume_db = -38.165
+[node name="soundbgm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_fmypw")
+volume_db = -20.096
 autoplay = true
 
-[connection signal="pressed" from="VBoxContainer/New_Game" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/New_Game" to="." method="_on_newgame_pressed"]
+[connection signal="pressed" from="VBoxContainer/New_Game" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_Continue_pressed"]
 [connection signal="pressed" from="VBoxContainer/Option" to="." method="_on_option_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exitgame_pressed"]
@@ -287,3 +287,4 @@ autoplay = true
 [connection signal="pressed" from="Level_select/close_button" to="." method="_on_closepop_pressed"]
 [connection signal="pressed" from="Setting/Back button" to="." method="_on_setting_back_pressed"]
 [connection signal="value_changed" from="Setting/Setting/HSlider" to="." method="_on_music_changed"]
+[connection signal="value_changed" from="Setting/Setting/HSlider" to="." method="_on_sound_changed"]

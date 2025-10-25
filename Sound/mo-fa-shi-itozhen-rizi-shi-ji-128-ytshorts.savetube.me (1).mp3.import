@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://coev0y8ow6415"
+path="res://.godot/imported/mo-fa-shi-itozhen-rizi-shi-ji-128-ytshorts.savetube.me (1).mp3-b09fe430905abd5782e30561fcbcabe4.mp3str"
+
+[deps]
+
+source_file="res://Sound/mo-fa-shi-itozhen-rizi-shi-ji-128-ytshorts.savetube.me (1).mp3"
+dest_files=["res://.godot/imported/mo-fa-shi-itozhen-rizi-shi-ji-128-ytshorts.savetube.me (1).mp3-b09fe430905abd5782e30561fcbcabe4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
