@@ -4,13 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Background/Background.png" id="1_j8b3c"]
 [ext_resource type="Texture2D" uid="uid://dj12ttrjw3ksc" path="res://img/Enemies/sento_m8.png" id="2_estmv"]
 [ext_resource type="Texture2D" uid="uid://xob4ygnoylmu" path="res://img/Overlay_Textures/dungeon0_baseT.png" id="3_4pwfs"]
-[ext_resource type="Texture2D" uid="uid://dt2xcisrtlom2" path="res://img/Chu.png" id="4_n3c6q"]
 [ext_resource type="Texture2D" uid="uid://ce1neujqiuv2m" path="res://img/Buttons/omoide2_1battle.png" id="6_estmv"]
 [ext_resource type="Script" uid="uid://bsw6oxfvctpbr" path="res://stage/combat_scene/hp_monster.gd" id="7_it1vf"]
 [ext_resource type="Texture2D" uid="uid://bg5termtb5hyc" path="res://img/Buttons/dungeon0_flee.png" id="7_n3c6q"]
 [ext_resource type="FontFile" uid="uid://dh1e1hmltgft6" path="res://font/PixelMplus12-Regular.ttf" id="9_4pwfs"]
 [ext_resource type="FontFile" uid="uid://qtpe31n1naif" path="res://font/PixelifySans-VariableFont_wght.ttf" id="10_g7ypw"]
 [ext_resource type="Script" path="res://stage/combat_scene/textpanel.py" id="11_g7ypw"]
+[ext_resource type="Texture2D" uid="uid://bcb4fe1rnph3l" path="res://img/maincharacter.png" id="11_gapb1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gapb1"]
 bg_color = Color(0, 0, 0, 0.8509804)
@@ -86,7 +86,6 @@ region_rect = Rect2(0, 0, 345, 223)
 texture_filter = 6
 position = Vector2(892, 465)
 scale = Vector2(1.116959, 1.0995212)
-texture = ExtResource("4_n3c6q")
 
 [node name="Attack_Button" type="Button" parent="."]
 offset_left = 207.0
@@ -261,6 +260,12 @@ language = ""
 structured_text_bidi_override = 0
 structured_text_bidi_override_options = Array[NodePath]([])
 script = ExtResource("11_g7ypw")
+
+[node name="MC2" type="Sprite2D" parent="."]
+texture_filter = 6
+position = Vector2(964.00006, 453)
+scale = Vector2(1.3931637, 1.3714138)
+texture = ExtResource("11_gapb1")
 
 [connection signal="pressed" from="Attack_Button" to="." method="_on_attack_button_pressed"]
 [connection signal="pressed" from="Flee_Button" to="." method="_on_flee_button_pressed"]

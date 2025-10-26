@@ -1,12 +1,12 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1761400470
+::res://::1761493000
 export_presets.cfg::TextFile::-1::1760505471::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::8365038792927059551::1760006918::1760006918::1::::<><><>0<>0<>0176cf9c6e8990b7be86bee517bca520<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 LICENSE.md::TextFile::-1::1760006908::0::1::::<><><>0<>0<><>::
-main.py::PyScriptExtension::-1::1761389134::0::1::::<><><>0<>0<><>::
+main.py::PyScriptExtension::-1::1761404269::0::1::::<><><>0<>0<><>::
 patch.gd::GDScript::4900882316459572127::1761373515::0::1::::<>Node<><>0<>0<><>::
 README.md::TextFile::-1::1760006908::0::1::::<><><>0<>0<><>::
-::res://__pycache__/::1761389134
+::res://__pycache__/::1761404269
 ::res://addons/::1760006908
 ::res://addons/py4godot/::1760505547
 dependencies.txt::TextFile::-1::1760006918::0::1::::<><><>0<>0<><>::
@@ -26,9 +26,11 @@ PixelMplus12-Bold.ttf::FontFile::5340434858252166694::1760006918::1760006918::1:
 PixelMplus12-Regular.ttf::FontFile::7704547463490203513::1760006918::1760006918::1::::<><><>0<>0<>d53c56d13b58427fbc8eeb0bdec0741a<>res://.godot/imported/PixelMplus12-Regular.ttf-4cfcf97726769fa7be3b3a60325be90b.fontdata::
 TA 8 bit.otf::FontFile::6786629720027501295::1760006918::1760006918::1::::<><><>0<>0<>3178899bed5ef7129b2283d97f6807c2<>res://.godot/imported/TA 8 bit.otf-dea3c7c9938bec16c966902285816d7f.fontdata::
 TA 8 bit.ttf::FontFile::2112663380445996841::1760006918::1760006918::1::::<><><>0<>0<>de70cd4b0f950f29191c3bb7bab735b3<>res://.godot/imported/TA 8 bit.ttf-986023c4adc44f6427927ffd71b14fd1.fontdata::
-::res://img/::1760622408
+::res://img/::1761492965
 Back_Arrow.png::CompressedTexture2D::7426397479287254291::1760006918::1760006918::1::::<><><>0<>0<>2d7827833a595a5dc0e6dec501c0ef66<>res://.godot/imported/Back_Arrow.png-68fd5522ff76d95bcc3a5ca6292201a8.ctex::
-Chu.png::CompressedTexture2D::8549988790774493075::1760006918::1760191808::1::::<><><>0<>0<>d8b6fa1e7a8228aab5e872c7edf6cb5d<>res://.godot/imported/Chu.png-2ab812f7bbe86915023ce9f1ec5b1f50.ctex::
+Chu.png::CompressedTexture2D::8549988790774493075::1761492965::1761493003::0::::<><><>0<>0<>265819c17df9d75ab335b4f1e01c280c<>::
+Logo.png::CompressedTexture2D::1315248982152445939::1761492929::1761492932::1::::<><><>0<>0<>5f4b4d07058f0318fe99bde51c60bc60<>res://.godot/imported/Logo.png-e5d3c815ff0119fdde9f6af849f43d99.ctex::
+maincharacter.png::CompressedTexture2D::2530632721531666119::1761492750::1761492776::1::::<><><>0<>0<>09334bd4e702b07abaaf1dfd2155befc<>res://.godot/imported/maincharacter.png-ecd0589403878d888a1e41655aaab748.ctex::
 ::res://img/Background/::1760622408
 Background.png::CompressedTexture2D::7439769734232292845::1760622408::1760006918::1::::<><><>0<>0<>8cca79da3c179c6337ba70dc28cd54f4<>res://.godot/imported/Background.png-9caa493e7018aaaba6a95bf82a13e21b.ctex::
 BG1_dungeonsoto.png::CompressedTexture2D::6107541809103589248::1760006918::1760006918::1::::<><><>0<>0<>f99c5b966cfc7897db1a5c016d261a35<>res://.godot/imported/BG1_dungeonsoto.png-174700f9e2579d4a1895fd834d66db74.ctex::
@@ -155,17 +157,17 @@ caller.py::PyScriptExtension::-1::1760006908::0::1::::<><><>0<>0<><>::
 random_events.py::PyScriptExtension::-1::1760006908::0::1::::<><><>0<>0<><>::
 ::res://Prototype_logic_py/__pycache__/::1760505550
 ::res://save/::1761373515
-save.txt::TextFile::-1::1761389237::0::1::::<><><>0<>0<><>::
+save.txt::TextFile::-1::1761403841::0::1::::<><><>0<>0<><>::
 ::res://Sound/::1761388986
 _    __.mp3::AudioStreamMP3::7600580456551018747::1760006908::1760006908::1::::<><><>0<>0<>83ea0b278c61d8c61e173763bd987bcc<>res://.godot/imported/_    __.mp3-e7d2fff4b4049b3bb8a96b2ed51bcb78.mp3str::
 mo-fa-shi-itozhen-rizi-shi-ji-128-ytshorts.savetube.me (1).mp3::AudioStreamMP3::5765063703236310110::1761388986::1761388986::1::::<><><>0<>0<>653d17e4f818401c59cafda75ab48d49<>res://.godot/imported/mo-fa-shi-itozhen-rizi-shi-ji-128-ytshorts.savetube.me (1).mp3-b09fe430905abd5782e30561fcbcabe4.mp3str::
-::res://stage/::1761389280
+::res://stage/::1761492965
 __init__.py::PyScriptExtension::-1::1760006918::0::1::::<><><>0<>0<><>::
 Button2.py::PyScriptExtension::-1::1760006918::0::1::::<><><>0<>0<><>::
 charactor.py::PyScriptExtension::-1::1761373515::0::1::::<><><>0<>0<><>::
 Level.py::PyScriptExtension::-1::1761373515::0::1::::<><><>0<>0<><>::
 maingame.py::PyScriptExtension::-1::1761373515::0::1::::<><><>0<>0<><>::
-main_menu.tscn::PackedScene::5660212921624415985::1761389280::0::1::::<><><>0<>0<><>::res://main.py<>uid://dh1e1hmltgft6::::res://font/PixelMplus12-Regular.ttf<>uid://c3xq2g0h1idc6::::res://font/TA 8 bit.otf<>uid://coev0y8ow6415::::res://Sound/mo-fa-shi-itozhen-rizi-shi-ji-128-ytshorts.savetube.me (1).mp3<>uid://bvvhka477bxcl::::res://img/Background/BG1_dungeonsotoN.png
+main_menu.tscn::PackedScene::5660212921624415985::1761492965::0::1::::<><><>0<>0<><>::res://main.py<>uid://c3xq2g0h1idc6::::res://font/TA 8 bit.otf<>uid://coev0y8ow6415::::res://Sound/mo-fa-shi-itozhen-rizi-shi-ji-128-ytshorts.savetube.me (1).mp3<>uid://bvvhka477bxcl::::res://img/Background/BG1_dungeonsotoN.png<>uid://s0d7ud4kr7sh::::res://img/Logo.png
 random_events.py::PyScriptExtension::-1::1761373515::0::1::::<><><>0<>0<><>::
 room.py::PyScriptExtension::-1::1761373515::0::1::::<><><>0<>0<><>::
 save_reload.py::PyScriptExtension::-1::1761373515::0::1::::<><><>0<>0<><>::

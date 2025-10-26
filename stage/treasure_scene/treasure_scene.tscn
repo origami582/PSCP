@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://stage/treasure_scene/treasure.py" id="1_c0vhm"]
 [ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Background/Background.png" id="1_gcyud"]
 [ext_resource type="Texture2D" uid="uid://net6eb56261a" path="res://img/Overlay_Textures/dungeon0_base.png" id="2_0kw27"]
-[ext_resource type="Texture2D" uid="uid://dt2xcisrtlom2" path="res://img/Chu.png" id="3_c0vhm"]
+[ext_resource type="Texture2D" uid="uid://bcb4fe1rnph3l" path="res://img/maincharacter.png" id="3_wqapo"]
 [ext_resource type="Texture2D" uid="uid://cp5fv22vjrg24" path="res://img/Buttons/rysh_1_1.png" id="4_c0vhm"]
 [ext_resource type="FontFile" uid="uid://cic7ggie57dq1" path="res://font/PixelMplus12-Bold.ttf" id="6_wqapo"]
 [ext_resource type="Script" path="res://stage/Level.py" id="7_etjvh"]
@@ -46,6 +46,12 @@ offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("1_gcyud")
 expand_mode = 1
+
+[node name="MC" type="Sprite2D" parent="."]
+texture_filter = 6
+position = Vector2(964.00006, 453)
+scale = Vector2(1.3931637, 1.3714138)
+texture = ExtResource("3_wqapo")
 
 [node name="Overlay" type="TextureRect" parent="."]
 editor_description = "Overlay Need edit
@@ -242,12 +248,6 @@ language = ""
 structured_text_bidi_override = 0
 structured_text_bidi_override_options = Array[NodePath]([])
 script = ExtResource("9_b8r66")
-
-[node name="MC" type="Sprite2D" parent="."]
-texture_filter = 6
-position = Vector2(892, 465)
-scale = Vector2(1.116959, 1.0995212)
-texture = ExtResource("3_c0vhm")
 
 [node name="Chest" type="Button" parent="."]
 offset_left = 386.0

@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dt2xcisrtlom2"
-valid=false
+uid="uid://bcb4fe1rnph3l"
+path="res://.godot/imported/maincharacter.png-ecd0589403878d888a1e41655aaab748.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://img/Chu.png"
+source_file="res://img/maincharacter.png"
+dest_files=["res://.godot/imported/maincharacter.png-ecd0589403878d888a1e41655aaab748.ctex"]
 
 [params]
 
