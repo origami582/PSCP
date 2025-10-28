@@ -1,5 +1,5 @@
-res://stage/treasure_scene/treasure_scene.tscn
+res://stage/save_reload.py
 res://stage/combat_scene/combat_scene.tscn
 res://stage/stage1.tscn
-res://stage/backpack_scene/backpack_scene.tscn
-res://stage/main_menu.tscn
+res://stage/Level.py
+res://stage/charactor.py

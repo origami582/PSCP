@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Background/Background.png" id="1_j8b3c"]
 [ext_resource type="Texture2D" uid="uid://dj12ttrjw3ksc" path="res://img/Enemies/sento_m8.png" id="2_estmv"]
 [ext_resource type="Texture2D" uid="uid://xob4ygnoylmu" path="res://img/Overlay_Textures/dungeon0_baseT.png" id="3_4pwfs"]
-[ext_resource type="Texture2D" uid="uid://ce1neujqiuv2m" path="res://img/Buttons/omoide2_1battle.png" id="6_estmv"]
+[ext_resource type="Texture2D" uid="uid://dd3vqg24slgqw" path="res://img/Card sample 2.0/Strike I.png" id="5_g7ypw"]
 [ext_resource type="Script" uid="uid://bsw6oxfvctpbr" path="res://stage/combat_scene/hp_monster.gd" id="7_it1vf"]
 [ext_resource type="Texture2D" uid="uid://bg5termtb5hyc" path="res://img/Buttons/dungeon0_flee.png" id="7_n3c6q"]
 [ext_resource type="FontFile" uid="uid://dh1e1hmltgft6" path="res://font/PixelMplus12-Regular.ttf" id="9_4pwfs"]
@@ -88,11 +88,11 @@ position = Vector2(892, 465)
 scale = Vector2(1.116959, 1.0995212)
 
 [node name="Attack_Button" type="Button" parent="."]
-offset_left = 207.0
-offset_top = 327.0
-offset_right = 390.0
-offset_bottom = 504.0
-icon = ExtResource("6_estmv")
+offset_left = 194.0
+offset_top = 283.0
+offset_right = 412.0
+offset_bottom = 527.42426
+icon = ExtResource("5_g7ypw")
 flat = true
 expand_icon = true
 

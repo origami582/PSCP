@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce1neujqiuv2m"
-valid=false
+uid="uid://bhnwjiku0o1fd"
+path="res://.godot/imported/Strike II.png-10ab5ab04f422459e64e439362608e8e.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://img/Buttons/omoide2_1battle.png"
+source_file="res://img/Card sample 2.0/Strike II.png"
+dest_files=["res://.godot/imported/Strike II.png-10ab5ab04f422459e64e439362608e8e.ctex"]
 
 [params]
 

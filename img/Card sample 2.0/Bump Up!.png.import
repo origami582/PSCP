@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce1neujqiuv2m"
-valid=false
+uid="uid://be368hmvlusmm"
+path="res://.godot/imported/Bump Up!.png-5af26bfb282bdd0fdac636fce5325c4e.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://img/Buttons/omoide2_1battle.png"
+source_file="res://img/Card sample 2.0/Bump Up!.png"
+dest_files=["res://.godot/imported/Bump Up!.png-5af26bfb282bdd0fdac636fce5325c4e.ctex"]
 
 [params]
 

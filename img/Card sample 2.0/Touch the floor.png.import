@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce1neujqiuv2m"
-valid=false
+uid="uid://maxawysnyv5i"
+path="res://.godot/imported/Touch the floor.png-2542ec55aea1bf218d912b82865e227a.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://img/Buttons/omoide2_1battle.png"
+source_file="res://img/Card sample 2.0/Touch the floor.png"
+dest_files=["res://.godot/imported/Touch the floor.png-2542ec55aea1bf218d912b82865e227a.ctex"]
 
 [params]
 

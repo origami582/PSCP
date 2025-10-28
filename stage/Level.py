@@ -33,4 +33,4 @@ class Level(Label):
 		Updates the label's text to show the current floor.
 		"""
 		#print update_level
-		self.text = f"Level: {Globals.floor}"
+		self.text = f"Level: {Globals.level}"
