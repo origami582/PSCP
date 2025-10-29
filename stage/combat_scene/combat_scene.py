@@ -32,6 +32,12 @@ class combat_scene(Control):
 		self.get_node("Attack_Button").disabled = True
 		self.get_node("Flee_Button").disabled = True
 		self.get_node("dead_screen").visible = True
+		Globals.player_lives -= 1 # minus player lives
+		print(f"Player died! Lives remaining: {Globals.player_lives}") #debug
+		if Globals.player_lives > 0:
+			print("You Lose the fight but stand up again...")
+		else :
+			print("You are Wiped")
 
 	def pick_monster(self):
 		"""Picks a random monster from the encounter pool."""

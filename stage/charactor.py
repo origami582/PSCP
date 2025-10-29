@@ -46,6 +46,7 @@ class Character:
 		# Future improvement: Increase max_hp or other stats on level up.
 		self.exp_req = self._get_req_exp(level=self.level + 1)
 
+
 	def flee_penalty(self):
 		"""Applies a penalty to HP for fleeing and returns the new HP."""
 		print("Applying flee penalty...")  # Debug
@@ -76,6 +77,7 @@ class Globals:
 	floor = 1
 	previous_scene_path = ""
 	level = 1
+	player_lives = 3
 	@staticmethod
 	def new_game():
 		"""Initializes a new game, creating a new player character."""
@@ -84,3 +86,4 @@ class Globals:
 		Globals.room = 1
 		Globals.floor = 1
 		Globals.previous_scene_path = ""
+		Globals.player_lives = 3
