@@ -2,7 +2,36 @@ from py4godot.classes import gdclass
 
 @gdclass
 class Character:
-	"""Represents a single character in the game, like the player or an enemy."""
+	"""
+	Represents the player character, holding all their stats and game-related attributes.
+
+	This class is the central data structure for the player. It manages everything
+	from health and strength to experience and level progression.
+
+	Attributes:
+		strength (int): The character's attack power.
+		max_hp (int): The maximum health points.
+		actual_hp (int): The current health points.
+		lifes (int): The number of extra lives the character has.
+		level (int): The character's current level.
+		exp (int): The experience points earned towards the next level.
+		exp_total (int): The total experience points earned throughout the game.
+		exp_req (int): The experience points required to reach the next level.
+
+	How to Use:
+		This class is typically instantiated once per game and stored in `Globals.player`.
+
+		Example of creating a new character:
+			`player_character = Character(strength=10, max_hp=100)`
+
+		Example of accessing an attribute:
+			`current_health = player_character.actual_hp`
+
+	Adding New Variables:
+		To add a new stat (e.g., `defense`), add it as an instance attribute in the `__init__` method.
+		If the new stat needs to be saved when the player quits, you MUST also update the `save_data`
+		dictionary in `save_reload.py` to include it in both the `save()` and `load()` methods.
+	"""
 	FLEE_HP_THRESHOLD = 20
 	FLEE_PENALTY_PERCENTAGE = 0.25
 	FLEE_PENALTY_FLAT = 5
@@ -67,9 +96,28 @@ class Character:
 
 @gdclass
 class Globals:
-	"""
-	A class for storing true global game state and singletons.
-	This very much enable continue function!
+	"""A static-like class for storing global game state and singletons.
+
+	This class acts as a centralized, globally accessible container for game-wide
+	information that needs to persist across different scenes, such as the player
+	object, game difficulty, and current progress (floor/room). It is essential
+	for the save/load functionality.
+
+	This class should NOT be instantiated. Its attributes are accessed directly.
+
+	Attributes:
+		player (Character): The single instance of the player's character.
+		difficulty (float): A multiplier affecting game difficulty (e.g., 1.0 for Easy).
+		room (int): The current room number on the floor.
+		floor (int): The current floor number in the dungeon.
+		previous_scene_path (str): The path to the last main scene, used for returning from menus.
+
+	How to Use:
+		`from .charactor import Globals`
+		`# Accessing the player's strength`
+		`player_strength = Globals.player.strength`
+		`# Setting the difficulty`
+		`Globals.difficulty = 1.5`
 	"""
 	player: Character = None  # This will hold the instance of the player's Character
 	difficulty = 1.0
