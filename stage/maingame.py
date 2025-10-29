@@ -40,6 +40,7 @@ class maingame(Control):
 		"""Prints the player's current status to the console for debugging."""
 		print("\n-------------------------------------")
 		print(f"Level: {Globals.player.level}")
+		print(f"Lifes left: {Globals.player.lifes}")
 		print(f"HP: {Globals.player.actual_hp}/{Globals.player.max_hp}")
 		print(f"EXP: {Globals.player.exp}/{Globals.player.exp_req}")
 		print(f"Total EXP: {Globals.player.exp_total}")

@@ -57,16 +57,19 @@ class main(Control):
 	def _on_easy_pressed(self):
 		"""Sets difficulty to Easy and starts a new game."""
 		#add Globals. forward
+		Globals.new_game()
 		Globals.difficulty = 1
 		self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
 	def _on_medium_pressed(self):
 		"""Sets difficulty to Medium and starts a new game."""
 		#add Globals. forward
+		Globals.new_game()
 		Globals.difficulty = 1.5
 		self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
 	def _on_hard_pressed(self):
 		"""Sets difficulty to Hard and starts a new game."""
 		#add Globals. forward
+		Globals.new_game()
 		Globals.difficulty = 2
 		self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
 	def _on_sound_changed(self, value: float):

@@ -29,15 +29,20 @@ class combat_scene(Control):
 
 	def player_died(self):
 		"""Disables combat buttons and shows the death screen."""
-		self.get_node("Attack_Button").disabled = True
-		self.get_node("Flee_Button").disabled = True
-		self.get_node("dead_screen").visible = True
-		Globals.player_lives -= 1 # minus player lives
-		print(f"Player died! Lives remaining: {Globals.player_lives}") #debug
-		if Globals.player_lives > 0:
-			print("You Lose the fight but stand up again...")
-		else :
-			print("You are Wiped")
+		# self.get_node("Attack_Button").disabled = True
+		# self.get_node("Flee_Button").disabled = True
+		# self.get_node("dead_screen").visible = True
+		# Globals.player_lives -= 1 # minus player lives
+		# print(f"Player died! Lives remaining: {Globals.player_lives}") #debug
+		# if Globals.player_lives > 0:
+		# 	print("You Lose the fight but stand up again...")
+		# else :
+		# 	print("You are Wiped")
+
+		Globals.player.lifes -= 1
+		Globals.player.actual_hp = Globals.player.max_hp
+		print("DEBUG: Player died - Live reducted by 1")
+		self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
 
 	def pick_monster(self):
 		"""Picks a random monster from the encounter pool."""
@@ -81,10 +86,14 @@ class combat_scene(Control):
 		if remain_hp <= 0:
 			print("died")
 			self.player_died()      # call function above when player is dead
-			### Maybe call result scence here?
+			if Globals.player.lifes <= 0:
+				self.get_node("dead_screen").visible = True
+				self.get_node("Textbox").visible = False
+				self.get_node("Attack_Button").visible = False
 		else:
-			# Player survived, return to main stage
+			# Player survived, return to stage1
 			self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
+
 
 	def _on_died_back_to_menu_pressed(self):
 		"""Handles returning to the main menu from the death screen."""

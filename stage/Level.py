@@ -4,10 +4,6 @@ from py4godot.classes.Label import Label
 from .charactor import Globals
 
 '''
-Note: By 'level' it mean floor level
-'''
-
-'''
 Development note (Mon): There is absolutely no need to waste every frame updating
 label that does not change in any values or texts
 '''
@@ -33,4 +29,4 @@ class Level(Label):
 		Updates the label's text to show the current floor.
 		"""
 		#print update_level
-		self.text = f"Level: {Globals.level}"
+		self.text = f"Level: {Globals.player.level}"

@@ -17,6 +17,7 @@ class Character:
 		self.strength = strength
 		self.max_hp = max_hp
 		self.actual_hp = max_hp
+		self.lifes = 3
 
 		self.level = 1
 		self.exp = 0
@@ -42,7 +43,6 @@ class Character:
 	def _level_up(self):
 		"""Increases character level and updates required experience."""
 		self.level += 1
-		Globals.level += 1
 		# Future improvement: Increase max_hp or other stats on level up.
 		self.exp_req = self._get_req_exp(level=self.level + 1)
 
@@ -76,14 +76,11 @@ class Globals:
 	room = 1
 	floor = 1
 	previous_scene_path = ""
-	level = 1
-	player_lives = 3
+
 	@staticmethod
 	def new_game():
 		"""Initializes a new game, creating a new player character."""
 		Globals.player = Character(strength=10, max_hp=100)
-		Globals.difficulty = 1.0
 		Globals.room = 1
 		Globals.floor = 1
 		Globals.previous_scene_path = ""
-		Globals.player_lives = 3

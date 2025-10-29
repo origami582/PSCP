@@ -26,6 +26,7 @@ class save_game:
 				"strength": character.strength,
 				"max_hp": character.max_hp,
 				"actual_hp": character.actual_hp,
+				"lives": character.lifes,
 				"level": character.level,
 				"exp": character.exp,
 				"exp_total": character.exp_total,
@@ -81,6 +82,7 @@ class load_game:
 				max_hp=save_data["max_hp"]
 			)
 			new_character.actual_hp = save_data["actual_hp"]
+			new_character.lifes = save_data["lives"]
 			new_character.level = save_data["level"]
 			new_character.exp = save_data["exp"]
 			new_character.exp_total = save_data["exp_total"]
