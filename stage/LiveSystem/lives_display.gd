@@ -1,9 +1,9 @@
 extends Node2D
 
 func _ready():
-	update_display()
+	update_display(3)
 
-func update_display():
+func update_display(count):
 	print("updated heart")
 	if Livecounter.live == 3 :
 		$Heart1.show()
