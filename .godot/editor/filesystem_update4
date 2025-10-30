@@ -1,7 +1,3 @@
-res://stage/stage1.tscn
-res://stage/Level.py
-res://main.py
-res://stage/charactor.py
+res://stage/combat_scene/combat_scene.tscn
+res://stage/combat_scene/textpanel.py
 res://stage/combat_scene/combat_scene.py
-res://stage/maingame.py
-res://stage/save_reload.py

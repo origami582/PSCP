@@ -69,12 +69,15 @@ class combat_scene(Control):
 		self.hp_label.call("update_hp", self.monster.hp, self.monster.max_hp)
 
 		if self.monster.is_dead:
+			self.get_node("Textbox").visible = True
+			textbox_node.get_node("Text").call("show_player_attack")
 			print("Monster Defeated")
 			print(f"You gained {self.monster.exp_reward} EXP!!!")
 			Globals.room += 1
 			Globals.player.gain_exp(amount=self.monster.exp_reward) # Gained EXP after defeating monster
 			# Status report will always trigger after returning to maingame (stage1.tscn) :)
-			self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
+			if event.is_action_pressed("ui_accept"):
+				self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
 		else:
 			# Monster is not dead, it's their turn to attack! (We can add this logic here)
 			print("Monster Attack!")
