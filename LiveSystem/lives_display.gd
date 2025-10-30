@@ -1,5 +1,8 @@
 extends Node2D
 
+func _ready():
+	update_display()
+
 func update_display():
 	print("updated heart")
 	if Livecounter.live == 3 :
