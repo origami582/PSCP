@@ -1,16 +1,20 @@
-[gd_scene load_steps=21 format=3 uid="uid://80o0vrx8ov3h"]
+[gd_scene load_steps=25 format=3 uid="uid://80o0vrx8ov3h"]
 
 [ext_resource type="Script" path="res://stage/combat_scene/combat_scene.py" id="1_601pc"]
 [ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Background/Background.png" id="1_j8b3c"]
 [ext_resource type="Texture2D" uid="uid://dj12ttrjw3ksc" path="res://img/Enemies/sento_m8.png" id="2_estmv"]
 [ext_resource type="Texture2D" uid="uid://cn8wqy5vkgfm1" path="res://img/Overlay_Textures/dungeon0_baseT.png" id="3_4pwfs"]
+[ext_resource type="Texture2D" uid="uid://dpomvt1nw754o" path="res://img/Roll_button.png" id="5_gapb1"]
 [ext_resource type="Script" uid="uid://brtcgat56h72y" path="res://stage/combat_scene/hp_bar.gd" id="6_gapb1"]
+[ext_resource type="FontFile" uid="uid://x2aerthebyse" path="res://font/PixelMplus10-Bold.ttf" id="7_5m2hi"]
 [ext_resource type="Script" uid="uid://bsw6oxfvctpbr" path="res://stage/combat_scene/hp_monster.gd" id="7_it1vf"]
 [ext_resource type="Texture2D" uid="uid://bg5termtb5hyc" path="res://img/Buttons/dungeon0_flee.png" id="7_n3c6q"]
 [ext_resource type="FontFile" uid="uid://dh1e1hmltgft6" path="res://font/PixelMplus12-Regular.ttf" id="9_4pwfs"]
 [ext_resource type="FontFile" uid="uid://qtpe31n1naif" path="res://font/PixelifySans-VariableFont_wght.ttf" id="10_g7ypw"]
 [ext_resource type="Script" path="res://stage/combat_scene/textpanel.py" id="11_g7ypw"]
 [ext_resource type="Texture2D" uid="uid://bcb4fe1rnph3l" path="res://img/maincharacter.png" id="11_gapb1"]
+[ext_resource type="FontFile" uid="uid://cpuqreeqb2emg" path="res://font/PixelMplus10-Regular.ttf" id="12_pjunm"]
+[ext_resource type="Script" uid="uid://dn7nul6wycv6g" path="res://stage/combat_scene/hp_player.gd" id="15_pjunm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g7ypw"]
 bg_color = Color(0.067547224, 0.067547224, 0.067547224, 1)
@@ -104,10 +108,11 @@ texture = ExtResource("2_estmv")
 region_rect = Rect2(0, 0, 345, 223)
 
 [node name="Attack_Button" type="Button" parent="."]
-offset_left = 194.0
-offset_top = 283.0
-offset_right = 412.0
-offset_bottom = 527.42426
+offset_left = 231.0
+offset_top = 363.0
+offset_right = 362.0
+offset_bottom = 491.42426
+icon = ExtResource("5_gapb1")
 flat = true
 expand_icon = true
 
@@ -124,11 +129,12 @@ script = ExtResource("6_gapb1")
 
 [node name="HP_monster" type="Label" parent="."]
 offset_left = 520.0
-offset_top = 108.0
-offset_right = 718.0
-offset_bottom = 213.0
+offset_top = 110.0
+offset_right = 612.0
+offset_bottom = 133.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_5m2hi")
 text = "HP : 42/100"
 language = "en"
 script = ExtResource("7_it1vf")
@@ -192,11 +198,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Textbox" type="Panel" parent="."]
-visible = false
 offset_left = 332.0
 offset_top = 362.0
 offset_right = 740.0
-offset_bottom = 560.0
+offset_bottom = 498.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_4pwfs")
 
 [node name="Text" type="Label" parent="Textbox"]
@@ -234,8 +239,8 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 24.0
 offset_top = 21.0
-offset_right = 148.0
-offset_bottom = 71.0
+offset_right = 380.0
+offset_bottom = 116.0
 grow_horizontal = 1
 grow_vertical = 1
 rotation = 0.0
@@ -267,6 +272,7 @@ accessibility_described_by_nodes = Array[NodePath]([])
 accessibility_labeled_by_nodes = Array[NodePath]([])
 accessibility_flow_to_nodes = Array[NodePath]([])
 theme_type_variation = &""
+theme_override_fonts/font = ExtResource("12_pjunm")
 text = "add text"
 horizontal_alignment = 0
 vertical_alignment = 0
@@ -296,7 +302,7 @@ position = Vector2(964.00006, 453)
 scale = Vector2(1.3931637, 1.3714138)
 texture = ExtResource("11_gapb1")
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
+[node name="Player_bar" type="ProgressBar" parent="."]
 offset_left = 8.0
 offset_top = 476.0
 offset_right = 211.0
@@ -305,13 +311,16 @@ theme_override_styles/background = SubResource("StyleBoxFlat_5m2hi")
 theme_override_styles/fill = SubResource("StyleBoxFlat_pjunm")
 value = 50.0
 show_percentage = false
+script = ExtResource("6_gapb1")
 
-[node name="Label" type="Label" parent="."]
+[node name="HP_player" type="Label" parent="."]
 offset_left = 56.0
-offset_top = 478.0
-offset_right = 143.0
-offset_bottom = 501.0
+offset_top = 481.0
+offset_right = 144.0
+offset_bottom = 504.0
+theme_override_fonts/font = ExtResource("7_5m2hi")
 text = "HP : 50/100"
+script = ExtResource("15_pjunm")
 
 [connection signal="pressed" from="Attack_Button" to="." method="_on_attack_button_pressed"]
 [connection signal="pressed" from="Flee_Button" to="." method="_on_flee_button_pressed"]

@@ -35,7 +35,7 @@ class Character:
 	FLEE_HP_THRESHOLD = 20
 	FLEE_PENALTY_PERCENTAGE = 0.25
 	FLEE_PENALTY_FLAT = 5
-	
+
 	Strength_per_level = 10
 	Max_hp_per_level = 20
 	def __init__(self, strength=Strength_per_level, max_hp=Max_hp_per_level):
