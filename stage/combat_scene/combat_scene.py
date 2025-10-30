@@ -20,13 +20,18 @@ class combat_scene(Control):
 		# Get a reference to the label node
 		self.hp_label = self.get_node("HP_monster")
 		self.monster_bar = self.get_node("Monster_bar")
-
+		# update for mc hp_label and mc_bar
+		self.mc_label = self.get_node("mc_hp")
+		self.mc_bar = self.get_node("mc_bar")
 		# Randomly pick monster from available pool and create an instance
 		selected_encounter = self.pick_monster()
 		self.monster = Monster().setup_monster(monster_type=selected_encounter)
 		# Update the label with the initial HP values
 		self.hp_label.call("update_hp", self.monster.hp, self.monster.max_hp)
 		self.monster_bar.call("update_monster_bar", self.monster.hp, self.monster.max_hp)
+		# for mc
+		self.mc_label.call("update_mc_hp", Globals.player.actual_hp, Globals.player.max_hp)
+		self.mc_bar.call("update_mc_bar", Globals.player.actual_hp, Globals.player.max_hp)
 	def player_died(self):
 		"""Disables combat buttons and shows the death screen."""
 		# self.get_node("Attack_Button").disabled = True
@@ -88,7 +93,9 @@ class combat_scene(Control):
 		# Update the label with the new HP values
 		self.hp_label.call("update_hp", self.monster.hp, self.monster.max_hp)
 		self.monster_bar.call("update_monster_bar", self.monster.hp, self.monster.max_hp)
-
+		# update mc bar
+		self.mc_label.call("update_mc_hp", Globals.player.actual_hp, Globals.player.max_hp)
+		self.mc_label.call("update_mc_bar", Globals.player.actual_hp, Globals.player.max_hp)
 
 	def _on_flee_button_pressed(self):
 		"""Handles the event when the flee button is pressed."""
