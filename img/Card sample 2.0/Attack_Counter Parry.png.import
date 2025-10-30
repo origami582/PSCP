@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddxcqgsg84nsp"
-path="res://.godot/imported/Bump Up!.png-5af26bfb282bdd0fdac636fce5325c4e.ctex"
+uid="uid://bl2j0abclp11l"
+path="res://.godot/imported/Attack_Counter Parry.png-efc5eea1b3390ad5c958b3319b267ca6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Card sample 2.0/Bump Up!.png"
-dest_files=["res://.godot/imported/Bump Up!.png-5af26bfb282bdd0fdac636fce5325c4e.ctex"]
+source_file="res://img/Card sample 2.0/Attack_Counter Parry.png"
+dest_files=["res://.godot/imported/Attack_Counter Parry.png-efc5eea1b3390ad5c958b3319b267ca6.ctex"]
 
 [params]
 

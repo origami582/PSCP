@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buox4v2vw41gu"
-path="res://.godot/imported/Touch the floor.png-2542ec55aea1bf218d912b82865e227a.ctex"
+uid="uid://dcudcavva7u5m"
+path="res://.godot/imported/Attack_Strike I.png-e78cc25944c241a40dbb2831414bc8b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Card sample 2.0/Touch the floor.png"
-dest_files=["res://.godot/imported/Touch the floor.png-2542ec55aea1bf218d912b82865e227a.ctex"]
+source_file="res://img/Card sample 2.0/Attack_Strike I.png"
+dest_files=["res://.godot/imported/Attack_Strike I.png-e78cc25944c241a40dbb2831414bc8b2.ctex"]
 
 [params]
 
