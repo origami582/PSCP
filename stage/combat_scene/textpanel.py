@@ -18,5 +18,6 @@ class textpanel(Label):
 	def show_player_attack(self, monster_name: str, damage: int):
 		"""Updates the label to show the player's attack."""
 		self.text = f"{monster_name} took {damage} damage!"
-		if self.monster.is_dead:
-			self.text = f"{monster_name} Defeated!!! \n You gained {self.monster.exp_reward} EXP!!!"
+	def show_monster_dide(self, monster_name: str, exp: int):
+		"""Updates the label to show the player's attack."""
+		self.text = f"{monster_name} defeated!!! you gained {exp} EXP!!!"
