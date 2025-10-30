@@ -1,16 +1,27 @@
-[gd_scene load_steps=17 format=3 uid="uid://80o0vrx8ov3h"]
+[gd_scene load_steps=20 format=3 uid="uid://80o0vrx8ov3h"]
 
 [ext_resource type="Script" path="res://stage/combat_scene/combat_scene.py" id="1_601pc"]
 [ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Background/Background.png" id="1_j8b3c"]
 [ext_resource type="Texture2D" uid="uid://dj12ttrjw3ksc" path="res://img/Enemies/sento_m8.png" id="2_estmv"]
 [ext_resource type="Texture2D" uid="uid://xob4ygnoylmu" path="res://img/Overlay_Textures/dungeon0_baseT.png" id="3_4pwfs"]
 [ext_resource type="Texture2D" uid="uid://dd3vqg24slgqw" path="res://img/Card sample 2.0/Strike I.png" id="5_g7ypw"]
+[ext_resource type="Script" uid="uid://brtcgat56h72y" path="res://stage/combat_scene/hp_bar.gd" id="6_gapb1"]
 [ext_resource type="Script" uid="uid://bsw6oxfvctpbr" path="res://stage/combat_scene/hp_monster.gd" id="7_it1vf"]
 [ext_resource type="Texture2D" uid="uid://bg5termtb5hyc" path="res://img/Buttons/dungeon0_flee.png" id="7_n3c6q"]
 [ext_resource type="FontFile" uid="uid://dh1e1hmltgft6" path="res://font/PixelMplus12-Regular.ttf" id="9_4pwfs"]
 [ext_resource type="FontFile" uid="uid://qtpe31n1naif" path="res://font/PixelifySans-VariableFont_wght.ttf" id="10_g7ypw"]
 [ext_resource type="Script" path="res://stage/combat_scene/textpanel.py" id="11_g7ypw"]
 [ext_resource type="Texture2D" uid="uid://bcb4fe1rnph3l" path="res://img/maincharacter.png" id="11_gapb1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g7ypw"]
+bg_color = Color(0.067547224, 0.067547224, 0.067547224, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqhti"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gapb1"]
 bg_color = Color(0, 0, 0, 0.8509804)
@@ -82,11 +93,6 @@ scale = Vector2(1, 0.98542607)
 texture = ExtResource("2_estmv")
 region_rect = Rect2(0, 0, 345, 223)
 
-[node name="MC" type="Sprite2D" parent="."]
-texture_filter = 6
-position = Vector2(892, 465)
-scale = Vector2(1.116959, 1.0995212)
-
 [node name="Attack_Button" type="Button" parent="."]
 offset_left = 194.0
 offset_top = 283.0
@@ -96,6 +102,28 @@ icon = ExtResource("5_g7ypw")
 flat = true
 expand_icon = true
 
+[node name="Monster_bar" type="ProgressBar" parent="."]
+offset_left = 417.0
+offset_top = 106.0
+offset_right = 706.0
+offset_bottom = 133.0
+theme_override_styles/background = SubResource("StyleBoxFlat_g7ypw")
+theme_override_styles/fill = SubResource("StyleBoxFlat_iqhti")
+value = 42.27
+show_percentage = false
+script = ExtResource("6_gapb1")
+
+[node name="HP_monster" type="Label" parent="."]
+offset_left = 520.0
+offset_top = 108.0
+offset_right = 718.0
+offset_bottom = 213.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "HP : 42/100"
+language = "en"
+script = ExtResource("7_it1vf")
+
 [node name="Flee_Button" type="Button" parent="."]
 offset_left = 247.0
 offset_top = 508.0
@@ -103,15 +131,6 @@ offset_right = 610.0
 offset_bottom = 604.0
 icon = ExtResource("7_n3c6q")
 flat = true
-
-[node name="HP_monster" type="Label" parent="."]
-offset_left = 398.0
-offset_top = 72.0
-offset_right = 596.0
-offset_bottom = 177.0
-text = "Floating Text here"
-language = "en"
-script = ExtResource("7_it1vf")
 
 [node name="dead_screen" type="CanvasLayer" parent="."]
 visible = false
@@ -266,6 +285,11 @@ texture_filter = 6
 position = Vector2(964.00006, 453)
 scale = Vector2(1.3931637, 1.3714138)
 texture = ExtResource("11_gapb1")
+
+[node name="MC" type="Sprite2D" parent="."]
+texture_filter = 6
+position = Vector2(892, 465)
+scale = Vector2(1.116959, 1.0995212)
 
 [connection signal="pressed" from="Attack_Button" to="." method="_on_attack_button_pressed"]
 [connection signal="pressed" from="Flee_Button" to="." method="_on_flee_button_pressed"]

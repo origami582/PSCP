@@ -1,7 +1,8 @@
+VBoxContainer
+ProgressBar
 AudioStreamPlayer
 TextureRect
 HBoxContainer
-VBoxContainer
 Panel
 FlowContainer
 Container
@@ -11,5 +12,3 @@ PopupPanel
 CanvasLayer
 Button
 TextureButton
-ProgressBar
-Sprite2D

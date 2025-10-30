@@ -19,6 +19,7 @@ class combat_scene(Control):
 
 		# Get a reference to the label node
 		self.hp_label = self.get_node("HP_monster")
+		self.monster_bar = self.get_node("Monster_bar")
 
 		# Randomly pick monster from available pool and create an instance
 		selected_encounter = self.pick_monster()
@@ -26,7 +27,7 @@ class combat_scene(Control):
 
 		# Update the label with the initial HP values
 		self.hp_label.call("update_hp", self.monster.hp, self.monster.max_hp)
-
+		self.monster_bar.call("update_monster_bar", self.monster.hp, self.monster.max_hp)
 	def player_died(self):
 		"""Disables combat buttons and shows the death screen."""
 		# self.get_node("Attack_Button").disabled = True
