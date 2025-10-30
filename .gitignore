@@ -20,3 +20,6 @@ addons/py4godot/cpython-3.12.4-darwin64/
 
 # IDE-specific
 .vscode/
+
+# Custom plugins files
+.pylint
