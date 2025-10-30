@@ -1,10 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://80o0vrx8ov3h"]
+[gd_scene load_steps=21 format=3 uid="uid://80o0vrx8ov3h"]
 
 [ext_resource type="Script" path="res://stage/combat_scene/combat_scene.py" id="1_601pc"]
 [ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Background/Background.png" id="1_j8b3c"]
 [ext_resource type="Texture2D" uid="uid://dj12ttrjw3ksc" path="res://img/Enemies/sento_m8.png" id="2_estmv"]
 [ext_resource type="Texture2D" uid="uid://xob4ygnoylmu" path="res://img/Overlay_Textures/dungeon0_baseT.png" id="3_4pwfs"]
-[ext_resource type="Texture2D" uid="uid://cit8fxtuqjji1" path="res://img/Card sample 2.0/Strike I.png" id="5_g7ypw"]
 [ext_resource type="Script" uid="uid://brtcgat56h72y" path="res://stage/combat_scene/hp_bar.gd" id="6_gapb1"]
 [ext_resource type="Script" uid="uid://bsw6oxfvctpbr" path="res://stage/combat_scene/hp_monster.gd" id="7_it1vf"]
 [ext_resource type="Texture2D" uid="uid://bg5termtb5hyc" path="res://img/Buttons/dungeon0_flee.png" id="7_n3c6q"]
@@ -44,6 +43,16 @@ border_width_right = 3
 border_width_bottom = 3
 border_color = Color(1, 1, 1, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5m2hi"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pjunm"]
+bg_color = Color(0.4313402, 0.43134028, 0.43134007, 1)
+
 [node name="Node2D" type="Node2D"]
 _import_path = NodePath("")
 unique_name_in_owner = false
@@ -81,7 +90,8 @@ offset_bottom = 648.0
 texture = ExtResource("1_j8b3c")
 expand_mode = 1
 
-[node name="Overlay" type="TextureRect" parent="."]
+[node name="Overlay" type="TextureRect" parent="Background"]
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("3_4pwfs")
@@ -98,7 +108,6 @@ offset_left = 194.0
 offset_top = 283.0
 offset_right = 412.0
 offset_bottom = 527.42426
-icon = ExtResource("5_g7ypw")
 flat = true
 expand_icon = true
 
@@ -286,6 +295,23 @@ texture_filter = 6
 position = Vector2(964.00006, 453)
 scale = Vector2(1.3931637, 1.3714138)
 texture = ExtResource("11_gapb1")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 8.0
+offset_top = 476.0
+offset_right = 211.0
+offset_bottom = 503.0
+theme_override_styles/background = SubResource("StyleBoxFlat_5m2hi")
+theme_override_styles/fill = SubResource("StyleBoxFlat_pjunm")
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="."]
+offset_left = 56.0
+offset_top = 478.0
+offset_right = 143.0
+offset_bottom = 501.0
+text = "HP : 50/100"
 
 [connection signal="pressed" from="Attack_Button" to="." method="_on_attack_button_pressed"]
 [connection signal="pressed" from="Flee_Button" to="." method="_on_flee_button_pressed"]
