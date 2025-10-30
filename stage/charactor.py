@@ -38,7 +38,7 @@ class Character:
 
 	Strength_per_level = 10
 	Max_hp_per_level = 20
-	def __init__(self, strength=Strength_per_level, max_hp=Max_hp_per_level):
+	def __init__(self, strength, max_hp):
 		"""
 		Initializes a new character.
 		Args:

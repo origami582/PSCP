@@ -62,41 +62,50 @@ class combat_scene(Control):
 
 	def _on_attack_button_pressed(self) -> None:
 		"""Handles the event when the player's attack button is pressed."""
-		# Player attacks monster
-		dice_face = random_event_picker.dice_roll()
-		print(f"Dice roll: {dice_face}")	# Debug
-		self.monster.take_damage(amount=Globals.player.strength * dice_face) #Globals.player.strength
-		self.get_node("Attack_Button").visible = False
-		self.get_node("Flee_Button").visible = False
-
 		# Get the textbox and its label, then update the text
 		textbox_node = self.get_node("Textbox")
+		textbox_node.visible = True
+
+		# Player attacks monster
+		dice_face = random_event_picker.dice_roll()
+		textbox_node.get_node("Text").call("show_dice_roll", dice_face)
+		player_damage = Globals.player.strength * dice_face
+		print(f"Dice roll: {dice_face}, Damage: {player_damage}")  # Debug
+		self.monster.take_damage(amount=player_damage)
+		self.get_node("Attack_Button").visible = False
+		self.get_node("Flee_Button").visible = False
+		textbox_node.get_node("Text").call("show_player_attack",
+										   self.monster.monster_type,
+										   player_damage)
+
 		if self.monster.is_dead:
-			textbox_node.get_node("Text").call("show_monster_dead",\
-											  self.monster.monster_type,\
-												self.monster.exp_reward)
-			textbox_node.visible = True
+			# Monster is dead, show victory message and wait for player to continue.
+			textbox_node.get_node("Text").call("show_monster_dead",
+											   self.monster.monster_type,
+											   self.monster.exp_reward)
 			self.wait_for_next_scene = True
-		else:
-			textbox_node.get_node("Text").call("show_player_attack",\
-											  self.monster.monster_type,\
-												Globals.player.strength)
-			textbox_node.visible = True
-			damage = self.monster.atk
-			Globals.player.actual_hp -= damage
+			# Update HP bars and return to prevent monster from attacking.
+			self.update_ui_elements()
+			return
+
+		# Monster attacks player, if it's still alive
+		monster_damage = self.monster.atk
+		Globals.player.actual_hp -= monster_damage
+		textbox_node.get_node("Text").call("show_monster_attack",
+										   self.monster.monster_type,
+										   monster_damage)
+
+
+		# Check if player died from the counter-attack
 		if Globals.player.actual_hp <= 0:
-			print("died")
-			self.player_died()      # call function above when player is dead
+			self.player_died()
+			return # Stop further execution if player is defeated
+
+		# Check for game over
 		if Globals.player.lifes <= 0:
-			self.get_node("dead_screen").visible = True
-			self.get_node("Textbox").visible = False
-			self.get_node("Attack_Button").visible = False
-			self.get_node("Flee_Button").visible = False
-		# Update the label with the new HP values
-		self.monster_hp_label.call("update_hp", self.monster.hp, self.monster.max_hp)
-		self.monster_bar.call("update_monster_bar", self.monster.hp, self.monster.max_hp)
-		self.player_hp_label.call("update_hp", Globals.player.actual_hp, Globals.player.max_hp)
-		self.player_bar.call("update_player_bar", Globals.player.actual_hp, Globals.player.max_hp)
+			self.show_game_over_screen()
+
+		self.update_ui_elements()
 
 	def _on_flee_button_pressed(self):
 		"""Handles the event when the flee button is pressed."""
@@ -105,15 +114,27 @@ class combat_scene(Control):
 		if remain_hp <= 0:
 			print("died")
 			self.player_died()      # call function above when player is dead
-		if Globals.player.lifes <= 0:
-			self.get_node("dead_screen").visible = True
-			self.get_node("Textbox").visible = False
-			self.get_node("Attack_Button").visible = False
-			self.get_node("Flee_Button").visible = False
-		else:
+			return
+
+		if Globals.player.lifes > 0:
 			# Player survived, return to stage1
 			self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
+		else:
+			self.show_game_over_screen()
 
+	def show_game_over_screen(self):
+		"""Displays the game over screen and hides combat UI."""
+		self.get_node("dead_screen").visible = True
+		self.get_node("Textbox").visible = False
+		self.get_node("Attack_Button").visible = False
+		self.get_node("Flee_Button").visible = False
+
+	def update_ui_elements(self):
+		"""Updates all HP-related UI elements."""
+		self.monster_hp_label.call("update_hp", self.monster.hp, self.monster.max_hp)
+		self.monster_bar.call("update_monster_bar", self.monster.hp, self.monster.max_hp)
+		self.player_hp_label.call("update_hp", Globals.player.actual_hp, Globals.player.max_hp)
+		self.player_bar.call("update_player_bar", Globals.player.actual_hp, Globals.player.max_hp)
 
 	def _on_died_back_to_menu_pressed(self):
 		"""Handles returning to the main menu from the death screen."""
