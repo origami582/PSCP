@@ -11,9 +11,9 @@
 [ext_resource type="FontFile" uid="uid://x2aerthebyse" path="res://font/PixelMplus10-Bold.ttf" id="10_an8mi"]
 [ext_resource type="Script" path="res://stage/room.py" id="10_bwayr"]
 [ext_resource type="Texture2D" uid="uid://bcb4fe1rnph3l" path="res://img/maincharacter.png" id="11_vf5ng"]
-[ext_resource type="PackedScene" uid="uid://bm2ihfn0utn2r" path="res://LiveSystem/LivesDisplay.tscn" id="12_an8mi"]
+[ext_resource type="PackedScene" uid="uid://bm2ihfn0utn2r" path="res://stage/LiveSystem/LivesDisplay.tscn" id="12_an8mi"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 _import_path = NodePath("")
 unique_name_in_owner = false
 process_mode = 0
@@ -276,6 +276,7 @@ scale = Vector2(1.3931637, 1.3714138)
 texture = ExtResource("11_vf5ng")
 
 [node name="Lives" parent="." instance=ExtResource("12_an8mi")]
+script = null
 
 [connection signal="pressed" from="Return_Button" to="." method="_on_return_button_pressed"]
 [connection signal="pressed" from="Next_Button" to="." method="_on_next_pressed"]
