@@ -75,7 +75,16 @@ class combat_scene(Control):
 											  self.monster.monster_type,\
 												Globals.player.strength)
 			textbox_node.visible = True
-
+			damage = self.monster.atk
+			Globals.player.actual_hp -= damage
+		if Globals.player.actual_hp <= 0:
+			print("died")
+			self.player_died()      # call function above when player is dead
+			if Globals.player.lifes <= 0:
+				self.get_node("dead_screen").visible = True
+				self.get_node("Textbox").visible = False
+				self.get_node("Attack_Button").visible = False
+				self.get_node("Flee_Button").visible = False
 		# Update the label with the new HP values
 		self.hp_label.call("update_hp", self.monster.hp, self.monster.max_hp)
 		self.monster_bar.call("update_monster_bar", self.monster.hp, self.monster.max_hp)

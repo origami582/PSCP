@@ -13,7 +13,7 @@ class Monster:
 		self.monster_type:str = ''
 		self.hp:float = 0
 		self.max_hp:float = 0
-		# self.atk:float = 0
+		self.atk:float = 0
 		self.exp_reward:int = 0
 
 	def debug_report(self):
@@ -33,7 +33,7 @@ class Monster:
 
 			# Set stats from retrived data
 			self.hp = monster_data['hp_scaler']() * Monster_stat.BASE_HP
-			# self.atk = monster_data['atk_scaler']() * Globals.player.strength * Globals.difficulty
+			self.atk = monster_data['atk_scaler']() * Monster_stat.BASE_ATK
 			self.max_hp = self.hp
 			self.exp_reward = monster_data['exp_reward']
 
