@@ -75,6 +75,7 @@ class combat_scene(Control):
 
 		# Update the label with the new HP values
 		self.hp_label.call("update_hp", self.monster.hp, self.monster.max_hp)
+		self.monster_bar.call("update_monster_bar", self.monster.hp, self.monster.max_hp)
 
 
 	def _on_flee_button_pressed(self):
