@@ -60,27 +60,22 @@ class combat_scene(Control):
 
 		# Get the textbox and its label, then update the text
 		textbox_node = self.get_node("Textbox")
-		textbox_node.get_node("Text").call("show_player_attack",\
-										  self.monster.monster_type,\
-											Globals.player.strength)
-		textbox_node.visible = True
+		if self.monster.is_dead:
+			textbox_node.get_node("Text").call("show_monster_dead",\
+											  self.monster.monster_type,\
+												self.monster.exp_reward)
+			textbox_node.visible = True
+			self.wait_for_next_scene = True 
+			
+		else:
+			textbox_node.get_node("Text").call("show_player_attack",\
+											  self.monster.monster_type,\
+												Globals.player.strength)
+			textbox_node.visible = True
 
 		# Update the label with the new HP values
 		self.hp_label.call("update_hp", self.monster.hp, self.monster.max_hp)
 
-		if self.monster.is_dead:
-			self.get_node("Textbox").visible = True
-			textbox_node.get_node("Text").call("show_player_attack")
-			print("Monster Defeated")
-			print(f"You gained {self.monster.exp_reward} EXP!!!")
-			Globals.room += 1
-			Globals.player.gain_exp(amount=self.monster.exp_reward) # Gained EXP after defeating monster
-			# Status report will always trigger after returning to maingame (stage1.tscn) :)
-			if event.is_action_pressed("ui_accept"):
-				self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
-		else:
-			# Monster is not dead, it's their turn to attack! (We can add this logic here)
-			print("Monster Attack!")
 
 	def _on_flee_button_pressed(self):
 		"""Handles the event when the flee button is pressed."""
@@ -103,17 +98,26 @@ class combat_scene(Control):
 		self.get_tree().change_scene_to_file("res://stage/main_menu.tscn")
 
 	def _input(self, event):
-			"""Handles player input for advancing dialogue in the textbox."""
+		"""Handles player input for advancing dialogue in the textbox."""
+		if hasattr(self, "wait_for_next_scene") and self.wait_for_next_scene:
 			if event.is_action_pressed("ui_accept"):
-				self.get_node("Textbox").visible = False
-				self.get_node("Attack_Button").visible = True
-				self.get_node("Flee_Button").visible = True
+				self.wait_for_next_scene = False
+				print("Monster Defeated")
+				print(f"You gained {self.monster.exp_reward} EXP!!!")
+				Globals.room += 1
+				Globals.player.gain_exp(amount=self.monster.exp_reward)
+				self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
+			return
+		if event.is_action_pressed("ui_accept"):
+			self.get_node("Textbox").visible = False
+			self.get_node("Attack_Button").visible = True
+			self.get_node("Flee_Button").visible = True
 
-			# Check if the 'Press_B' action is pressed (mapped to 'B' key in Project Settings)
-			if event.is_action_pressed("Press_B"):
-				print("Debug: 'B' key pressed, chaning to backpack scene")
-				Globals.previous_scene_path = "res://stage/combat_scene/combat_scene.tscn"
-				self.get_tree().change_scene_to_file("res://stage/backpack_scene/backpack_scene.tscn")
+		# Check if the 'Press_B' action is pressed (mapped to 'B' key in Project Settings)
+		if event.is_action_pressed("Press_B"):
+			print("Debug: 'B' key pressed, chaning to backpack scene")
+			Globals.previous_scene_path = "res://stage/combat_scene/combat_scene.tscn"
+			self.get_tree().change_scene_to_file("res://stage/backpack_scene/backpack_scene.tscn")
 
 	def _on_textbox_hidden(self):
 		"""Callback for when the textbox is hidden (currently unused)."""
