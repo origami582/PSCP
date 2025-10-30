@@ -89,6 +89,7 @@ class combat_scene(Control):
 				self.get_node("dead_screen").visible = True
 				self.get_node("Textbox").visible = False
 				self.get_node("Attack_Button").visible = False
+				self.get_node("Flee_Button").visible = False
 		else:
 			# Player survived, return to stage1
 			self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
