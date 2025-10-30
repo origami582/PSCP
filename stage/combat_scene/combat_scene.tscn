@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://stage/combat_scene/combat_scene.py" id="1_601pc"]
 [ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Background/Background.png" id="1_j8b3c"]
 [ext_resource type="Texture2D" uid="uid://dj12ttrjw3ksc" path="res://img/Enemies/sento_m8.png" id="2_estmv"]
-[ext_resource type="Texture2D" uid="uid://xob4ygnoylmu" path="res://img/Overlay_Textures/dungeon0_baseT.png" id="3_4pwfs"]
+[ext_resource type="Texture2D" uid="uid://cn8wqy5vkgfm1" path="res://img/Overlay_Textures/dungeon0_baseT.png" id="3_4pwfs"]
 [ext_resource type="Script" uid="uid://brtcgat56h72y" path="res://stage/combat_scene/hp_bar.gd" id="6_gapb1"]
 [ext_resource type="Script" uid="uid://bsw6oxfvctpbr" path="res://stage/combat_scene/hp_monster.gd" id="7_it1vf"]
 [ext_resource type="Texture2D" uid="uid://bg5termtb5hyc" path="res://img/Buttons/dungeon0_flee.png" id="7_n3c6q"]
