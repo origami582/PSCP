@@ -40,6 +40,8 @@ class combat_scene(Control):
 		# 	print("You are Wiped")
 
 		Globals.player.lifes -= 1
+		Livecounter.live = Globals.player.lifes
+		self.get_node("Lives").call("updated_display")
 		Globals.player.actual_hp = Globals.player.max_hp
 		print("DEBUG: Player died - Live reducted by 1")
 		self.get_tree().change_scene_to_file("res://stage/stage1.tscn")

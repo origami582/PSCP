@@ -275,7 +275,7 @@ position = Vector2(964.00006, 453)
 scale = Vector2(1.3931637, 1.3714138)
 texture = ExtResource("11_vf5ng")
 
-[node name="Node2D" parent="." instance=ExtResource("12_an8mi")]
+[node name="Lives" parent="." instance=ExtResource("12_an8mi")]
 
 [connection signal="pressed" from="Return_Button" to="." method="_on_return_button_pressed"]
 [connection signal="pressed" from="Next_Button" to="." method="_on_next_pressed"]
