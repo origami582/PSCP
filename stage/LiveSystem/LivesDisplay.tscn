@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bm2ihfn0utn2r"]
 
-[ext_resource type="Script" uid="uid://cuwluavxe4hcf" path="res://LiveSystem/lives_display.gd" id="1_3mmuc"]
+[ext_resource type="Script" uid="uid://cuwluavxe4hcf" path="res://stage/LiveSystem/lives_display.gd" id="1_3mmuc"]
 [ext_resource type="Texture2D" uid="uid://di70jtlm5e8uq" path="res://img/hearticon.png" id="2_3mgx5"]
 
 [node name="Node2D" type="Node2D"]

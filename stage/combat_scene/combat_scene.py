@@ -20,7 +20,7 @@ class combat_scene(Control):
 		# Get a reference to the label node
 		self.hp_label = self.get_node("HP_monster")
 		self.monster_bar = self.get_node("Monster_bar")
-
+		
 		# Randomly pick monster from available pool and create an instance
 		selected_encounter = self.pick_monster()
 		self.monster = Monster().setup_monster(monster_type=selected_encounter)
@@ -40,8 +40,9 @@ class combat_scene(Control):
 		# 	print("You are Wiped")
 
 		Globals.player.lifes -= 1
-		Livecounter.live = Globals.player.lifes
-		self.get_node("Lives").call("updated_display")
+		# call func4tion updateddisplay
+		#
+		#
 		Globals.player.actual_hp = Globals.player.max_hp
 		print("DEBUG: Player died - Live reducted by 1")
 		self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
