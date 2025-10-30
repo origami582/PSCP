@@ -1,5 +1,6 @@
-VBoxContainer
+Label
 ProgressBar
+VBoxContainer
 AudioStreamPlayer
 TextureRect
 HBoxContainer
@@ -7,7 +8,6 @@ Panel
 FlowContainer
 Container
 PanelContainer
-Label
 PopupPanel
 CanvasLayer
 Button

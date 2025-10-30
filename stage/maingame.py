@@ -27,11 +27,6 @@ class maingame(Control):
 		- 'Press_B': Opens the backpack scene.
 		- 'Press_X': Returns to the main menu.
 		"""
-		# Check if the 'Press_B' action is pressed (mapped to 'B' key in Project Settings)
-		if event.is_action_pressed("Press_B"):
-			print("Debug: 'B' key pressed, chaning to backpack scene")
-			Globals.previous_scene_path = "res://stage/stage1.tscn"
-			self.get_tree().change_scene_to_file("res://stage/backpack_scene/backpack_scene.tscn")
 		if event.is_action_pressed("Press_X"):
 			print("Debug: 'X' key pressed, returning to title")
 			self._on_back_button_pressed()		# Basically the same as pressing the back button itself.
