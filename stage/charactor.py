@@ -132,7 +132,7 @@ class Globals:
 	@staticmethod
 	def new_game():
 		"""Initializes a new game, creating a new player character."""
-		Globals.player = Character(strength=40, max_hp=100)
+		Globals.player = Character(strength=10, max_hp=100)
 		Globals.room = 1
 		Globals.floor = 1
 		Globals.previous_scene_path = ""

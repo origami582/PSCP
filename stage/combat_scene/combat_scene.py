@@ -65,6 +65,7 @@ class combat_scene(Control):
 		# Get the textbox and its label, then update the text
 		textbox_node = self.get_node("Textbox")
 		textbox_node.visible = True
+		textbox_node.get_node("Text").call("clear_text")
 
 		# Player attacks monster
 		dice_face = random_event_picker.dice_roll()

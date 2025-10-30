@@ -5,6 +5,7 @@ from py4godot.classes.Label import Label
 class textpanel(Label):
 	"""A UI label for displaying combat text, like attack messages."""
 	def _ready(self):
+		"""Initializes the label."""
 		# You can set some default text or leave it blank
 		self.text = ""
 
@@ -23,3 +24,7 @@ class textpanel(Label):
 	def show_monster_dead(self, monster_name: str, exp: int):
 		"""Updates the label to show the player's attack."""
 		self.text += f"{monster_name} defeated!!! you gained {exp} EXP!!!\n"
+
+	def clear_text(self):
+		"""Clears all text from the label."""
+		self.text = ""
