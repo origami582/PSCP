@@ -1,5 +1,7 @@
-res://stage/combat_scene/combat_scene.tscn
-res://stage/combat_scene/textpanel.py
 res://stage/combat_scene/combat_scene.py
 res://stage/combat_scene/hp_monster.gd
-res://stage/combat_scene/hp_bar.gd
+res://stage/combat_scene/textpanel.py
+res://LiveSystem/LivesDisplay.tscn
+res://LiveSystem/Livecounter.gd
+res://LiveSystem/lives_display.gd
+res://stage/stage1.tscn
