@@ -72,7 +72,6 @@ class maingame(Control):
 
 		# Only execute this block if the scene did NOT change
 		### --- Debug ---
-		Globals.player.gain_exp(amount=10) # Assuming you gain EXP from non-combat events
 		self.status_update() # Prints the HP *after* the non-combat event
 		### --- Debug ---
 
