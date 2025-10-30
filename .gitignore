@@ -10,7 +10,7 @@
 # Python
 __pycache__/
 venv/
-.venv/
+*.venv/
 
 # py4godot - CPython distributions
 addons/py4godot/cpython-3.12.4-windows64/
@@ -19,7 +19,7 @@ addons/py4godot/cpython-3.12.4-linux64/
 addons/py4godot/cpython-3.12.4-darwin64/
 
 # IDE-specific
-.vscode/
+*.vscode/
 
 # Custom plugins files
-.pylintrc
+*.pylintrc

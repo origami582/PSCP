@@ -17,8 +17,6 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GlobalPopup="*res://stage/UI/popup.tscn"
-Patch="*res://patch.gd"
 Livecounter="*res://stage/LiveSystem/Livecounter.gd"
 
 [editor_plugins]

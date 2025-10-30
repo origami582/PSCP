@@ -258,12 +258,12 @@ icon = ExtResource("4_c0vhm")
 flat = true
 expand_icon = true
 
-[node name="Button" type="Button" parent="."]
+[node name="Debug_Back" type="Button" parent="."]
 offset_left = 357.0
 offset_top = 478.0
 offset_right = 516.0
 offset_bottom = 542.0
-text = "OPEN"
+text = "Debug Back"
 
 [connection signal="pressed" from="Chest" to="." method="_on_chest_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Debug_Back" to="." method="_on_debug_back_pressed"]

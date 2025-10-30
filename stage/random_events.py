@@ -12,8 +12,8 @@ class random_event_picker:
 	STANDARD_EVENT_POOL = {
 		# Event structure is:
 		# 'Event name' : probability(int, float)
-		"monster_encounter": 1,
-		"treasure_chest": 0,
+		"monster_encounter": 0,
+		"treasure_chest": 10,
 		"rest_stop": 0
 		# Add more events here
 	}
