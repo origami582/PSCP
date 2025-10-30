@@ -24,7 +24,6 @@ class combat_scene(Control):
 		# Randomly pick monster from available pool and create an instance
 		selected_encounter = self.pick_monster()
 		self.monster = Monster().setup_monster(monster_type=selected_encounter)
-
 		# Update the label with the initial HP values
 		self.hp_label.call("update_hp", self.monster.hp, self.monster.max_hp)
 		self.monster_bar.call("update_monster_bar", self.monster.hp, self.monster.max_hp)
