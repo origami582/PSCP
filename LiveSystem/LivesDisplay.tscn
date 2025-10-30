@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm2ihfn0utn2r"]
+
+[ext_resource type="Script" uid="uid://cuwluavxe4hcf" path="res://LiveSystem/lives_display.gd" id="1_3mmuc"]
+[ext_resource type="Texture2D" uid="uid://di70jtlm5e8uq" path="res://img/hearticon.png" id="2_3mgx5"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_3mmuc")
+
+[node name="Heart1" type="Sprite2D" parent="."]
+position = Vector2(1095, 56)
+texture = ExtResource("2_3mgx5")
+
+[node name="Heart2" type="Sprite2D" parent="."]
+position = Vector2(1095, 130)
+texture = ExtResource("2_3mgx5")
+
+[node name="Heart3" type="Sprite2D" parent="."]
+position = Vector2(1095, 204)
+texture = ExtResource("2_3mgx5")
