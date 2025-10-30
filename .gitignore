@@ -6,7 +6,6 @@
 *.pyc
 *.exe
 *.pck
-*.cfg
 
 # Python
 __pycache__/
