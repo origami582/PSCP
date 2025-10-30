@@ -35,12 +35,3 @@ class room(Label):
 			Globals.room = 1
 			Globals.floor += 1
 		self.text = f"Floor:{Globals.floor} Room: {Globals.room}"
-		"""
-		Updates the label's text to show the current floor and room.
-		Handles wrapping the room number and incrementing the floor.
-		"""
-		#print update_level
-		if Globals.room >= 10:
-			Globals.room = 1
-			Globals.floor += 1
-		self.text = f"Floor:{Globals.floor} Room: {Globals.room}"

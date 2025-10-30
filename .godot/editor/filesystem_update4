@@ -1,7 +1,10 @@
+res://stage/combat_scene/combat_scene.tscn
 res://stage/combat_scene/combat_scene.py
-res://stage/combat_scene/hp_monster.gd
-res://stage/combat_scene/textpanel.py
-res://LiveSystem/LivesDisplay.tscn
-res://LiveSystem/Livecounter.gd
 res://LiveSystem/lives_display.gd
-res://stage/stage1.tscn
+res://stage/combat_scene/monster_stat.py
+res://stage/random_events.py
+res://stage/treasure_scene/treasure.py
+res://stage/treasure_scene/treasure_scene.tscn
+res://stage/combat_scene/monster.py
+res://stage/room.py
+res://stage/maingame.py

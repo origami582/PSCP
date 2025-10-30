@@ -44,6 +44,8 @@ class maingame(Control):
 		print(f"HP: {Globals.player.actual_hp}/{Globals.player.max_hp}")
 		print(f"EXP: {Globals.player.exp}/{Globals.player.exp_req}")
 		print(f"Total EXP: {Globals.player.exp_total}")
+		print(f"Room: {Globals.room}")
+		print(f"Floor: {Globals.floor}")
 		print("-------------------------------------\n")
 
 	# Possibly the heart of the game sit here in this function

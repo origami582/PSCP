@@ -9,17 +9,17 @@ class Monster_stat:
 	"""
 	BASE_HP = 100 * Globals.difficulty
 	BASE_ATK = 10 * Globals.difficulty
-	
+
 	MONSTER_DATA = {
 		"slime": {
-			"hp_scaler": 0.8 + ((Globals.floor - 1) * 0.5),
-			"atk_scaler": 1.2 + ((Globals.floor - 1) * 0.5),
+			"hp_scaler": lambda: 0.8 + ((Globals.floor - 1) * 0.5),
+			"atk_scaler": lambda: 1.2 + ((Globals.floor - 1) * 0.5),
 			"texture_path": "",		# add texture path
 			"exp_reward": 50
 		},
 		"goblin": {
-			"hp_scaler": 1.2 + ((Globals.floor - 1) * 0.5),
-			"atk_scaler": 0.8 + ((Globals.floor - 1) * 0.5),
+			"hp_scaler": lambda: 1.2 + ((Globals.floor - 1) * 0.5),
+			"atk_scaler": lambda: 0.8 + ((Globals.floor - 1) * 0.5),
 			"texture_path": "",		# add texture path
 			"exp_reward": 75
 		},

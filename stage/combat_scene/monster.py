@@ -7,7 +7,6 @@ class Monster:
 	Represents a single monster instance in combat.
 	This class stores its type, stats, and current state.
 	"""
-	BASE_HP = 100
 
 	def __init__(self):
 		"""Initializes a new monster with default empty stats."""
@@ -33,7 +32,8 @@ class Monster:
 			monster_data = Monster_stat.MONSTER_DATA[monster_type]
 
 			# Set stats from retrived data
-			self.hp = monster_data['hp_scaler'] * Monster.BASE_HP
+			self.hp = monster_data['hp_scaler']() * Monster_stat.BASE_HP
+			# self.atk = monster_data['atk_scaler']() * Globals.player.strength * Globals.difficulty
 			self.max_hp = self.hp
 			self.exp_reward = monster_data['exp_reward']
 

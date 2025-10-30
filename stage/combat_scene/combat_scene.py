@@ -57,7 +57,7 @@ class combat_scene(Control):
 	def _on_attack_button_pressed(self) -> None:
 		"""Handles the event when the player's attack button is pressed."""
 		# Player attacks monster
-		self.monster.take_damage(amount=Globals.player.strength)
+		self.monster.take_damage(amount=1000) #Globals.player.strength
 		self.get_node("Attack_Button").visible = False
 		self.get_node("Flee_Button").visible = False
 
@@ -68,8 +68,8 @@ class combat_scene(Control):
 											  self.monster.monster_type,\
 												self.monster.exp_reward)
 			textbox_node.visible = True
-			self.wait_for_next_scene = True 
-			
+			self.wait_for_next_scene = True
+
 		else:
 			textbox_node.get_node("Text").call("show_player_attack",\
 											  self.monster.monster_type,\
