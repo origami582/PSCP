@@ -12,8 +12,8 @@ class random_event_picker:
 	STANDARD_EVENT_POOL = {
 		# Event structure is:
 		# 'Event name' : probability(int, float)
-		"monster_encounter": 0,
-		"treasure_chest": 10,
+		"monster_encounter": 50,
+		"treasure_chest": 1,
 		"rest_stop": 0
 		# Add more events here
 	}
@@ -23,16 +23,6 @@ class random_event_picker:
 		"slime": 100,
 		"goblin": 0
 		# Add more encounters here
-	}
-	STANDARD_ITEMS_DROP = {
-		# Item structure is:
-		# 'Item name': probability(int, float)
-		"Bump_up": 50,
-		"Shield_perform": 50,
-		"Strike_I": 50,
-		"Strike_II": 50,
-		"Touch_the_floor": 50
-		# Add more items here
 	}
 
 	@staticmethod
@@ -80,20 +70,8 @@ class random_event_picker:
 		return chosen_encounter
 
 	@staticmethod
-	def pick_random_item(item_pool: dict = None) -> str:
-		"""
-		Picks a single random item from a dictionary of items and their weights.
-
-		Args:
-			item_pool: A dictionary where keys are item names (str)
-
-		Return:
-			The name of the chosen item.
-		"""
-		if item_pool is None:
-			item_pool = random_event_picker.STANDARD_ITEMS_DROP
-
-		items = list(item_pool.keys())
-		weights = list(item_pool.values())
-		chosen_item = random.choices(population=items, weights=weights, k=1)[0]
-		return chosen_item
+	def dice_roll() -> int:
+		'''
+		Roll a dice!
+		'''
+		return random.randint(a=1, b=6)
