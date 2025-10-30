@@ -9,6 +9,7 @@ class random_event_picker:
 	"""
 	A utility class with static methods to handle weighted random selections for game events and encounters.
 	"""
+	
 	STANDARD_EVENT_POOL = {
 		# Event structure is:
 		# 'Event name' : probability(int, float)
@@ -24,7 +25,10 @@ class random_event_picker:
 		"goblin": 0
 		# Add more encounters here
 	}
-
+	STANDARD_BOSS_POOL = {
+		"slime": 100,
+		
+	}
 	@staticmethod
 	def pick_random_event(event_pool: dict = None) -> str:
 		"""
@@ -47,7 +51,16 @@ class random_event_picker:
 		# random.choices returns a list, so we take the first element
 		chosen_event = random.choices(population=events, weights=weights, k=1)[0]
 		return chosen_event
+	@staticmethod
+	def pick_random_boss(boss_pool: dict = None) ->str:
+		if boss_pool is None:
+			boss_pool = random_event_picker.STANDARD_ENCOUNTER_POOL
 
+		boss = list(boss_pool.keys())
+		weights = list(boss_pool.values())
+
+		chosen_boss = random.choices(population=boss, weights=weights, k=1)[0]
+		return chosen_boss
 	@staticmethod
 	def pick_random_encounter(encounter_pool: dict = None) -> str:
 		"""

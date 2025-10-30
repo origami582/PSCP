@@ -14,7 +14,7 @@
 [ext_resource type="Script" path="res://stage/combat_scene/textpanel.py" id="11_g7ypw"]
 [ext_resource type="Texture2D" uid="uid://bcb4fe1rnph3l" path="res://img/maincharacter.png" id="11_gapb1"]
 [ext_resource type="FontFile" uid="uid://cpuqreeqb2emg" path="res://font/PixelMplus10-Regular.ttf" id="12_pjunm"]
-[ext_resource type="Script" uid="uid://dn7nul6wycv6g" path="res://stage/combat_scene/hp_player.gd" id="15_pjunm"]
+[ext_resource type="Script" path="res://stage/combat_scene/hp_player.gd" id="15_pjunm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g7ypw"]
 bg_color = Color(0.067547224, 0.067547224, 0.067547224, 1)

@@ -50,20 +50,24 @@ class maingame(Control):
 		Picks a random event and transitions to the appropriate scene.
 		"""
 		print("next")
-		selected_event = random_event_picker.pick_random_event()
-		print(selected_event)       # Debug
-		match selected_event:
-			case 'monster_encounter':
-				# Change to combat scene
-				print('monster')
-				self.get_tree().change_scene_to_file("res://stage/combat_scene/combat_scene.tscn")
-			case 'treasure_chest':
-				print('treasure')
-				# Change scene to tresure chest
-				self.get_tree().change_scene_to_file("res://stage/treasure_scene/treasure_scene.tscn")
-			case 'rest_stop':
-				print('rest_stop')
-				# Change scene to rest stop
+		if Globals.room == 9:
+			selected_event = random_event_picker.pick_random_event()
+			self.get_tree().change_scene_to_file("res://stage/combat_scene/combat_scene.tscn")
+		else:
+			selected_event = random_event_picker.pick_random_event()
+			print(selected_event)       # Debug
+			match selected_event:
+				case 'monster_encounter':
+					# Change to combat scene
+					print('monster')
+					self.get_tree().change_scene_to_file("res://stage/combat_scene/combat_scene.tscn")
+				case 'treasure_chest':
+					print('treasure')
+					# Change scene to tresure chest
+					self.get_tree().change_scene_to_file("res://stage/treasure_scene/treasure_scene.tscn")
+				case 'rest_stop':
+					print('rest_stop')
+					# Change scene to rest stop
 
 		# Only execute this block if the scene did NOT change
 		### --- Debug ---

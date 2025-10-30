@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://stage/maingame.py" id="1_w447a"]
 [ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Background/Background.png" id="2_3ikxw"]
-[ext_resource type="Texture2D" uid="uid://net6eb56261a" path="res://img/Overlay_Textures/dungeon0_base.png" id="3_e7fe8"]
+[ext_resource type="Texture2D" uid="uid://c5moi23lq5gbw" path="res://img/Overlay_Textures/dungeon0_base.png" id="3_e7fe8"]
 [ext_resource type="Texture2D" uid="uid://cdgx0bl4aj7jv" path="res://img/Buttons/dungeon0_exit.png" id="5_bwayr"]
 [ext_resource type="Texture2D" uid="uid://rcjc53x31xm1" path="res://img/Buttons/rysh_0base_7X.png" id="7_vf5ng"]
 [ext_resource type="Texture2D" uid="uid://bg3iw3mviox0t" path="res://img/Buttons/dungeon0_go.png" id="8_bwayr"]
