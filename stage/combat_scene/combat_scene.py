@@ -20,7 +20,7 @@ class combat_scene(Control):
 		# Get a reference to the label node
 		self.hp_label = self.get_node("HP_monster")
 		self.monster_bar = self.get_node("Monster_bar")
-		
+
 		# Randomly pick monster from available pool and create an instance
 		selected_encounter = self.pick_monster()
 		self.monster = Monster().setup_monster(monster_type=selected_encounter)
@@ -126,12 +126,6 @@ class combat_scene(Control):
 			self.get_node("Textbox").visible = False
 			self.get_node("Attack_Button").visible = True
 			self.get_node("Flee_Button").visible = True
-
-		# Check if the 'Press_B' action is pressed (mapped to 'B' key in Project Settings)
-		if event.is_action_pressed("Press_B"):
-			print("Debug: 'B' key pressed, chaning to backpack scene")
-			Globals.previous_scene_path = "res://stage/combat_scene/combat_scene.tscn"
-			self.get_tree().change_scene_to_file("res://stage/backpack_scene/backpack_scene.tscn")
 
 	def _on_textbox_hidden(self):
 		"""Callback for when the textbox is hidden (currently unused)."""
