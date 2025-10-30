@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bcb4fe1rnph3l" path="res://img/maincharacter.png" id="11_vf5ng"]
 [ext_resource type="PackedScene" uid="uid://bm2ihfn0utn2r" path="res://stage/LiveSystem/LivesDisplay.tscn" id="12_an8mi"]
 
-[node name="Node2D2" type="Node2D"]
+[node name="Node2D3" type="Node2D"]
 _import_path = NodePath("")
 unique_name_in_owner = false
 process_mode = 0

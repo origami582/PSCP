@@ -78,6 +78,11 @@ class combat_scene(Control):
 		textbox_node.get_node("Text").call("show_player_attack",
 										   self.monster.monster_type,
 										   player_damage)
+		monster_node = self.get_node("Monster")
+		if monster_node:
+			monster_anim_player = monster_node.get_node("Monster_AnimationPlayer")
+			if monster_anim_player:
+				monster_anim_player.play("hit_flash")
 
 		if self.monster.is_dead:
 			# Monster is dead, show victory message and wait for player to continue.
