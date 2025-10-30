@@ -35,7 +35,9 @@ class Character:
 	FLEE_HP_THRESHOLD = 20
 	FLEE_PENALTY_PERCENTAGE = 0.25
 	FLEE_PENALTY_FLAT = 5
-
+	
+	Strength_per_level = 10
+	Max_hp_per_level = 20
 	def __init__(self, strength=10, max_hp=100):
 		"""
 		Initializes a new character.
@@ -74,7 +76,8 @@ class Character:
 		self.level += 1
 		# Future improvement: Increase max_hp or other stats on level up.
 		self.exp_req = self._get_req_exp(level=self.level + 1)
-
+		self.strength += Strength_per_level
+		self.max_hp += Max_hp_per_level
 
 	def flee_penalty(self):
 		"""Applies a penalty to HP for fleeing and returns the new HP."""
