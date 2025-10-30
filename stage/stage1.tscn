@@ -11,13 +11,8 @@
 [ext_resource type="FontFile" uid="uid://x2aerthebyse" path="res://font/PixelMplus10-Bold.ttf" id="10_an8mi"]
 [ext_resource type="Script" path="res://stage/room.py" id="10_bwayr"]
 [ext_resource type="Texture2D" uid="uid://bcb4fe1rnph3l" path="res://img/maincharacter.png" id="11_vf5ng"]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://bm2ihfn0utn2r" path="res://stage/LiveSystem/LivesDisplay.tscn" id="12_an8mi"]
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
 
 [node name="Node2D2" type="Node2D"]
 _import_path = NodePath("")
@@ -280,16 +275,8 @@ texture_filter = 6
 position = Vector2(964.00006, 453)
 scale = Vector2(1.3931637, 1.3714138)
 texture = ExtResource("11_vf5ng")
-
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 [node name="Lives" parent="." instance=ExtResource("12_an8mi")]
 script = null
-
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 [connection signal="pressed" from="Return_Button" to="." method="_on_return_button_pressed"]
 [connection signal="pressed" from="Next_Button" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="Back_Button" to="." method="_on_back_button_pressed"]

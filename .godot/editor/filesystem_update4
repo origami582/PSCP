@@ -11,3 +11,4 @@ res://stage/maingame.py
 res://stage/LiveSystem/LivesDisplay.tscn
 res://stage/stage1.tscn
 res://stage/backpack_scene/backpack_scene.py
+res://stage/charactor.py

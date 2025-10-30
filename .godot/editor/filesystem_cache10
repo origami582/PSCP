@@ -1,12 +1,12 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1761849006
+::res://::1761858167
 export_presets.cfg::TextFile::-1::1760478417::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::8365038792927059551::1759735538::1759735538::1::::<><><>0<>0<>0176cf9c6e8990b7be86bee517bca520<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 LICENSE.md::TextFile::-1::1759423506::0::1::::<><><>0<>0<><>::
 main.py::PyScriptExtension::-1::1761739307::0::1::::<><><>0<>0<><>::
 patch.gd::GDScript::4900882316459572127::1761068729::0::1::::<>Node<><>0<>0<><>::
 README.md::TextFile::-1::1759735513::0::1::::<><><>0<>0<><>::
-::res://__pycache__/::1761849313
+::res://__pycache__/::1761852898
 ::res://addons/::1760475929
 ::res://addons/py4godot/::1761067974
 dependencies.txt::TextFile::-1::1760477744::0::1::::<><><>0<>0<><>::
@@ -26,12 +26,13 @@ PixelMplus12-Bold.ttf::FontFile::5340434858252166694::1737169494::1759822353::1:
 PixelMplus12-Regular.ttf::FontFile::7704547463490203513::1737169494::1759822353::1::::<><><>0<>0<>d53c56d13b58427fbc8eeb0bdec0741a<>res://.godot/imported/PixelMplus12-Regular.ttf-4cfcf97726769fa7be3b3a60325be90b.fontdata::
 TA 8 bit.otf::FontFile::6786629720027501295::1759735538::1759735538::1::::<><><>0<>0<>3178899bed5ef7129b2283d97f6807c2<>res://.godot/imported/TA 8 bit.otf-dea3c7c9938bec16c966902285816d7f.fontdata::
 TA 8 bit.ttf::FontFile::2112663380445996841::1759735538::1759735538::1::::<><><>0<>0<>de70cd4b0f950f29191c3bb7bab735b3<>res://.godot/imported/TA 8 bit.ttf-986023c4adc44f6427927ffd71b14fd1.fontdata::
-::res://img/::1761849012
+::res://img/::1761858221
 Back_Arrow.png::CompressedTexture2D::7426397479287254291::1759432086::1759822354::1::::<><><>0<>0<>2d7827833a595a5dc0e6dec501c0ef66<>res://.godot/imported/Back_Arrow.png-68fd5522ff76d95bcc3a5ca6292201a8.ctex::
 Chu.png::CompressedTexture2D::8549988790774493075::1761662325::1761662325::0::::<><><>0<>0<>265819c17df9d75ab335b4f1e01c280c<>::
 hearticon.png::CompressedTexture2D::7788367900799793276::1761848947::1761849012::1::::<><><>0<>0<>32052e1b7e5ea83fc1105a9070439834<>res://.godot/imported/hearticon.png-5068d9009240cb894ddb4420cbab9049.ctex::
 Logo.png::CompressedTexture2D::1315248982152445939::1761662325::1761736697::1::::<><><>0<>0<>5f4b4d07058f0318fe99bde51c60bc60<>res://.godot/imported/Logo.png-e5d3c815ff0119fdde9f6af849f43d99.ctex::
 maincharacter.png::CompressedTexture2D::2530632721531666119::1761662325::1761736697::1::::<><><>0<>0<>09334bd4e702b07abaaf1dfd2155befc<>res://.godot/imported/maincharacter.png-ecd0589403878d888a1e41655aaab748.ctex::
+Roll_button.png::CompressedTexture2D::8241763138521747040::1761858221::1761858265::1::::<><><>0<>0<>d5b019ef796664c3cc088e397f23ff1c<>res://.godot/imported/Roll_button.png-186ac52f13e9f42d0a18c96d39315a68.ctex::
 ::res://img/Background/::1760522352
 Background.png::CompressedTexture2D::7439769734232292845::1760520712::1760521631::1::::<><><>0<>0<>8cca79da3c179c6337ba70dc28cd54f4<>res://.godot/imported/Background.png-9caa493e7018aaaba6a95bf82a13e21b.ctex::
 BG1_dungeonsoto.png::CompressedTexture2D::6107541809103589248::1759569864::1759822355::1::::<><><>0<>0<>f99c5b966cfc7897db1a5c016d261a35<>res://.godot/imported/BG1_dungeonsoto.png-174700f9e2579d4a1895fd834d66db74.ctex::
@@ -65,35 +66,14 @@ rysh_0base_7X.png::CompressedTexture2D::1197890741915887102::1761335726::1761335
 rysh_1_1.png::CompressedTexture2D::5887947902021336387::1760522611::1760522668::1::::<><><>0<>0<>aa084598016253d712ccdc44955bc210<>res://.godot/imported/rysh_1_1.png-4a61e8f41f9fa217d2f22d2563e6c8a7.ctex::
 sento_0_enter.png::CompressedTexture2D::5106327548175322019::1759569864::1759822354::1::::<><><>0<>0<>9f0d3863a10da0f1221f5589fa1cc1be<>res://.godot/imported/sento_0_enter.png-337b5190e5ddd69f46eae5245ca3553e.ctex::
 sento_0_shift.png::CompressedTexture2D::7823406035008879892::1759569864::1759822354::1::::<><><>0<>0<>1b14afb86e766c7826ee09f7bfa7c786<>res://.godot/imported/sento_0_shift.png-c3795fbdd685b5ab607673bb99eda326.ctex::
-::res://img/Card sample 2.0/::1761850478
-Bump Up!.png::CompressedTexture2D::7417459620289233887::1761742274::1761850486::1::::<><><>0<>0<>378414c88fbbc226fec717a59ba4cfb2<>res://.godot/imported/Bump Up!.png-5af26bfb282bdd0fdac636fce5325c4e.ctex::
-Shield Perform.png::CompressedTexture2D::3808364133459211893::1761742387::1761850486::1::::<><><>0<>0<>1f64cec164ec85ecdb676407b9edf0c4<>res://.godot/imported/Shield Perform.png-d7e4219cb2a2f8e024dce5e111eb15cb.ctex::
-Strike I.png::CompressedTexture2D::5375589121867206230::1761742435::1761850486::1::::<><><>0<>0<>a3a154d44758f0b80296a1a596474709<>res://.godot/imported/Strike I.png-22d5d1ad9abf0cbe9fb8ed715c16b675.ctex::
-Strike II.png::CompressedTexture2D::6775514287914379597::1761742469::1761850486::1::::<><><>0<>0<>4da06f4ad8dc8aec451a3402093278c4<>res://.godot/imported/Strike II.png-10ab5ab04f422459e64e439362608e8e.ctex::
-Touch the floor.png::CompressedTexture2D::3820548269552241904::1761742499::1761850486::1::::<><><>0<>0<>acd00e4593970c3f9b5174737ab19b25<>res://.godot/imported/Touch the floor.png-2542ec55aea1bf218d912b82865e227a.ctex::
-::res://img/Cards/::1761067944
-sento_1_H2taiki.png::CompressedTexture2D::594037086333115077::1759569864::1760522352::1::::<><><>0<>0<>2ae62cdc1489921a0ba3f9ab5b1d2c5c<>res://.godot/imported/sento_1_H2taiki.png-96c63c031fa451529f1461fb1ab073e4.ctex::
-sento_1_item00.png::CompressedTexture2D::2365145949445661598::1761066935::1761066977::1::::<><><>0<>0<>95f5f770a9fbeb8bb1d1c28ae3f089ce<>res://.godot/imported/sento_1_item00.png-1b12cfd5258f54e14a91f5c87161acae.ctex::
-sento_1_item01.png::CompressedTexture2D::4926259068057862670::1759569864::1760522352::1::::<><><>0<>0<>a780934fe87d521fbbd7ddd28eb2d09d<>res://.godot/imported/sento_1_item01.png-3fee2d30f17294f77796cc091f0f9468.ctex::
-sento_1_item02.png::CompressedTexture2D::8079605275813940664::1759569864::1760522352::1::::<><><>0<>0<>82e2e33e6d24157989adeb17f957a135<>res://.godot/imported/sento_1_item02.png-c8c904835fa5a63d560b187463d87f0b.ctex::
-sento_1_item03.png::CompressedTexture2D::6512884529363921467::1759569864::1760522352::1::::<><><>0<>0<>7c8f8509734c3731a0252a0a821dab7d<>res://.godot/imported/sento_1_item03.png-6eab6b8296795efd3a3ef18fd7946de8.ctex::
-sento_1_s1.png::CompressedTexture2D::5086811180505108408::1759569864::1760522352::1::::<><><>0<>0<>2d29c549f956bf958eb0c02d59bf01bc<>res://.godot/imported/sento_1_s1.png-a554af6849243916123ad8e14a763fbc.ctex::
-sento_1_s2.png::CompressedTexture2D::1087397085683165264::1759569864::1760522352::1::::<><><>0<>0<>c2451ca97abdf7fab7616fdea47a05d2<>res://.godot/imported/sento_1_s2.png-de8b32a8914b04ec1a6d8ec17c1db3e1.ctex::
-sento_1_s3.png::CompressedTexture2D::5338592044650420093::1759569864::1760522352::1::::<><><>0<>0<>32564737965c28afcc517becf96aef3e<>res://.godot/imported/sento_1_s3.png-c723da40416fff337f9b05b0fe9d7879.ctex::
-sento_itemget1.png::CompressedTexture2D::4045568650737336323::1759569864::1760522352::1::::<><><>0<>0<>fa9815ff3e9effe65a3c3ef7f0a6db17<>res://.godot/imported/sento_itemget1.png-696ea7693d0b4c269c456b758f94b149.ctex::
-sento_itemget2.png::CompressedTexture2D::4907584489736546517::1759569864::1760522352::1::::<><><>0<>0<>512746c38036c18b3c9dcf49ba69ac30<>res://.godot/imported/sento_itemget2.png-efb9f3f044b98dacdbc99a8504271282.ctex::
-sento_itemget3.png::CompressedTexture2D::5231985907123535171::1759569864::1760522352::1::::<><><>0<>0<>d6624701165262c791a86ae58d4d6384<>res://.godot/imported/sento_itemget3.png-c55416534e1d50c7c965251213381185.ctex::
-sento_naoF_s1.png::CompressedTexture2D::532164106800757899::1759569864::1760522352::1::::<><><>0<>0<>8b8f915ef344962c1e8f2728649d1a0f<>res://.godot/imported/sento_naoF_s1.png-69db9280b7196fe490d208983bc75f60.ctex::
-sento_naoF_s2.png::CompressedTexture2D::8810207320054874984::1759569864::1760522352::1::::<><><>0<>0<>592aa3a7e1515f9d076fe12eb3332278<>res://.godot/imported/sento_naoF_s2.png-1bcd7f12be09cd65fdd0347d2d21b89b.ctex::
-sento_naoF_s3.png::CompressedTexture2D::7219923958295678487::1759569864::1760522352::1::::<><><>0<>0<>1a4c4daaa9f6373c05238fcfbabdaa69<>res://.godot/imported/sento_naoF_s3.png-eb7e87ead32cecd0319d30a7ed2e5e42.ctex::
-sento_naoF_sH.png::CompressedTexture2D::7884298445541040762::1759569864::1760522352::1::::<><><>0<>0<>e6e9b7726c4c1ce6aeddb541a04e0c9e<>res://.godot/imported/sento_naoF_sH.png-aa2b80b68edb11e06a4556461b37b5b9.ctex::
-sento_skillget1.png::CompressedTexture2D::2512686486133805212::1759569864::1760522352::1::::<><><>0<>0<>88c0ee0577a195096b13ee4cc2d96442<>res://.godot/imported/sento_skillget1.png-dd7b6f0968dffc5b1ca1d24906842f9f.ctex::
-sento_skillget2.png::CompressedTexture2D::7181988863130083079::1759569864::1760522352::1::::<><><>0<>0<>00efcb4fadbd50a68ac5a61474e1e41b<>res://.godot/imported/sento_skillget2.png-83e28f08028655bb77cce7daa9ae4ebd.ctex::
-sento_skillget3.png::CompressedTexture2D::5289962827175577265::1759569864::1760522352::1::::<><><>0<>0<>6f4041a669fb81fea76a104e6f85b547<>res://.godot/imported/sento_skillget3.png-21d956f439f25a9e1ee06f407eedf5d0.ctex::
-sento_skilN1.png::CompressedTexture2D::2659223144691514017::1759569864::1760522352::1::::<><><>0<>0<>0b49dc78ba1234433e0e59731a75de6b<>res://.godot/imported/sento_skilN1.png-4a86bb69104f7b987a496c527184a779.ctex::
-sento_skilN2.png::CompressedTexture2D::36817645879907331::1759569864::1760522352::1::::<><><>0<>0<>23d036fdd76068805ff715b5e62eaae7<>res://.godot/imported/sento_skilN2.png-d8ed1d24c77c0ea0d1bb2aed1792abe5.ctex::
-sento_skilN3.png::CompressedTexture2D::8499236673882487521::1759569864::1760522352::1::::<><><>0<>0<>7d6a54ba7814649f3478e80eba6133e7<>res://.godot/imported/sento_skilN3.png-e04ac5cb99e301eb89b956f8cae6eb91.ctex::
-::res://img/Enemies/::1760522353
+::res://img/Card sample 2.0/::1761858149
+Attack_Counter Parry.png::CompressedTexture2D::3214827262504587279::1761858149::1761858265::1::::<><><>0<>0<>79566aec9510938088d805fac16bdc15<>res://.godot/imported/Attack_Counter Parry.png-efc5eea1b3390ad5c958b3319b267ca6.ctex::
+Attack_Strike I.png::CompressedTexture2D::7341113049398991160::1761858149::1761858265::1::::<><><>0<>0<>966c6d1816447f212ab061c2960fef9b<>res://.godot/imported/Attack_Strike I.png-e78cc25944c241a40dbb2831414bc8b2.ctex::
+Attack_Strike II.png::CompressedTexture2D::5701663229321575998::1761858149::1761858265::1::::<><><>0<>0<>bb66727bcc5e93ff31159c3216ddd965<>res://.godot/imported/Attack_Strike II.png-adf5a11f81e2e9ade105d63e10ad982f.ctex::
+Defense_Lion Protection.png::CompressedTexture2D::3104897387441286207::1761858149::1761858265::1::::<><><>0<>0<>d9b1f6e0b2a36965966cda4df93d82b3<>res://.godot/imported/Defense_Lion Protection.png-45ae3fa11df9dd32b1e3b307d78d76e2.ctex::
+item_Life Elixir.png::CompressedTexture2D::2383729101410246689::1761858149::1761858265::1::::<><><>0<>0<>5035f27ba608fc83cd320f6f368ab38b<>res://.godot/imported/item_Life Elixir.png-1f33fb05cc17833ce41cd77c38382e82.ctex::
+::res://img/Enemies/::1761858149
+Boss.png::CompressedTexture2D::6621980171716694413::1761858149::1761858265::1::::<><><>0<>0<>e414b13310098da4ed9980718603e526<>res://.godot/imported/Boss.png-02fb66634dc14a2e598e85fdc567e4f0.ctex::
 sento_m1.png::CompressedTexture2D::4280440020052800720::1759569864::1760522352::1::::<><><>0<>0<>bffadd2f342a19f3d911b5cb837df2cc<>res://.godot/imported/sento_m1.png-030b0c0f6eb6027a037d3254f1dad460.ctex::
 sento_m2.png::CompressedTexture2D::9164272020738943554::1759569864::1760522352::1::::<><><>0<>0<>3aeb0e5cf99428fda56401bf6ff1795b<>res://.godot/imported/sento_m2.png-6e6956e74fc34019793d77a6ecceb564.ctex::
 sento_m3.png::CompressedTexture2D::4482153983667093866::1759569864::1760522351::1::::<><><>0<>0<>4d71d3729bad1f66738a34cddbdd1368<>res://.godot/imported/sento_m3.png-5209e1db2c59331a33ba2800c7bdf7a2.ctex::
@@ -159,52 +139,41 @@ rysh_0base_4hidarisita.png::CompressedTexture2D::2687900603496018505::1759569864
 rysh_2_title.png::CompressedTexture2D::1037072629473532660::1759569864::1760522351::1::::<><><>0<>0<>7941df06e0004224e81bd8f1e7db7491<>res://.godot/imported/rysh_2_title.png-d335597e161e3b7db18c888276729aea.ctex::
 sento_0_barE.png::CompressedTexture2D::329846651072469702::1759569864::1760522351::1::::<><><>0<>0<>1022137441e98670da6dfa238dedad9a<>res://.godot/imported/sento_0_barE.png-0beeb5a3e95cc929f922f16279c636fc.ctex::
 sento_0_barP.png::CompressedTexture2D::7263308638017137912::1759569864::1760522351::1::::<><><>0<>0<>24ef2acbadae3b404c5ba5a9d28d53c5<>res://.godot/imported/sento_0_barP.png-e3c78ed95e68d4132998034f26c2f154.ctex::
-::res://LiveSystem/::1761849313
-Livecounter.gd::GDScript::2652854313879075262::1761848947::0::1::::<>Node<><>0<>0<><>::
-LivesDisplay.tscn::PackedScene::3284923527071152787::1761848947::0::1::::<><><>0<>0<><>::uid://cuwluavxe4hcf::::res://LiveSystem/lives_display.gd<>uid://di70jtlm5e8uq::::res://img/hearticon.png
-lives_display.gd::GDScript::6222738187027094701::1761849313::0::1::::<>Node2D<><>0<>0<><>::
 ::res://Prototype_logic_py/::1760110356
 caller.py::PyScriptExtension::-1::1760110356::0::1::::<><><>0<>0<><>::
 random_events.py::PyScriptExtension::-1::1759822518::0::1::::<><><>0<>0<><>::
 ::res://Prototype_logic_py/__pycache__/::1760110425
-::res://save/::1761849313
-save.txt::TextFile::-1::1761849313::0::1::::<><><>0<>0<><>::
+::res://save/::1761858167
+save.txt::TextFile::-1::1761858167::0::1::::<><><>0<>0<><>::
 ::res://Sound/::1761736697
 _    __.mp3::AudioStreamMP3::7600580456551018747::1759844507::1759844507::1::::<><><>0<>0<>83ea0b278c61d8c61e173763bd987bcc<>res://.godot/imported/_    __.mp3-e7d2fff4b4049b3bb8a96b2ed51bcb78.mp3str::
 mo-fa-shi-itozhen-rizi-shi-ji-128-ytshorts.savetube.me (1).mp3::AudioStreamMP3::5765063703236310110::1761408713::1761736697::1::::<><><>0<>0<>653d17e4f818401c59cafda75ab48d49<>res://.godot/imported/mo-fa-shi-itozhen-rizi-shi-ji-128-ytshorts.savetube.me (1).mp3-b09fe430905abd5782e30561fcbcabe4.mp3str::
-::res://stage/::1761849313
+::res://stage/::1761858239
 __init__.py::PyScriptExtension::-1::1759423839::0::1::::<><><>0<>0<><>::
 Button2.py::PyScriptExtension::-1::1759819844::0::1::::<><><>0<>0<><>::
-charactor.py::PyScriptExtension::-1::1761741515::0::1::::<><><>0<>0<><>::
+charactor.py::PyScriptExtension::-1::1761858149::0::1::::<><><>0<>0<><>::
 Level.py::PyScriptExtension::-1::1761739307::0::1::::<><><>0<>0<><>::
-maingame.py::PyScriptExtension::-1::1761739940::0::1::::<><><>0<>0<><>::
+maingame.py::PyScriptExtension::-1::1761858149::0::1::::<><><>0<>0<><>::
 main_menu.tscn::PackedScene::5660212921624415985::1761662325::0::1::::<><><>0<>0<><>::res://main.py<>uid://c3xq2g0h1idc6::::res://font/TA 8 bit.otf<>uid://coev0y8ow6415::::res://Sound/mo-fa-shi-itozhen-rizi-shi-ji-128-ytshorts.savetube.me (1).mp3<>uid://bvvhka477bxcl::::res://img/Background/BG1_dungeonsotoN.png<>uid://s0d7ud4kr7sh::::res://img/Logo.png
-random_events.py::PyScriptExtension::-1::1761850320::0::1::::<><><>0<>0<><>::
-room.py::PyScriptExtension::-1::1761341959::0::1::::<><><>0<>0<><>::
+random_events.py::PyScriptExtension::-1::1761858167::0::1::::<><><>0<>0<><>::
+room.py::PyScriptExtension::-1::1761852898::0::1::::<><><>0<>0<><>::
 save_reload.py::PyScriptExtension::-1::1761740322::0::1::::<><><>0<>0<><>::
-stage1.tscn::PackedScene::7289950682809830993::1761849313::0::1::::<><><>0<>0<><>::res://stage/maingame.py<>uid://dd846kfv6n6bx::::res://img/Background/Background.png<>uid://net6eb56261a::::res://img/Overlay_Textures/dungeon0_base.png<>uid://cdgx0bl4aj7jv::::res://img/Buttons/dungeon0_exit.png<>uid://rcjc53x31xm1::::res://img/Buttons/rysh_0base_7X.png<>uid://bg3iw3mviox0t::::res://img/Buttons/dungeon0_go.png<>uid://cic7ggie57dq1::::res://font/PixelMplus12-Bold.ttf<>res://stage/Level.py<>uid://x2aerthebyse::::res://font/PixelMplus10-Bold.ttf<>res://stage/room.py<>uid://bcb4fe1rnph3l::::res://img/maincharacter.png
-::res://stage/__pycache__/::1761850324
-::res://stage/backpack_scene/::1761076916
-backpack_scene.py::PyScriptExtension::-1::1761077115::0::1::::<><><>0<>0<><>::
-backpack_scene.tscn::PackedScene::4818586191794218996::1761076916::0::1::::<><><>0<>0<><>::uid://x6byjci325bg::::res://img/Overlay_Textures/RS_N0_1baseS.png<>res://stage/backpack_scene/backpack_scene.py<>uid://btws4a6lckvuf::::res://stage/UI/cardslot.tscn
-::res://stage/backpack_scene/__pycache__/::1761077118
-::res://stage/combat_scene/::1761849655
-combat_scene.py::PyScriptExtension::-1::1761849313::0::1::::<><><>0<>0<><>::
-combat_scene.tscn::PackedScene::2368737096994633395::1761849309::0::1::::<><><>0<>0<><>::res://stage/combat_scene/combat_scene.py<>uid://dd846kfv6n6bx::::res://img/Background/Background.png<>uid://dj12ttrjw3ksc::::res://img/Enemies/sento_m8.png<>uid://xob4ygnoylmu::::res://img/Overlay_Textures/dungeon0_baseT.png<>uid://dd3vqg24slgqw::::res://img/Card sample 2.0/Strike I.png<>uid://brtcgat56h72y::::res://stage/combat_scene/hp_bar.gd<>uid://bsw6oxfvctpbr::::res://stage/combat_scene/hp_monster.gd<>uid://bg5termtb5hyc::::res://img/Buttons/dungeon0_flee.png<>uid://dh1e1hmltgft6::::res://font/PixelMplus12-Regular.ttf<>uid://qtpe31n1naif::::res://font/PixelifySans-VariableFont_wght.ttf<>res://stage/combat_scene/textpanel.py<>uid://bcb4fe1rnph3l::::res://img/maincharacter.png
+stage1.tscn::PackedScene::7289950682809830993::1761858239::0::1::::<><><>0<>0<><>::res://stage/maingame.py<>uid://dd846kfv6n6bx::::res://img/Background/Background.png<>uid://net6eb56261a::::res://img/Overlay_Textures/dungeon0_base.png<>uid://cdgx0bl4aj7jv::::res://img/Buttons/dungeon0_exit.png<>uid://rcjc53x31xm1::::res://img/Buttons/rysh_0base_7X.png<>uid://bg3iw3mviox0t::::res://img/Buttons/dungeon0_go.png<>uid://cic7ggie57dq1::::res://font/PixelMplus12-Bold.ttf<>res://stage/Level.py<>uid://x2aerthebyse::::res://font/PixelMplus10-Bold.ttf<>res://stage/room.py<>uid://bcb4fe1rnph3l::::res://img/maincharacter.png
+::res://stage/__pycache__/::1761858167
+::res://stage/combat_scene/::1761858149
+combat_scene.py::PyScriptExtension::-1::1761858149::0::1::::<><><>0<>0<><>::
+combat_scene.tscn::PackedScene::2368737096994633395::1761852898::0::1::::<><><>0<>0<><>::res://stage/combat_scene/combat_scene.py<>uid://dd846kfv6n6bx::::res://img/Background/Background.png<>uid://dj12ttrjw3ksc::::res://img/Enemies/sento_m8.png<>uid://xob4ygnoylmu::::res://img/Overlay_Textures/dungeon0_baseT.png<>uid://cit8fxtuqjji1::::res://img/Card sample 2.0/Strike I.png<>uid://brtcgat56h72y::::res://stage/combat_scene/hp_bar.gd<>uid://bsw6oxfvctpbr::::res://stage/combat_scene/hp_monster.gd<>uid://bg5termtb5hyc::::res://img/Buttons/dungeon0_flee.png<>uid://dh1e1hmltgft6::::res://font/PixelMplus12-Regular.ttf<>uid://qtpe31n1naif::::res://font/PixelifySans-VariableFont_wght.ttf<>res://stage/combat_scene/textpanel.py<>uid://bcb4fe1rnph3l::::res://img/maincharacter.png
 hp_bar.gd::GDScript::3618986382371835734::1761848947::0::1::::<>ProgressBar<><>0<>0<><>::
 hp_monster.gd::GDScript::3697144624376084103::1761848947::0::1::::<>Label<><>0<>0<><>::
-monster.py::PyScriptExtension::-1::1760762347::0::1::::<><><>0<>0<><>::
-monster_stat.py::PyScriptExtension::-1::1761849655::0::1::::<><><>0<>0<><>::
+monster.py::PyScriptExtension::-1::1761858149::0::1::::<><><>0<>0<><>::
+monster_stat.py::PyScriptExtension::-1::1761858149::0::1::::<><><>0<>0<><>::
 textpanel.py::PyScriptExtension::-1::1761848947::0::1::::<><><>0<>0<><>::
-::res://stage/combat_scene/__pycache__/::1761850139
-::res://stage/treasure_scene/::1761662325
-treasure.py::PyScriptExtension::-1::1760720714::0::1::::<><><>0<>0<><>::
-treasure_scene.tscn::PackedScene::2605262196282551733::1761662325::0::1::::<><><>0<>0<><>::res://stage/treasure_scene/treasure.py<>uid://dd846kfv6n6bx::::res://img/Background/Background.png<>uid://net6eb56261a::::res://img/Overlay_Textures/dungeon0_base.png<>uid://bcb4fe1rnph3l::::res://img/maincharacter.png<>uid://cp5fv22vjrg24::::res://img/Buttons/rysh_1_1.png<>uid://cic7ggie57dq1::::res://font/PixelMplus12-Bold.ttf<>res://stage/Level.py<>uid://x2aerthebyse::::res://font/PixelMplus10-Bold.ttf<>res://stage/room.py
-::res://stage/treasure_scene/__pycache__/::1760720722
-::res://stage/UI/::1761072863
-cardslot.gd::GDScript::609836605759753878::1761066271::0::1::::<>PanelContainer<><>0<>0<><>::
-cardslot.tscn::PackedScene::3766569765689886993::1761072746::0::1::::<><><>0<>0<><>::uid://ixn6jj1aj8f7::::res://stage/UI/cardslot.gd<>uid://cm06upads5g6v::::res://img/Overlay_Textures/RS_S1_1kingakuhyou.png
-Level.tscn::PackedScene::6812561648204145828::1761056236::0::1::::<><><>0<>0<><>::uid://c3xq2g0h1idc6::::res://font/TA 8 bit.otf
-popup.gd::GDScript::2580612132756747592::1761066167::0::1::::<>Control<><>0<>0<><>::
-popup.tscn::PackedScene::5469253848794385315::1761072863::0::1::::<><><>0<>0<><>::uid://bc1ckmlvwvxd5::::res://stage/UI/popup.gd<>uid://dh1e1hmltgft6::::res://font/PixelMplus12-Regular.ttf<>uid://8xxuxecvhj6u::::res://img/Cards/sento_1_item00.png
-::res://stage/UI/__pycache__/::1761056173
+::res://stage/combat_scene/__pycache__/::1761852973
+::res://stage/LiveSystem/::1761853587
+Livecounter.gd::GDScript::2652854313879075262::1761852861::0::1::::<>Node<><>0<>0<><>::
+LivesDisplay.tscn::PackedScene::3284923527071152787::1761853587::0::1::::<><><>0<>0<><>::uid://cuwluavxe4hcf::::res://stage/LiveSystem/lives_display.gd<>uid://di70jtlm5e8uq::::res://img/hearticon.png
+lives_display.gd::GDScript::6222738187027094701::1761852861::0::1::::<>Node2D<><>0<>0<><>::
+::res://stage/treasure_scene/::1761858167
+treasure.py::PyScriptExtension::-1::1761858167::0::1::::<><><>0<>0<><>::
+treasure_scene.tscn::PackedScene::2605262196282551733::1761858167::0::1::::<><><>0<>0<><>::res://stage/treasure_scene/treasure.py<>uid://dd846kfv6n6bx::::res://img/Background/Background.png<>uid://net6eb56261a::::res://img/Overlay_Textures/dungeon0_base.png<>uid://bcb4fe1rnph3l::::res://img/maincharacter.png<>uid://cp5fv22vjrg24::::res://img/Buttons/rysh_1_1.png<>uid://cic7ggie57dq1::::res://font/PixelMplus12-Bold.ttf<>res://stage/Level.py<>uid://x2aerthebyse::::res://font/PixelMplus10-Bold.ttf<>res://stage/room.py
+::res://stage/treasure_scene/__pycache__/::1761858118
