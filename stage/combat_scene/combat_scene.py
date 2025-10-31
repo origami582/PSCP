@@ -108,7 +108,7 @@ class combat_scene(Control):
 		textbox_node.get_node("Text").call("show_monster_attack",
 										   self.monster.monster_type,
 										   monster_damage)
-
+		#animationformc
 		# Check if player died from the counter-attack
 		if Globals.player.actual_hp <= 0:
 			self.player_died()
