@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://coota7stov8ag"]
+
+[ext_resource type="Texture2D" uid="uid://bapgriya28opx" path="res://img/Background/BG3_boss.png" id="1_8ja01"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1400.0
+offset_bottom = 850.0
+texture = ExtResource("1_8ja01")
