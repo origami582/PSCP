@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://db4komuwe55g4"]
+[gd_scene load_steps=19 format=3 uid="uid://db4komuwe55g4"]
 
 [ext_resource type="Script" path="res://stage/maingame.py" id="1_w447a"]
 [ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Background/Background.png" id="2_3ikxw"]
@@ -12,6 +12,26 @@
 [ext_resource type="Script" path="res://stage/room.py" id="10_bwayr"]
 [ext_resource type="Texture2D" uid="uid://bcb4fe1rnph3l" path="res://img/maincharacter.png" id="11_vf5ng"]
 [ext_resource type="PackedScene" uid="uid://bm2ihfn0utn2r" path="res://stage/LiveSystem/LivesDisplay.tscn" id="12_an8mi"]
+[ext_resource type="FontFile" uid="uid://qtpe31n1naif" path="res://font/PixelifySans-VariableFont_wght.ttf" id="13_h4obd"]
+[ext_resource type="FontFile" uid="uid://dh1e1hmltgft6" path="res://font/PixelMplus12-Regular.ttf" id="14_lwrpw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bl376"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_anhuh"]
+base_font = ExtResource("13_h4obd")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ir46q"]
+font = ExtResource("14_lwrpw")
+font_size = 60
+
+[sub_resource type="FontVariation" id="FontVariation_ab8am"]
+base_font = ExtResource("14_lwrpw")
 
 [node name="Node2D3" type="Node2D"]
 _import_path = NodePath("")
@@ -271,13 +291,62 @@ script = ExtResource("10_bwayr")
 
 [node name="MC" type="Sprite2D" parent="."]
 texture_filter = 6
-position = Vector2(964.00006, 453)
+position = Vector2(993, 474)
 scale = Vector2(1.3931637, 1.3714138)
 texture = ExtResource("11_vf5ng")
 
 [node name="Lives" parent="." instance=ExtResource("12_an8mi")]
-script = null
+
+[node name="dead_screen" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Textbox" type="Panel" parent="dead_screen"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -198.0
+offset_right = 322.0
+offset_bottom = 188.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_bl376")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="dead_screen/Textbox"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1.5
+offset_top = -166.5
+offset_right = -1.5
+offset_bottom = 170.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 230
+
+[node name="Label" type="Label" parent="dead_screen/Textbox/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_anhuh")
+theme_override_font_sizes/font_size = 75
+text = "You Died"
+label_settings = SubResource("LabelSettings_ir46q")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="died_back_to_menu" type="Button" parent="dead_screen/Textbox/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_ab8am")
+theme_override_font_sizes/font_size = 30
+text = "Back to Main Menu"
 
 [connection signal="pressed" from="Return_Button" to="." method="_on_return_button_pressed"]
 [connection signal="pressed" from="Next_Button" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="Back_Button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="dead_screen/Textbox/VBoxContainer/died_back_to_menu" to="." method="_on_died_back_to_menu_pressed"]

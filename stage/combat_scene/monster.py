@@ -32,13 +32,32 @@ class Monster:
 			monster_data = Monster_stat.MONSTER_DATA[monster_type]
 
 			# Set stats from retrived data
-			self.hp = monster_data['hp_scaler']() * Monster_stat.BASE_HP
-			self.atk = monster_data['atk_scaler']() * Monster_stat.BASE_ATK
+			self.hp = monster_data['hp_scaler']() * Monster_stat.BASE_HP()
+			self.atk = monster_data['atk_scaler']() * Monster_stat.BASE_ATK()
 			self.max_hp = self.hp
-			self.exp_reward = monster_data['exp_reward']
+			self.exp_reward = monster_data['exp_reward']()
 			self.texture_path = monster_data['texture_path']
 
 			# Print debug
+			self.debug_report()
+
+		return self
+
+	def setup_boss(self, boss_type:str):
+		"""Configures the boss's stats based on its type."""
+		self.monster_type = boss_type
+
+		if boss_type in Monster_stat.BOSS_DATA:
+			# Get dictionary item of that monster and store in monster_data
+			monster_data = Monster_stat.BOSS_DATA[boss_type]
+
+			# Set stats from retrived data
+			self.hp = monster_data['hp_scaler']() * Monster_stat.BASE_HP()
+			self.atk = monster_data['atk_scaler']() * Monster_stat.BASE_ATK()
+			self.max_hp = self.hp
+			self.exp_reward = monster_data['exp_reward']()
+			self.texture_path = monster_data['texture_path']
+
 			self.debug_report()
 
 		return self

@@ -25,6 +25,17 @@ class textpanel(Label):
 		"""Updates the label to show the player's attack."""
 		self.text += f"{monster_name} defeated!!! you gained {exp} EXP!!!\n"
 
+	def show_roland_transform(self):
+		"""Shows the transformation text for the Roland boss fight."""
+		self.text += "Roland: '...Fine. Let's see how you handle this.'\nHe becomes The Black Silence!\n"
+
+	def show_flee(self,  died: bool, monster_name: str, damage: int):
+		"""Updates the label to show the player's attack."""
+		if died:
+			self.text += f"You died trying to flee from {monster_name}!\n"
+		else:
+			self.text += f"You take {damage} damages trying to flee!\n"
+
 	def clear_text(self):
 		"""Clears all text from the label."""
 		self.text = ""

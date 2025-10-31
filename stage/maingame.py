@@ -12,24 +12,43 @@ class maingame(Control):
 		'''
 		Called when the node is 'ready'. Initializes the game state.
 		'''
+		self.get_node("dead_screen").visible = False
 		self.get_node("Back_Button").disabled = False
 		self.get_node("Next_Button").disabled = False
 		self.get_node("Return_Button").disabled = False
 		# Initialize a new game/character if one doesn't already exist.
 		if Globals.player is None:
 			Globals.new_game()
-		self.save = save_game()
 		self.status_update()
+		self.save = save_game()
+
+	def _process(self, delta):
+		self.live_counter = self.get_node("Lives")
+		self.live_counter.call("update_display", Globals.player.lifes)
+
+		if Globals.player.lifes <= 0:
+			self.game_over()
 
 	def _input(self, event):
 		"""
 		Handles global input events for the main game screen.
-		- 'Press_B': Opens the backpack scene.
+		- 'Press_R': Debug reduce heart count.
 		- 'Press_X': Returns to the main menu.
 		"""
 		if event.is_action_pressed("Press_X"):
 			print("Debug: 'X' key pressed, returning to title")
 			self._on_back_button_pressed()		# Basically the same as pressing the back button itself.
+		if event.is_action_pressed("Press_R"):
+			print("Debug: 'R' key pressed, reducing heart count")
+			Globals.player.lifes -= 1
+
+	def game_over(self):
+		"""Call once player lives is 0 -> game over"""
+		self.get_node("dead_screen").visible = True
+		self.get_node("Back_Button").disabled = True
+		self.get_node("Next_Button").disabled = True
+		self.get_node("Return_Button").disabled = True
+		return
 
 	def status_update(self):
 		"""Prints the player's current status to the console for debugging."""
@@ -51,7 +70,7 @@ class maingame(Control):
 		"""
 		print("next")
 		if Globals.room == 9:
-			selected_event = random_event_picker.pick_random_event()
+			# Next scene will be boss scene
 			self.get_tree().change_scene_to_file("res://stage/combat_scene/combat_scene.tscn")
 		else:
 			selected_event = random_event_picker.pick_random_event()
@@ -61,7 +80,7 @@ class maingame(Control):
 					# Change to combat scene
 					print('monster')
 					self.get_tree().change_scene_to_file("res://stage/combat_scene/combat_scene.tscn")
-				case 'treasure_chest':
+				case 'treasure_chest':		# Ditch (appear as a secret)
 					print('treasure')
 					# Change scene to tresure chest
 					self.get_tree().change_scene_to_file("res://stage/treasure_scene/treasure_scene.tscn")
@@ -79,18 +98,15 @@ class maingame(Control):
 		"""Placeholder for a 'Return' or 'Rest' action. Currently does nothing."""
 		print("return")
 
-		### Residue code block (Awaiting delete) ###
-	def _on_skip_pressed(self):
-		"""Legacy/debug function. Prints the current difficulty."""
-		print("skip")
-		#check difficult
-		print(Globals.difficulty)
-		### Residue code block (Awaiting delete) ###
-
 	def _on_back_button_pressed(self):
 		"""Saves the game and returns to the main menu."""
 		print("Back")
 		print("Debug: Progress automatically saved!")
 		Globals.previous_scene_path = "res://stage/stage1.tscn"
 		self.save.save(character=Globals.player)
+		self.get_tree().change_scene_to_file("res://stage/main_menu.tscn")
+
+
+	def _on_died_back_to_menu_pressed(self):
+		"""Return to main menu once clicked"""
 		self.get_tree().change_scene_to_file("res://stage/main_menu.tscn")

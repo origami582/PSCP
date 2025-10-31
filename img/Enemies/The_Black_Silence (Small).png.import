@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3tihr1t7f27o"
-path="res://.godot/imported/sento_m2.png-6e6956e74fc34019793d77a6ecceb564.ctex"
+uid="uid://n1fq6jw3ua0m"
+path="res://.godot/imported/The_Black_Silence (Small).png-4a0a96c35c2a89c03ee5e0dab72b4e50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Enemies/sento_m2.png"
-dest_files=["res://.godot/imported/sento_m2.png-6e6956e74fc34019793d77a6ecceb564.ctex"]
+source_file="res://img/Enemies/The_Black_Silence (Small).png"
+dest_files=["res://.godot/imported/The_Black_Silence (Small).png-4a0a96c35c2a89c03ee5e0dab72b4e50.ctex"]
 
 [params]
 

@@ -32,12 +32,12 @@ class Character:
 		If the new stat needs to be saved when the player quits, you MUST also update the `save_data`
 		dictionary in `save_reload.py` to include it in both the `save()` and `load()` methods.
 	"""
-	FLEE_HP_THRESHOLD = 20
+	FLEE_HP_THRESHOLD = 35
 	FLEE_PENALTY_PERCENTAGE = 0.25
-	FLEE_PENALTY_FLAT = 5
+	FLEE_PENALTY_FLAT = 10
 
-	Strength_per_level = 10
-	Max_hp_per_level = 20
+	STRENGHT_PER_LEVEL = 15 # Increased from 10 for more impactful level-ups
+	MAX_HP_PER_LEVEL = 30 # Increased from 20 for more impactful level-ups
 	def __init__(self, strength, max_hp):
 		"""
 		Initializes a new character.
@@ -57,7 +57,10 @@ class Character:
 
 	def _get_req_exp(self, level):
 		"""Calculates the required experience for a given level."""
-		return round(number=(level ** 1.8) + level * 4)
+		# The previous formula (level ** 1.8) + level * 4 was too low for early levels.
+		# This new formula provides a higher baseline and a steeper curve,
+		# preventing the player from leveling up multiple times from a single early-game monster.
+		return round(number=50 + (level ** 2.2) + (level * 10))
 
 	def gain_exp(self, amount: int):
 		"""Adds experience to the character and levels up if necessary."""
@@ -77,8 +80,8 @@ class Character:
 		# Future improvement: Increase max_hp or other stats on level up.
 		self.actual_hp = self.max_hp
 		self.exp_req = self._get_req_exp(level=self.level + 1)
-		self.strength += Character.Strength_per_level
-		self.max_hp += Character.Max_hp_per_level
+		self.strength += Character.STRENGHT_PER_LEVEL
+		self.max_hp += Character.MAX_HP_PER_LEVEL
 
 	def flee_penalty(self):
 		"""Applies a penalty to HP for fleeing and returns the new HP."""
@@ -97,6 +100,14 @@ class Character:
 			self.actual_hp = 0
 
 		return self.actual_hp
+
+	def get_penalty(self) -> int:
+		"""Staticmethod to return penalty amount for fleeing."""
+		if self.actual_hp >= self.FLEE_HP_THRESHOLD:
+			penalty = int(self.actual_hp * self.FLEE_PENALTY_PERCENTAGE)
+		else:
+			penalty = self.FLEE_PENALTY_FLAT
+		return penalty
 
 @gdclass
 class Globals:
@@ -132,7 +143,7 @@ class Globals:
 	@staticmethod
 	def new_game():
 		"""Initializes a new game, creating a new player character."""
-		Globals.player = Character(strength=10, max_hp=100)
+		Globals.player = Character(strength=15, max_hp=150)
 		Globals.room = 1
 		Globals.floor = 1
 		Globals.previous_scene_path = ""

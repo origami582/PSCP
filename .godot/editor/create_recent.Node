@@ -1,9 +1,9 @@
+TextureRect
+VBoxContainer
 AnimationPlayer
 Label
 ProgressBar
-VBoxContainer
 AudioStreamPlayer
-TextureRect
 HBoxContainer
 Panel
 FlowContainer

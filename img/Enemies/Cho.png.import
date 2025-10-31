@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgf8p0uc6dyvv"
-path="res://.godot/imported/sento_m25.png-fd9e6e08f504881a007e6b30b92b0142.ctex"
+uid="uid://c1l0btd2v1qlx"
+path="res://.godot/imported/Cho.png-dc4bdc7cde5deac625400e7d7ad6ec2b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Enemies/sento_m25.png"
-dest_files=["res://.godot/imported/sento_m25.png-fd9e6e08f504881a007e6b30b92b0142.ctex"]
+source_file="res://img/Enemies/Cho.png"
+dest_files=["res://.godot/imported/Cho.png-dc4bdc7cde5deac625400e7d7ad6ec2b.ctex"]
 
 [params]
 
