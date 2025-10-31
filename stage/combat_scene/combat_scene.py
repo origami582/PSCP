@@ -109,7 +109,6 @@ class combat_scene(Control):
 										   self.monster.monster_type,
 										   monster_damage)
 
-
 		# Check if player died from the counter-attack
 		if Globals.player.actual_hp <= 0:
 			self.player_died()
