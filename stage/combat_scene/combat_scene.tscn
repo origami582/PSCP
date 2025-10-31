@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://80o0vrx8ov3h"]
+[gd_scene load_steps=32 format=3 uid="uid://80o0vrx8ov3h"]
 
 [ext_resource type="Script" path="res://stage/combat_scene/combat_scene.py" id="1_601pc"]
 [ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Background/Background.png" id="1_j8b3c"]
@@ -17,21 +17,6 @@
 [ext_resource type="FontFile" uid="uid://cpuqreeqb2emg" path="res://font/PixelMplus10-Regular.ttf" id="12_pjunm"]
 [ext_resource type="Script" uid="uid://dn7nul6wycv6g" path="res://stage/combat_scene/hp_player.gd" id="15_pjunm"]
 
-[sub_resource type="Animation" id="Animation_88ysd"]
-resource_name = "hit_flash"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.13333334, 0.26666668),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(0.8932792, 0.28137127, 0.19310376, 1), Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="Animation" id="Animation_1u3gw"]
 length = 0.001
 tracks/0/type = "value"
@@ -47,37 +32,25 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_00274"]
-_data = {
-&"RESET": SubResource("Animation_1u3gw"),
-&"hit_flash": SubResource("Animation_88ysd")
-}
-
-[sub_resource type="Animation" id="Animation_pjunm"]
+[sub_resource type="Animation" id="Animation_88ysd"]
 resource_name = "hit_flash"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Monster:modulate")
+tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.23333333),
+"times": PackedFloat32Array(0, 0.13333334, 0.26666668),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(0.83780515, 0.1594747, 0.20682827, 1), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 1), Color(0.8932792, 0.28137127, 0.19310376, 1), Color(1, 1, 1, 1)]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Monster:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.13, 0.24),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(564, 239), Vector2(527, 243), Vector2(564, 239)]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_00274"]
+_data = {
+&"RESET": SubResource("Animation_1u3gw"),
+&"hit_flash": SubResource("Animation_88ysd")
 }
 
 [sub_resource type="Animation" id="Animation_c6xyl"]
@@ -105,6 +78,33 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(564, 239)]
+}
+
+[sub_resource type="Animation" id="Animation_pjunm"]
+resource_name = "hit_flash"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Monster:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.23333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.83780515, 0.1594747, 0.20682827, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Monster:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.13, 0.24),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(564, 239), Vector2(527, 243), Vector2(564, 239)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_88ysd"]
@@ -210,10 +210,11 @@ texture = ExtResource("3_4pwfs")
 expand_mode = 1
 
 [node name="Monster" type="Sprite2D" parent="."]
-position = Vector2(551.5, 211.875)
+position = Vector2(564, 239)
 scale = Vector2(1, 0.98542607)
 texture = ExtResource("2_estmv")
 region_rect = Rect2(0, 0, 345, 223)
+script = ExtResource("5_c6xyl")
 
 [node name="Monster_AnimationPlayer" type="AnimationPlayer" parent="Monster"]
 root_node = NodePath("../..")
