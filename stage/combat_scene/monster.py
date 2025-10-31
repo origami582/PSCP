@@ -36,6 +36,7 @@ class Monster:
 			self.atk = monster_data['atk_scaler']() * Monster_stat.BASE_ATK
 			self.max_hp = self.hp
 			self.exp_reward = monster_data['exp_reward']
+			self.texture_path = monster_data['texture_path']
 
 			# Print debug
 			self.debug_report()

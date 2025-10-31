@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Background/Background.png" id="1_j8b3c"]
 [ext_resource type="Texture2D" uid="uid://dj12ttrjw3ksc" path="res://img/Enemies/sento_m8.png" id="2_estmv"]
 [ext_resource type="Texture2D" uid="uid://cn8wqy5vkgfm1" path="res://img/Overlay_Textures/dungeon0_baseT.png" id="3_4pwfs"]
+[ext_resource type="Script" uid="uid://bc3hqn0eof8lb" path="res://stage/combat_scene/monster_texture.gd" id="5_c6xyl"]
 [ext_resource type="Texture2D" uid="uid://dpomvt1nw754o" path="res://img/Roll_button.png" id="5_gapb1"]
 [ext_resource type="Script" uid="uid://brtcgat56h72y" path="res://stage/combat_scene/hp_bar.gd" id="6_gapb1"]
 [ext_resource type="FontFile" uid="uid://x2aerthebyse" path="res://font/PixelMplus10-Bold.ttf" id="7_5m2hi"]
@@ -138,7 +139,7 @@ texture = ExtResource("3_4pwfs")
 expand_mode = 1
 
 [node name="Monster" type="Sprite2D" parent="."]
-position = Vector2(564, 239)
+position = Vector2(551.5, 211.875)
 scale = Vector2(1, 0.98542607)
 texture = ExtResource("2_estmv")
 region_rect = Rect2(0, 0, 345, 223)
@@ -159,10 +160,10 @@ flat = true
 expand_icon = true
 
 [node name="Monster_bar" type="ProgressBar" parent="."]
-offset_left = 417.0
-offset_top = 106.0
-offset_right = 706.0
-offset_bottom = 133.0
+offset_left = 406.5
+offset_top = 313.875
+offset_right = 695.5
+offset_bottom = 340.875
 theme_override_styles/background = SubResource("StyleBoxFlat_g7ypw")
 theme_override_styles/fill = SubResource("StyleBoxFlat_iqhti")
 value = 42.27
@@ -170,10 +171,10 @@ show_percentage = false
 script = ExtResource("6_gapb1")
 
 [node name="HP_monster" type="Label" parent="."]
-offset_left = 520.0
-offset_top = 110.0
-offset_right = 612.0
-offset_bottom = 133.0
+offset_left = 509.5
+offset_top = 317.875
+offset_right = 601.5
+offset_bottom = 340.875
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_5m2hi")
@@ -240,6 +241,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Textbox" type="Panel" parent="."]
+visible = false
 offset_left = 275.0
 offset_top = 364.0
 offset_right = 737.0

@@ -14,13 +14,13 @@ class Monster_stat:
 		"slime": {
 			"hp_scaler": lambda: 0.8 + ((Globals.floor - 1) * 0.5),
 			"atk_scaler": lambda: 1.2 + ((Globals.floor - 1) * 0.5),
-			"texture_path": "",		# add texture path
+			"texture_path": "res://img/Enemies/sento_m8.png",		# add texture path
 			"exp_reward": (50 * Globals.difficulty) * ((Globals.floor * 0.2) + 1)
 		},
 		"goblin": {
 			"hp_scaler": lambda: 1.2 + ((Globals.floor - 1) * 0.5),
 			"atk_scaler": lambda: 0.8 + ((Globals.floor - 1) * 0.5),
-			"texture_path": "",		# add texture path
+			"texture_path": "res://img/Enemies/Boss.png",		# add texture path
 			"exp_reward": 75 * Globals.difficulty * ((Globals.floor * 0.2) + 1)
 		},
 		# Add more monsters here
