@@ -2,7 +2,7 @@ from py4godot.classes import gdclass
 from py4godot.classes.Control import Control
 from .charactor import Globals
 from .random_events import random_event_picker
-from .save_reload import save_game
+from .save_reload import save_game, clear_save
 
 
 @gdclass
@@ -21,11 +21,11 @@ class maingame(Control):
 			Globals.new_game()
 		self.status_update()
 		self.save = save_game()
+		self.clear = clear_save()
+		self.live_counter = self.get_node("Lives")
 
 	def _process(self, delta):
-		self.live_counter = self.get_node("Lives")
 		self.live_counter.call("update_display", Globals.player.lifes)
-
 		if Globals.player.lifes <= 0:
 			self.game_over()
 
@@ -48,6 +48,7 @@ class maingame(Control):
 		self.get_node("Back_Button").disabled = True
 		self.get_node("Next_Button").disabled = True
 		self.get_node("Return_Button").disabled = True
+		self.clear.clear()		# Clear exisiting save file
 		return
 
 	def status_update(self):
@@ -86,6 +87,7 @@ class maingame(Control):
 					self.get_tree().change_scene_to_file("res://stage/treasure_scene/treasure_scene.tscn")
 				case 'rest_stop':
 					print('rest_stop')
+					self.get_tree().change_scene_to_file("res://stage/rest_scene/rest_stop.tscn")
 					# Change scene to rest stop
 
 		# Only execute this block if the scene did NOT change

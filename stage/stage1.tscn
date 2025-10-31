@@ -296,6 +296,7 @@ scale = Vector2(1.3931637, 1.3714138)
 texture = ExtResource("11_vf5ng")
 
 [node name="Lives" parent="." instance=ExtResource("12_an8mi")]
+unique_name_in_owner = true
 
 [node name="dead_screen" type="CanvasLayer" parent="."]
 visible = false

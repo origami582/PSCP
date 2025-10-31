@@ -5,6 +5,7 @@ for continuing the game from last save. once reopen the game
 from py4godot.classes import gdclass
 import json
 import base64
+import os
 from .charactor import Character, Globals
 
 SAVE_PATH = "save/save.txt"
@@ -100,3 +101,19 @@ class load_game:
 			print(f"Error: Could not load the game from file. Reason: {e}")
 		except (json.JSONDecodeError, KeyError, TypeError) as e:
 			print(f"Error: Save file is corrupted or has an invalid format. Reason: {e}")
+
+@gdclass
+class clear_save:
+	"""Handles the logic for deleting the save game file."""
+	def clear(self):
+		"""
+		Deletes the save file from the disk if it exists.
+		"""
+		try:
+			if os.path.exists(SAVE_PATH):
+				os.remove(SAVE_PATH)
+				print("Save file cleared successfully.")
+			else:
+				print("No save file found to clear.")
+		except OSError as e:
+			print(f"Error: Could not clear the save file. Reason: {e}")

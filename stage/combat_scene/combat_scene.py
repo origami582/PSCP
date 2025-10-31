@@ -89,6 +89,7 @@ class combat_scene(Control):
 		if self.monster.is_dead:
 			# Special check for Roland's second phase
 			if self.monster.monster_type == "Roland":
+				self.textbox_node.get_node("Text").call("clear_text")
 				self.textbox_node.get_node("Text").call("show_roland_transform")
 
 				# Transform into The_Black_Silence
