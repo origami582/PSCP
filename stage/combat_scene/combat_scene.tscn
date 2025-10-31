@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://80o0vrx8ov3h"]
+[gd_scene load_steps=26 format=3 uid="uid://80o0vrx8ov3h"]
 
 [ext_resource type="Script" path="res://stage/combat_scene/combat_scene.py" id="1_601pc"]
 [ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Background/Background.png" id="1_j8b3c"]
@@ -10,8 +10,6 @@
 [ext_resource type="FontFile" uid="uid://x2aerthebyse" path="res://font/PixelMplus10-Bold.ttf" id="7_5m2hi"]
 [ext_resource type="Script" uid="uid://bsw6oxfvctpbr" path="res://stage/combat_scene/hp_monster.gd" id="7_it1vf"]
 [ext_resource type="Texture2D" uid="uid://bg5termtb5hyc" path="res://img/Buttons/dungeon0_flee.png" id="7_n3c6q"]
-[ext_resource type="FontFile" uid="uid://dh1e1hmltgft6" path="res://font/PixelMplus12-Regular.ttf" id="9_4pwfs"]
-[ext_resource type="FontFile" uid="uid://qtpe31n1naif" path="res://font/PixelifySans-VariableFont_wght.ttf" id="10_g7ypw"]
 [ext_resource type="Script" path="res://stage/combat_scene/textpanel.py" id="11_g7ypw"]
 [ext_resource type="Texture2D" uid="uid://bcb4fe1rnph3l" path="res://img/maincharacter.png" id="11_gapb1"]
 [ext_resource type="FontFile" uid="uid://cpuqreeqb2emg" path="res://font/PixelMplus10-Regular.ttf" id="12_pjunm"]
@@ -123,19 +121,6 @@ border_color = Color(1, 1, 1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqhti"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gapb1"]
-bg_color = Color(0, 0, 0, 0.8509804)
-
-[sub_resource type="FontVariation" id="FontVariation_iqhti"]
-base_font = ExtResource("9_4pwfs")
-
-[sub_resource type="FontVariation" id="FontVariation_5m2hi"]
-base_font = ExtResource("10_g7ypw")
-
-[sub_resource type="LabelSettings" id="LabelSettings_pjunm"]
-font = ExtResource("9_4pwfs")
-font_size = 60
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4pwfs"]
 bg_color = Color(0, 0, 0, 1)
 border_width_left = 3
@@ -186,7 +171,7 @@ script = ExtResource("1_601pc")
 
 [node name="MC" type="Sprite2D" parent="."]
 texture_filter = 6
-position = Vector2(964.00006, 453)
+position = Vector2(993, 474)
 scale = Vector2(1.3931637, 1.3714138)
 texture = ExtResource("11_gapb1")
 
@@ -232,10 +217,10 @@ flat = true
 expand_icon = true
 
 [node name="Monster_bar" type="ProgressBar" parent="."]
-offset_left = 406.5
-offset_top = 313.875
-offset_right = 695.5
-offset_bottom = 340.875
+offset_left = 134.0
+offset_top = 147.0
+offset_right = 423.0
+offset_bottom = 174.0
 theme_override_styles/background = SubResource("StyleBoxFlat_g7ypw")
 theme_override_styles/fill = SubResource("StyleBoxFlat_iqhti")
 value = 42.27
@@ -243,10 +228,10 @@ show_percentage = false
 script = ExtResource("6_gapb1")
 
 [node name="HP_monster" type="Label" parent="."]
-offset_left = 509.5
-offset_top = 317.875
-offset_right = 601.5
-offset_bottom = 340.875
+offset_left = 237.0
+offset_top = 151.0
+offset_right = 329.0
+offset_bottom = 174.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_5m2hi")
@@ -262,62 +247,11 @@ offset_bottom = 604.0
 icon = ExtResource("7_n3c6q")
 flat = true
 
-[node name="dead_screen" type="CanvasLayer" parent="."]
-visible = false
-
-[node name="dead_screen_panel" type="Panel" parent="dead_screen"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -335.0
-offset_top = -191.0
-offset_right = 308.0
-offset_bottom = 205.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_gapb1")
-
-[node name="died_back_to_menu" type="Button" parent="dead_screen/dead_screen_panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.81200004
-anchor_right = 0.50200003
-anchor_bottom = 0.814
-offset_left = -115.5
-offset_top = -26.552002
-offset_right = 114.21399
-offset_bottom = 31.656006
-theme_override_fonts/font = SubResource("FontVariation_iqhti")
-theme_override_font_sizes/font_size = 25
-text = "Back to Main Menu"
-
-[node name="Label" type="Label" parent="dead_screen/dead_screen_panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.505
-anchor_top = 0.24200001
-anchor_right = 0.505
-anchor_bottom = 0.24200001
-offset_left = -228.715
-offset_top = -55.83201
-offset_right = 229.285
-offset_bottom = 56.16799
-theme_override_fonts/font = SubResource("FontVariation_5m2hi")
-theme_override_font_sizes/font_size = 75
-text = "You Died"
-label_settings = SubResource("LabelSettings_pjunm")
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Textbox" type="Panel" parent="."]
-visible = false
-offset_left = 275.0
+offset_left = 230.0
 offset_top = 364.0
-offset_right = 737.0
-offset_bottom = 497.0
+offset_right = 891.0
+offset_bottom = 545.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_4pwfs")
 
 [node name="Text" type="Label" parent="Textbox"]
@@ -355,8 +289,8 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 24.0
 offset_top = 21.0
-offset_right = 380.0
-offset_bottom = 116.0
+offset_right = 637.0
+offset_bottom = 161.0
 grow_horizontal = 1
 grow_vertical = 1
 rotation = 0.0
@@ -435,4 +369,3 @@ script = ExtResource("15_pjunm")
 
 [connection signal="pressed" from="Attack_Button" to="." method="_on_attack_button_pressed"]
 [connection signal="pressed" from="Flee_Button" to="." method="_on_flee_button_pressed"]
-[connection signal="pressed" from="dead_screen/dead_screen_panel/died_back_to_menu" to="." method="_on_died_back_to_menu_pressed"]

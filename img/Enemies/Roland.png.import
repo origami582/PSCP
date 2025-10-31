@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2mw3ffbqjhth"
-path="res://.godot/imported/sento_m24.png-d46bbbbe722fe4eed58a83b22ad10638.ctex"
+uid="uid://cgobkoe2udw34"
+path="res://.godot/imported/Roland.png-41c3331a4b7a37586b03a73d8f78a72a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Enemies/sento_m24.png"
-dest_files=["res://.godot/imported/sento_m24.png-d46bbbbe722fe4eed58a83b22ad10638.ctex"]
+source_file="res://img/Enemies/Roland.png"
+dest_files=["res://.godot/imported/Roland.png-41c3331a4b7a37586b03a73d8f78a72a.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1l0btd2v1qlx"
-path="res://.godot/imported/Boss.png-02fb66634dc14a2e598e85fdc567e4f0.ctex"
+uid="uid://l2a2v62xm6jr"
+path="res://.godot/imported/Roland (Small).png-23f30b5fa9b56d0d4300692973995d78.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Enemies/Boss.png"
-dest_files=["res://.godot/imported/Boss.png-02fb66634dc14a2e598e85fdc567e4f0.ctex"]
+source_file="res://img/Enemies/Roland (Small).png"
+dest_files=["res://.godot/imported/Roland (Small).png-23f30b5fa9b56d0d4300692973995d78.ctex"]
 
 [params]
 
