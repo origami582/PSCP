@@ -18,3 +18,4 @@ res://stage/combat_scene/hp_bar.gd
 res://stage/combat_scene/hp_player.gd
 res://stage/combat_scene/mc_bar.gd
 res://stage/combat_scene/mc_hp.gd
+res://stage/combat_scene/monster_texture.gd

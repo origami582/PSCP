@@ -17,15 +17,23 @@ class combat_scene(Control):
 		self.get_node("dead_screen").visible = False
 		self.get_node("Textbox").visible = False
 
+
 		# Get a reference to the label node
 		self.monster_hp_label = self.get_node("HP_monster")
 		self.monster_bar = self.get_node("Monster_bar")
 		self.player_hp_label = self.get_node("HP_player")
 		self.player_bar = self.get_node("Player_bar")
+		self.monster_node = self.get_node("Monster")
 
 		# Randomly pick monster from available pool and create an instance
 		selected_encounter = self.pick_monster()
 		self.monster = Monster().setup_monster(monster_type=selected_encounter)
+		self.monster_texture = self.monster.texture_path
+
+		# Change monster texture here
+		self.monster_node.call("update_texture", self.monster_texture)
+
+
 		# Update the label with the initial HP values
 		self.monster_hp_label.call("update_hp", self.monster.hp, self.monster.max_hp)
 		self.monster_bar.call("update_monster_bar", self.monster.hp, self.monster.max_hp)
@@ -78,6 +86,11 @@ class combat_scene(Control):
 		textbox_node.get_node("Text").call("show_player_attack",
 										   self.monster.monster_type,
 										   player_damage)
+		monster_node = self.get_node("Monster")
+		if monster_node:
+			monster_anim_player = monster_node.get_node("Monster_AnimationPlayer")
+			if monster_anim_player:
+				monster_anim_player.play("hit_flash")
 
 		if self.monster.is_dead:
 			# Monster is dead, show victory message and wait for player to continue.
