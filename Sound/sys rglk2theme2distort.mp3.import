@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b3ilj521wx0xh"
+path="res://.godot/imported/sys rglk2theme2distort.mp3-4b708dff46675e8183a4ec163d944c97.mp3str"
+
+[deps]
+
+source_file="res://Sound/sys rglk2theme2distort.mp3"
+dest_files=["res://.godot/imported/sys rglk2theme2distort.mp3-4b708dff46675e8183a4ec163d944c97.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

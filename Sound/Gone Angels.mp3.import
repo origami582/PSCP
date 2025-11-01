@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bbyamsl8e0bsy"
+path="res://.godot/imported/Gone Angels.mp3-381b1c894514857fe2cca3e5423c17a1.mp3str"
+
+[deps]
+
+source_file="res://Sound/Gone Angels.mp3"
+dest_files=["res://.godot/imported/Gone Angels.mp3-381b1c894514857fe2cca3e5423c17a1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

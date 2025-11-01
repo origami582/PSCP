@@ -136,14 +136,16 @@ class Globals:
 	"""
 	player: Character = None  # This will hold the instance of the player's Character
 	difficulty = 1.0
-	room = 1
-	floor = 1
+	room = 0
+	floor = 0
 	previous_scene_path = ""
+	is_returning_outside = False
 
 	@staticmethod
 	def new_game():
 		"""Initializes a new game, creating a new player character."""
 		Globals.player = Character(strength=15, max_hp=150)
-		Globals.room = 1
-		Globals.floor = 1
+		Globals.room = 0
+		Globals.floor = 0
 		Globals.previous_scene_path = ""
+		Globals.is_returning_outside = False

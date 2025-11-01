@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d03tqshhpe74"
+path="res://.godot/imported/sys rouge3 theme2.mp3-d27e1e21e7d64abb4cd413360d35d593.mp3str"
+
+[deps]
+
+source_file="res://Sound/sys rouge3 theme2.mp3"
+dest_files=["res://.godot/imported/sys rouge3 theme2.mp3-d27e1e21e7d64abb4cd413360d35d593.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

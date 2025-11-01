@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://db4komuwe55g4"]
+[gd_scene load_steps=22 format=3 uid="uid://db4komuwe55g4"]
 
 [ext_resource type="Script" path="res://stage/maingame.py" id="1_w447a"]
 [ext_resource type="Texture2D" uid="uid://dd846kfv6n6bx" path="res://img/Background/Background.png" id="2_3ikxw"]
@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://bm2ihfn0utn2r" path="res://stage/LiveSystem/LivesDisplay.tscn" id="12_an8mi"]
 [ext_resource type="FontFile" uid="uid://qtpe31n1naif" path="res://font/PixelifySans-VariableFont_wght.ttf" id="13_h4obd"]
 [ext_resource type="FontFile" uid="uid://dh1e1hmltgft6" path="res://font/PixelMplus12-Regular.ttf" id="14_lwrpw"]
+[ext_resource type="FontFile" uid="uid://cpuqreeqb2emg" path="res://font/PixelMplus10-Regular.ttf" id="15_bl376"]
+[ext_resource type="Script" path="res://stage/combat_scene/textpanel.py" id="16_anhuh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bl376"]
 bg_color = Color(0, 0, 0, 1)
@@ -32,6 +34,14 @@ font_size = 60
 
 [sub_resource type="FontVariation" id="FontVariation_ab8am"]
 base_font = ExtResource("14_lwrpw")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ir46q"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
 
 [node name="Node2D3" type="Node2D"]
 _import_path = NodePath("")
@@ -62,6 +72,8 @@ rotation = 0.0
 scale = Vector2(1, 1)
 skew = 0.0
 script = ExtResource("1_w447a")
+wait_for_next_scene = false
+next_scene_path = ""
 
 [node name="Background" type="TextureRect" parent="."]
 z_index = -4096
@@ -296,11 +308,12 @@ scale = Vector2(1.3931637, 1.3714138)
 texture = ExtResource("11_vf5ng")
 
 [node name="Lives" parent="." instance=ExtResource("12_an8mi")]
+unique_name_in_owner = true
 
 [node name="dead_screen" type="CanvasLayer" parent="."]
 visible = false
 
-[node name="Textbox" type="Panel" parent="dead_screen"]
+[node name="DeadPanel" type="Panel" parent="dead_screen"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -316,7 +329,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_bl376")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="dead_screen/Textbox"]
+[node name="VBoxContainer" type="VBoxContainer" parent="dead_screen/DeadPanel"]
 clip_contents = true
 layout_mode = 1
 anchors_preset = 14
@@ -331,7 +344,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 230
 
-[node name="Label" type="Label" parent="dead_screen/Textbox/VBoxContainer"]
+[node name="Label" type="Label" parent="dead_screen/DeadPanel/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("FontVariation_anhuh")
 theme_override_font_sizes/font_size = 75
@@ -340,13 +353,114 @@ label_settings = SubResource("LabelSettings_ir46q")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="died_back_to_menu" type="Button" parent="dead_screen/Textbox/VBoxContainer"]
+[node name="died_back_to_menu" type="Button" parent="dead_screen/DeadPanel/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("FontVariation_ab8am")
 theme_override_font_sizes/font_size = 30
 text = "Back to Main Menu"
 
+[node name="Textbox" type="Panel" parent="."]
+visible = false
+offset_left = 230.0
+offset_top = 364.0
+offset_right = 891.0
+offset_bottom = 545.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ir46q")
+
+[node name="Text" type="Label" parent="Textbox"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 2
+auto_translate_mode = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = 0
+light_mask = 1
+visibility_layer = 1
+z_index = 0
+z_as_relative = true
+y_sort_enabled = false
+texture_filter = 0
+texture_repeat = 0
+use_parent_material = false
+clip_contents = false
+custom_minimum_size = Vector2(0, 0)
+layout_direction = 0
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 24.0
+offset_top = 21.0
+offset_right = 637.0
+offset_bottom = 161.0
+grow_horizontal = 1
+grow_vertical = 1
+rotation = 0.0
+scale = Vector2(1, 1)
+pivot_offset = Vector2(0, 0)
+size_flags_horizontal = 1
+size_flags_vertical = 4
+size_flags_stretch_ratio = 1.0
+localize_numeral_system = true
+tooltip_text = ""
+tooltip_auto_translate_mode = 0
+focus_neighbor_left = NodePath("")
+focus_neighbor_top = NodePath("")
+focus_neighbor_right = NodePath("")
+focus_neighbor_bottom = NodePath("")
+focus_next = NodePath("")
+focus_previous = NodePath("")
+focus_mode = 0
+focus_behavior_recursive = 0
+mouse_filter = 2
+mouse_behavior_recursive = 0
+mouse_force_pass_scroll_events = true
+mouse_default_cursor_shape = 0
+accessibility_name = ""
+accessibility_description = ""
+accessibility_live = 0
+accessibility_controls_nodes = Array[NodePath]([])
+accessibility_described_by_nodes = Array[NodePath]([])
+accessibility_labeled_by_nodes = Array[NodePath]([])
+accessibility_flow_to_nodes = Array[NodePath]([])
+theme_type_variation = &""
+theme_override_fonts/font = ExtResource("15_bl376")
+theme_override_font_sizes/font_size = 22
+text = "add text"
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 0
+autowrap_trim_flags = 192
+justification_flags = 163
+paragraph_separator = "\\n"
+clip_text = false
+text_overrun_behavior = 0
+ellipsis_char = "…"
+uppercase = false
+tab_stops = PackedFloat32Array()
+lines_skipped = 0
+max_lines_visible = -1
+visible_characters = -1
+visible_characters_behavior = 0
+visible_ratio = 1.0
+text_direction = 0
+language = ""
+structured_text_bidi_override = 0
+structured_text_bidi_override_options = Array[NodePath]([])
+script = ExtResource("16_anhuh")
+
 [connection signal="pressed" from="Return_Button" to="." method="_on_return_button_pressed"]
 [connection signal="pressed" from="Next_Button" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="Back_Button" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="dead_screen/Textbox/VBoxContainer/died_back_to_menu" to="." method="_on_died_back_to_menu_pressed"]
+[connection signal="pressed" from="dead_screen/DeadPanel/VBoxContainer/died_back_to_menu" to="." method="_on_died_back_to_menu_pressed"]

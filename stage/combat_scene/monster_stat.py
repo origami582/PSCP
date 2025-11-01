@@ -127,15 +127,15 @@ class Monster_stat:
 		},
 		"Roland": {
 			# Special secret boss Roland from LoR
-			"hp_scaler": lambda: 5.5 + ((Globals.floor - 1) * 1.5),
-			"atk_scaler": lambda: 4.5 + ((Globals.floor - 1) * 1.0),
+			"hp_scaler": lambda: 8.0 + ((Globals.floor - 1) * 1.5),
+			"atk_scaler": lambda: 5.5 + ((Globals.floor - 1) * 1.0),
 			"texture_path": "res://img/Enemies/Roland (Small).png",
 			"exp_reward": lambda: 900 * Globals.difficulty * ((Globals.floor * 0.5) + 1)
 		},
 		"The_Black_Silence": {
 			# Roland stage 2 (You're a dead man!)
-			"hp_scaler": lambda: 30.0 + ((Globals.floor - 1) * 1.5),
-			"atk_scaler": lambda: 20.0 + ((Globals.floor - 1) * 1.0),
+			"hp_scaler": lambda: 20.0 + ((Globals.floor - 1) * 1.5),
+			"atk_scaler": lambda: 13.0 + ((Globals.floor - 1) * 1.0),
 			"texture_path": "res://img/Enemies/The_Black_Silence (Small).png",
 			"exp_reward": lambda: 4000 * Globals.difficulty * ((Globals.floor * 0.5) + 1)
 		}

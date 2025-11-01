@@ -1,9 +1,10 @@
+AudioStreamPlayer
+AudioStreamPlayer      - Matches the "sound" keyword.
 TextureRect
 VBoxContainer
 AnimationPlayer
 Label
 ProgressBar
-AudioStreamPlayer
 HBoxContainer
 Panel
 FlowContainer
@@ -11,4 +12,3 @@ Container
 PanelContainer
 PopupPanel
 CanvasLayer
-Button

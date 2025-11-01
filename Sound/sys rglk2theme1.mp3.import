@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://btwekerbnvgxg"
+path="res://.godot/imported/sys rglk2theme1.mp3-cdb3c5dfa085860eb1c6f1ff26e3a409.mp3str"
+
+[deps]
+
+source_file="res://Sound/sys rglk2theme1.mp3"
+dest_files=["res://.godot/imported/sys rglk2theme1.mp3-cdb3c5dfa085860eb1c6f1ff26e3a409.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
