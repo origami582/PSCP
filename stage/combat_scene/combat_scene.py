@@ -30,10 +30,20 @@ class combat_scene(Control):
 		if Globals.room == 9:
 			# Setup boss instead of normal monster
 			self.monster = Monster().setup_boss(boss_type=selected_encounter)
-			self.monster_texture = self.monster.texture_path
+			# --- Dynamic Music Logic ---
+			if selected_encounter == "Roland":
+				self.get_node("/root/AudioPlayer").call("play_music", "Roland2")
+			else:
+				# Default boss music
+				self.get_node("/root/AudioPlayer").call("play_music", "Boss2")
 		else:
+			# Setup normal monster
 			self.monster = Monster().setup_monster(monster_type=selected_encounter)
-			self.monster_texture = self.monster.texture_path
+			# Play normal battle music
+			self.get_node("/root/AudioPlayer").call("play_music", "Mirage")
+
+		# Set monster texture after setup
+		self.monster_texture = self.monster.texture_path
 
 		# Change monster texture here
 		self.monster_node.call("update_texture", self.monster_texture)
@@ -91,6 +101,9 @@ class combat_scene(Control):
 			if self.monster.monster_type == "Roland":
 				self.textbox_node.get_node("Text").call("clear_text")
 				self.textbox_node.get_node("Text").call("show_roland_transform")
+
+				# Change the music for the second phase!
+				self.get_node("/root/AudioPlayer").call("play_music", "GoneAngels")
 
 				# Transform into The_Black_Silence
 				self.monster = Monster().setup_boss(boss_type="The_Black_Silence")

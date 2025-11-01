@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://beyp5el67bpjn"
+path="res://.godot/imported/bat rglk2boss2.mp3-abf9e24a4bc96bc1384d8d197207f6a3.mp3str"
+
+[deps]
+
+source_file="res://Sound/bat rglk2boss2.mp3"
+dest_files=["res://.godot/imported/bat rglk2boss2.mp3-abf9e24a4bc96bc1384d8d197207f6a3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

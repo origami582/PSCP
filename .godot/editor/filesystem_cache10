@@ -1,12 +1,12 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1761948576
+::res://::1761980447
 export_presets.cfg::TextFile::-1::1760478417::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::8365038792927059551::1759735538::1759735538::1::::<><><>0<>0<>0176cf9c6e8990b7be86bee517bca520<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 LICENSE.md::TextFile::-1::1759423506::0::1::::<><><>0<>0<><>::
-main.py::PyScriptExtension::-1::1761739307::0::1::::<><><>0<>0<><>::
+main.py::PyScriptExtension::-1::1761974877::0::1::::<><><>0<>0<><>::
 patch.gd::GDScript::4900882316459572127::1761068729::0::1::::<>Node<><>0<>0<><>::
 README.md::TextFile::-1::1759735513::0::1::::<><><>0<>0<><>::
-::res://__pycache__/::1761869927
+::res://__pycache__/::1761974885
 ::res://addons/::1760475929
 ::res://addons/py4godot/::1761067974
 dependencies.txt::TextFile::-1::1760477744::0::1::::<><><>0<>0<><>::
@@ -128,26 +128,44 @@ sento_0_barP.png::CompressedTexture2D::7263308638017137912::1759569864::17605223
 caller.py::PyScriptExtension::-1::1760110356::0::1::::<><><>0<>0<><>::
 random_events.py::PyScriptExtension::-1::1759822518::0::1::::<><><>0<>0<><>::
 ::res://Prototype_logic_py/__pycache__/::1760110425
-::res://save/::1761929740
-save.txt::TextFile::-1::1761947981::0::1::::<><><>0<>0<><>::
-::res://Sound/::1761736697
+::res://save/::1761976174
+save.txt::TextFile::-1::1761977243::0::1::::<><><>0<>0<><>::
+::res://Sound/::1761990284
 _    __.mp3::AudioStreamMP3::7600580456551018747::1759844507::1759844507::1::::<><><>0<>0<>83ea0b278c61d8c61e173763bd987bcc<>res://.godot/imported/_    __.mp3-e7d2fff4b4049b3bb8a96b2ed51bcb78.mp3str::
+bat rglk2boss2.mp3::AudioStreamMP3::2717685681588876067::1761988508::1761988905::1::::<><><>0<>0<>96d2afd230f4fff7c613f9c8456e42f2<>res://.godot/imported/bat rglk2boss2.mp3-abf9e24a4bc96bc1384d8d197207f6a3.mp3str::
+bat rouge3 2.mp3::AudioStreamMP3::7709521163618479632::1761988922::1761989182::1::::<><><>0<>0<>649cbcbe084af5e29dba107e456ed0ae<>res://.godot/imported/bat rouge3 2.mp3-dc8f165a48fc6646d69d296c1785da32.mp3str::
+canto_III_B2.mp3::AudioStreamMP3::3418391838010892366::1761985453::1761985502::1::::<><><>0<>0<>ef419f63ace849a6d6d2dc62dff2dc1f<>res://.godot/imported/canto_III_B2.mp3-6fa8b2d53851f13ef71c1698be301351.mp3str::
+canto_III_D1.mp3::AudioStreamMP3::7921909936260453637::1761985381::1761985502::1::::<><><>0<>0<>0be8bfd5e69858e169599fb22e0cade7<>res://.godot/imported/canto_III_D1.mp3-16f626f441207e107bfc6f5b41dbe0c7.mp3str::
+canto_II_A1.mp3::AudioStreamMP3::6611719655011938534::1761980255::1761980447::1::::<><><>0<>0<>909cfa76512437e40e4fd39a63f73de5<>res://.godot/imported/canto_II_A1.mp3-6c0c5ebf1030434f85c359a95bed37e5.mp3str::
+Gone Angels.mp3::AudioStreamMP3::2506176986874276712::1761990277::1761990297::1::::<><><>0<>0<>66009785d2ab56000f644c06dda8ba04<>res://.godot/imported/Gone Angels.mp3-381b1c894514857fe2cca3e5423c17a1.mp3str::
+mirage sandbox 1.mp3::AudioStreamMP3::4071031179604287238::1761988731::1761989182::1::::<><><>0<>0<>52814cd1bef65f29fa1e97edd305956e<>res://.godot/imported/mirage sandbox 1.mp3-610d18dbde9714b2140fc5200d368123.mp3str::
 mo-fa-shi-itozhen-rizi-shi-ji-128-ytshorts.savetube.me (1).mp3::AudioStreamMP3::5765063703236310110::1761408713::1761736697::1::::<><><>0<>0<>653d17e4f818401c59cafda75ab48d49<>res://.godot/imported/mo-fa-shi-itozhen-rizi-shi-ji-128-ytshorts.savetube.me (1).mp3-b09fe430905abd5782e30561fcbcabe4.mp3str::
-::res://stage/::1761947419
+Mourning Dove Coo.mp3::AudioStreamMP3::8722344179080195937::1761985894::1761985914::1::::<><><>0<>0<>e778df6190f19b69224f1af38ca6836a<>res://.godot/imported/Mourning Dove Coo.mp3-3f5f029cef55aca8ce581fa17025809d.mp3str::
+nightingale.mp3::AudioStreamMP3::2737530967283013842::1761986216::1761986246::1::::<><><>0<>0<>eddf9e1ec76531bb39138d933b6b4611<>res://.godot/imported/nightingale.mp3-232eec358f209554a0fe1484f1ca480d.mp3str::
+Roland 2.mp3::AudioStreamMP3::4895327955583060248::1761990259::1761990297::1::::<><><>0<>0<>0edcf226e68d34fc221c98cc6fc73949<>res://.godot/imported/Roland 2.mp3-092f2de12e96334e0af15e79b5faf65f.mp3str::
+sys act5fun.mp3::AudioStreamMP3::6247970525173208239::1761989487::1761989509::1::::<><><>0<>0<>f16309266686347867194ee8b931c330<>res://.godot/imported/sys act5fun.mp3-7c580a6f1a66c4ec3add14b83e14ab91.mp3str::
+sys act18mini.mp3::AudioStreamMP3::6751894892561689713::1761987382::1761987446::1::::<><><>0<>0<>85af5e9f8674e74b5984f65ff82fc5e1<>res://.godot/imported/sys act18mini.mp3-090ef2cd155b7c0f4f281d9a9834aad7.mp3str::
+sys rglk2theme1.mp3::AudioStreamMP3::3765685985733862788::1761989020::1761989182::1::::<><><>0<>0<>3fbca555b0a331955b99141d7d64298f<>res://.godot/imported/sys rglk2theme1.mp3-cdb3c5dfa085860eb1c6f1ff26e3a409.mp3str::
+sys rglk2theme2distort.mp3::AudioStreamMP3::4368908905277938833::1761987367::1761987446::1::::<><><>0<>0<>8a2ca1e4651dbd682190f61e4795864a<>res://.godot/imported/sys rglk2theme2distort.mp3-4b708dff46675e8183a4ec163d944c97.mp3str::
+sys rouge3 theme2.mp3::AudioStreamMP3::263910849155324981::1761988841::1761989182::1::::<><><>0<>0<>774cd79f4c24e33af10c94e51b560516<>res://.godot/imported/sys rouge3 theme2.mp3-d27e1e21e7d64abb4cd413360d35d593.mp3str::
+sys rouge3 theme distort.mp3::AudioStreamMP3::8053161974082327022::1761988776::1761989182::1::::<><><>0<>0<>f1772de1245db15935129d5e0f9756c8<>res://.godot/imported/sys rouge3 theme distort.mp3-ff7fc7c5c8ba8b64b6fa9842983b15de.mp3str::
+::res://stage/::1761989534
 __init__.py::PyScriptExtension::-1::1759423839::0::1::::<><><>0<>0<><>::
+audio_player.gd::GDScript::4631401652091774014::1761989963::0::1::::<>AudioStreamPlayer<><>0<>0<><>::
+audio_player.tscn::PackedScene::1574712982399458995::1761978345::0::1::::<><><>0<>0<><>::uid://b68qrj5gvckhi::::res://stage/audio_player.gd
 Button2.py::PyScriptExtension::-1::1759819844::0::1::::<><><>0<>0<><>::
-charactor.py::PyScriptExtension::-1::1761929740::0::1::::<><><>0<>0<><>::
+charactor.py::PyScriptExtension::-1::1761976728::0::1::::<><><>0<>0<><>::
 Level.py::PyScriptExtension::-1::1761739307::0::1::::<><><>0<>0<><>::
-maingame.py::PyScriptExtension::-1::1761948521::0::1::::<><><>0<>0<><>::
-main_menu.tscn::PackedScene::5660212921624415985::1761662325::0::1::::<><><>0<>0<><>::res://main.py<>uid://c3xq2g0h1idc6::::res://font/TA 8 bit.otf<>uid://coev0y8ow6415::::res://Sound/mo-fa-shi-itozhen-rizi-shi-ji-128-ytshorts.savetube.me (1).mp3<>uid://bvvhka477bxcl::::res://img/Background/BG1_dungeonsotoN.png<>uid://s0d7ud4kr7sh::::res://img/Logo.png
-random_events.py::PyScriptExtension::-1::1761947471::0::1::::<><><>0<>0<><>::
+maingame.py::PyScriptExtension::-1::1761987957::0::1::::<><><>0<>0<><>::
+main_menu.tscn::PackedScene::5660212921624415985::1761989534::0::1::::<><><>0<>0<><>::res://main.py<>uid://c3xq2g0h1idc6::::res://font/TA 8 bit.otf<>uid://c3gwytd357634::::res://Sound/sys act18mini.mp3<>uid://bvvhka477bxcl::::res://img/Background/BG1_dungeonsotoN.png<>uid://jkcl5rdtqjms::::res://img/Logo.png
+random_events.py::PyScriptExtension::-1::1761977441::0::1::::<><><>0<>0<><>::
 room.py::PyScriptExtension::-1::1761852898::0::1::::<><><>0<>0<><>::
-save_reload.py::PyScriptExtension::-1::1761947724::0::1::::<><><>0<>0<><>::
-stage1.tscn::PackedScene::7289950682809830993::1761947419::0::1::::<><><>0<>0<><>::res://stage/maingame.py<>uid://dd846kfv6n6bx::::res://img/Background/Background.png<>uid://c5moi23lq5gbw::::res://img/Overlay_Textures/dungeon0_base.png<>uid://cdgx0bl4aj7jv::::res://img/Buttons/dungeon0_exit.png<>uid://rcjc53x31xm1::::res://img/Buttons/rysh_0base_7X.png<>uid://bg3iw3mviox0t::::res://img/Buttons/dungeon0_go.png<>uid://cic7ggie57dq1::::res://font/PixelMplus12-Bold.ttf<>res://stage/Level.py<>uid://x2aerthebyse::::res://font/PixelMplus10-Bold.ttf<>res://stage/room.py<>uid://bcb4fe1rnph3l::::res://img/maincharacter.png<>uid://bm2ihfn0utn2r::::res://stage/LiveSystem/LivesDisplay.tscn<>uid://qtpe31n1naif::::res://font/PixelifySans-VariableFont_wght.ttf<>uid://dh1e1hmltgft6::::res://font/PixelMplus12-Regular.ttf
-::res://stage/__pycache__/::1761948567
-::res://stage/combat_scene/::1761929740
-combat_scene.py::PyScriptExtension::-1::1761944571::0::1::::<><><>0<>0<><>::
-combat_scene.tscn::PackedScene::2368737096994633395::1761929740::0::1::::<><><>0<>0<><>::res://stage/combat_scene/combat_scene.py<>uid://dd846kfv6n6bx::::res://img/Background/Background.png<>uid://dj12ttrjw3ksc::::res://img/Enemies/sento_m8.png<>uid://cn8wqy5vkgfm1::::res://img/Overlay_Textures/dungeon0_baseT.png<>uid://bc3hqn0eof8lb::::res://stage/combat_scene/monster_texture.gd<>uid://dpomvt1nw754o::::res://img/Roll_button.png<>uid://brtcgat56h72y::::res://stage/combat_scene/hp_bar.gd<>uid://x2aerthebyse::::res://font/PixelMplus10-Bold.ttf<>uid://bsw6oxfvctpbr::::res://stage/combat_scene/hp_monster.gd<>uid://bg5termtb5hyc::::res://img/Buttons/dungeon0_flee.png<>res://stage/combat_scene/textpanel.py<>uid://bcb4fe1rnph3l::::res://img/maincharacter.png<>uid://cpuqreeqb2emg::::res://font/PixelMplus10-Regular.ttf<>uid://dn7nul6wycv6g::::res://stage/combat_scene/hp_player.gd
+save_reload.py::PyScriptExtension::-1::1761975222::0::1::::<><><>0<>0<><>::
+stage1.tscn::PackedScene::7289950682809830993::1761987957::0::1::::<><><>0<>0<><>::res://stage/maingame.py<>uid://dd846kfv6n6bx::::res://img/Background/Background.png<>uid://c5moi23lq5gbw::::res://img/Overlay_Textures/dungeon0_base.png<>uid://cdgx0bl4aj7jv::::res://img/Buttons/dungeon0_exit.png<>uid://rcjc53x31xm1::::res://img/Buttons/rysh_0base_7X.png<>uid://bg3iw3mviox0t::::res://img/Buttons/dungeon0_go.png<>uid://cic7ggie57dq1::::res://font/PixelMplus12-Bold.ttf<>res://stage/Level.py<>uid://x2aerthebyse::::res://font/PixelMplus10-Bold.ttf<>res://stage/room.py<>uid://bcb4fe1rnph3l::::res://img/maincharacter.png<>uid://bm2ihfn0utn2r::::res://stage/LiveSystem/LivesDisplay.tscn<>uid://qtpe31n1naif::::res://font/PixelifySans-VariableFont_wght.ttf<>uid://dh1e1hmltgft6::::res://font/PixelMplus12-Regular.ttf<>uid://cpuqreeqb2emg::::res://font/PixelMplus10-Regular.ttf<>res://stage/combat_scene/textpanel.py
+::res://stage/__pycache__/::1761987957
+::res://stage/combat_scene/::1761978498
+combat_scene.py::PyScriptExtension::-1::1761989957::0::1::::<><><>0<>0<><>::
+combat_scene.tscn::PackedScene::2368737096994633395::1761978498::0::1::::<><><>0<>0<><>::res://stage/combat_scene/combat_scene.py<>uid://dd846kfv6n6bx::::res://img/Background/Background.png<>uid://dj12ttrjw3ksc::::res://img/Enemies/sento_m8.png<>uid://cn8wqy5vkgfm1::::res://img/Overlay_Textures/dungeon0_baseT.png<>uid://bc3hqn0eof8lb::::res://stage/combat_scene/monster_texture.gd<>uid://dpomvt1nw754o::::res://img/Roll_button.png<>uid://brtcgat56h72y::::res://stage/combat_scene/hp_bar.gd<>uid://x2aerthebyse::::res://font/PixelMplus10-Bold.ttf<>uid://bsw6oxfvctpbr::::res://stage/combat_scene/hp_monster.gd<>uid://bg5termtb5hyc::::res://img/Buttons/dungeon0_flee.png<>res://stage/combat_scene/textpanel.py<>uid://bcb4fe1rnph3l::::res://img/maincharacter.png<>uid://cpuqreeqb2emg::::res://font/PixelMplus10-Regular.ttf<>uid://dn7nul6wycv6g::::res://stage/combat_scene/hp_player.gd
 hp_bar.gd::GDScript::3618986382371835734::1761862376::0::1::::<>ProgressBar<><>0<>0<><>::
 hp_monster.gd::GDScript::3697144624376084103::1761848947::0::1::::<>Label<><>0<>0<><>::
 hp_player.gd::GDScript::8138602769965242760::1761862376::0::1::::<>Label<><>0<>0<><>::
@@ -156,16 +174,20 @@ mc_hp.gd::GDScript::5069358334980311837::1761862338::0::1::::<>Label<><>0<>0<><>
 monster.py::PyScriptExtension::-1::1761929740::0::1::::<><><>0<>0<><>::
 monster_stat.py::PyScriptExtension::-1::1761929740::0::1::::<><><>0<>0<><>::
 monster_texture.gd::GDScript::2585055261359030851::1761869574::0::1::::<>Sprite2D<><>0<>0<><>::
-textpanel.py::PyScriptExtension::-1::1761947154::0::1::::<><><>0<>0<><>::
-::res://stage/combat_scene/__pycache__/::1761947386
+textpanel.py::PyScriptExtension::-1::1761977020::0::1::::<><><>0<>0<><>::
+::res://stage/combat_scene/__pycache__/::1761985827
 ::res://stage/LiveSystem/::1761929740
 LivesDisplay.tscn::PackedScene::3284923527071152787::1761907961::0::1::::<><><>0<>0<><>::uid://cuwluavxe4hcf::::res://stage/LiveSystem/lives_display.gd<>uid://di70jtlm5e8uq::::res://img/hearticon.png
 lives_display.gd::GDScript::6222738187027094701::1761929740::0::1::::<>Node2D<><>0<>0<><>::
-::res://stage/rest_scene/::1761948269
-rest_stop.py::PyScriptExtension::-1::1761948441::0::1::::<><><>0<>0<><>::
-rest_stop.tscn::PackedScene::3033186693494920539::1761948269::0::1::::<><><>0<>0<><>::uid://c5moi23lq5gbw::::res://img/Overlay_Textures/dungeon0_base.png<>res://stage/rest_scene/rest_stop.py<>uid://bapgriya28opx::::res://img/Background/BG3_boss.png<>uid://cic7ggie57dq1::::res://font/PixelMplus12-Bold.ttf<>res://stage/Level.py<>uid://x2aerthebyse::::res://font/PixelMplus10-Bold.ttf<>res://stage/room.py<>uid://bcb4fe1rnph3l::::res://img/maincharacter.png<>uid://bm2ihfn0utn2r::::res://stage/LiveSystem/LivesDisplay.tscn<>uid://cdgx0bl4aj7jv::::res://img/Buttons/dungeon0_exit.png<>uid://bg3iw3mviox0t::::res://img/Buttons/dungeon0_go.png<>uid://rcjc53x31xm1::::res://img/Buttons/rysh_0base_7X.png<>uid://cpuqreeqb2emg::::res://font/PixelMplus10-Regular.ttf<>res://stage/combat_scene/textpanel.py
-::res://stage/rest_scene/__pycache__/::1761948443
-::res://stage/treasure_scene/::1761946142
-treasure.py::PyScriptExtension::-1::1761946142::0::1::::<><><>0<>0<><>::
-treasure_scene.tscn::PackedScene::2605262196282551733::1761946142::0::1::::<><><>0<>0<><>::res://stage/treasure_scene/treasure.py<>uid://dd846kfv6n6bx::::res://img/Background/Background.png<>uid://c5moi23lq5gbw::::res://img/Overlay_Textures/dungeon0_base.png<>uid://bcb4fe1rnph3l::::res://img/maincharacter.png<>uid://cp5fv22vjrg24::::res://img/Buttons/rysh_1_1.png<>uid://cic7ggie57dq1::::res://font/PixelMplus12-Bold.ttf<>res://stage/Level.py<>uid://x2aerthebyse::::res://font/PixelMplus10-Bold.ttf<>res://stage/room.py<>uid://cpuqreeqb2emg::::res://font/PixelMplus10-Regular.ttf<>res://stage/combat_scene/textpanel.py
-::res://stage/treasure_scene/__pycache__/::1761946142
+::res://stage/outside/::1761986024
+outside.py::PyScriptExtension::-1::1761986396::0::1::::<><><>0<>0<><>::
+outside.tscn::PackedScene::5675353668164828934::1761977463::0::1::::<><><>0<>0<><>::uid://c5moi23lq5gbw::::res://img/Overlay_Textures/dungeon0_base.png<>res://stage/outside/outside.py<>uid://ctask6nks5xto::::res://img/Background/BG1_dungeonsoto.png<>uid://cic7ggie57dq1::::res://font/PixelMplus12-Bold.ttf<>res://stage/Level.py<>uid://x2aerthebyse::::res://font/PixelMplus10-Bold.ttf<>res://stage/room.py<>uid://bcb4fe1rnph3l::::res://img/maincharacter.png<>uid://bm2ihfn0utn2r::::res://stage/LiveSystem/LivesDisplay.tscn<>uid://bg3iw3mviox0t::::res://img/Buttons/dungeon0_go.png<>uid://rcjc53x31xm1::::res://img/Buttons/rysh_0base_7X.png<>uid://cpuqreeqb2emg::::res://font/PixelMplus10-Regular.ttf<>res://stage/combat_scene/textpanel.py
+::res://stage/outside/__pycache__/::1761986444
+::res://stage/rest_scene/::1761975678
+rest_stop.py::PyScriptExtension::-1::1761989738::0::1::::<><><>0<>0<><>::
+rest_stop.tscn::PackedScene::3033186693494920539::1761975678::0::1::::<><><>0<>0<><>::uid://c5moi23lq5gbw::::res://img/Overlay_Textures/dungeon0_base.png<>res://stage/rest_scene/rest_stop.py<>uid://bapgriya28opx::::res://img/Background/BG3_boss.png<>uid://cic7ggie57dq1::::res://font/PixelMplus12-Bold.ttf<>res://stage/Level.py<>uid://x2aerthebyse::::res://font/PixelMplus10-Bold.ttf<>res://stage/room.py<>uid://bcb4fe1rnph3l::::res://img/maincharacter.png<>uid://bm2ihfn0utn2r::::res://stage/LiveSystem/LivesDisplay.tscn<>uid://cdgx0bl4aj7jv::::res://img/Buttons/dungeon0_exit.png<>uid://bg3iw3mviox0t::::res://img/Buttons/dungeon0_go.png<>uid://rcjc53x31xm1::::res://img/Buttons/rysh_0base_7X.png<>uid://cpuqreeqb2emg::::res://font/PixelMplus10-Regular.ttf<>res://stage/combat_scene/textpanel.py
+::res://stage/rest_scene/__pycache__/::1761989740
+::res://stage/treasure_scene/::1761975678
+treasure.py::PyScriptExtension::-1::1761989780::0::1::::<><><>0<>0<><>::
+treasure_scene.tscn::PackedScene::2605262196282551733::1761975678::0::1::::<><><>0<>0<><>::res://stage/treasure_scene/treasure.py<>uid://dd846kfv6n6bx::::res://img/Background/Background.png<>uid://c5moi23lq5gbw::::res://img/Overlay_Textures/dungeon0_base.png<>uid://bcb4fe1rnph3l::::res://img/maincharacter.png<>uid://cp5fv22vjrg24::::res://img/Buttons/rysh_1_1.png<>uid://cic7ggie57dq1::::res://font/PixelMplus12-Bold.ttf<>res://stage/Level.py<>uid://x2aerthebyse::::res://font/PixelMplus10-Bold.ttf<>res://stage/room.py<>uid://rcjc53x31xm1::::res://img/Buttons/rysh_0base_7X.png<>uid://cpuqreeqb2emg::::res://font/PixelMplus10-Regular.ttf<>res://stage/combat_scene/textpanel.py
+::res://stage/treasure_scene/__pycache__/::1761950337

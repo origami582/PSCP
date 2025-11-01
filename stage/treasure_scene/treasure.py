@@ -7,6 +7,9 @@ from ..save_reload import save_game
 class treasure(Control):
 	wait_for_next_scene:bool = False
 	def _ready(self):
+		# Get the global music player and tell it to play the battle music.
+		self.get_node("/root/AudioPlayer").call("play_music", "Fun")
+
 		self.get_node("Textbox").visible = True
 		self.get_node("Textbox").get_node("Text").call("clear_text")
 		self.get_node("Textbox").get_node("Text").call("show_chest_room")

@@ -45,8 +45,8 @@ class random_event_picker:
 		"Man_eater": 55,
 		"Perfect_golem": 50,
 		"Dragon_lord": 30,
-		"Cho": 30,
-		"Roland": 5000, # Special boss, ultra rare
+		"Cho": 20,
+		"Roland": 2, # Special boss, ultra rare!
 	}
 	@staticmethod
 	def pick_random_event(event_pool: dict = None) -> str:

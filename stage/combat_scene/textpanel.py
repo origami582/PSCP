@@ -9,6 +9,18 @@ class textpanel(Label):
 		# You can set some default text or leave it blank
 		self.text = ""
 
+	def show_enter(self):
+		"""Show once enter stage1 from outside"""
+		self.text = "You enter the labyrinth once again!"
+
+	def show_return(self, cases: str):
+		"""Show once return to beginning"""
+		self.text = "You figure it'd best to retreat for now."
+
+	def show_advance(self):
+		"""Show once click forward"""
+		self.text = "You advance to the next room!"
+
 	def show_rest(self, cases: str):
 		"""Show once enter rest stop scene"""
 		match cases:

@@ -18,8 +18,9 @@ class main(Control):
 
 	def _ready(self):
 		"""Called when the node is 'ready', i.e., when both the node and its children have entered the scene tree."""
-		#music
-		self.music = self.get_node("soundbgm")
+		# Use the centralized AudioPlayer to play the menu music.
+		# "Rosette" is used here as an example menu theme.
+		self.get_node("/root/AudioPlayer").call("play_music", "Rosette")
 	def _on_newgame_pressed(self):
 		"""Handles the 'New Game' button press, showing the difficulty/level selection popup."""
 		#open popup
@@ -59,19 +60,23 @@ class main(Control):
 		#add Globals. forward
 		Globals.new_game()
 		Globals.difficulty = 1
-		self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
+		# Change scene to outside of labyrinth instead
+		self.get_tree().change_scene_to_file("res://stage/outside/outside.tscn")
 	def _on_medium_pressed(self):
 		"""Sets difficulty to Medium and starts a new game."""
 		#add Globals. forward
 		Globals.new_game()
 		Globals.difficulty = 1.5
-		self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
+		# Change scene to outside of labyrinth instead
+		self.get_tree().change_scene_to_file("res://stage/outside/outside.tscn")
 	def _on_hard_pressed(self):
 		"""Sets difficulty to Hard and starts a new game."""
 		#add Globals. forward
 		Globals.new_game()
 		Globals.difficulty = 2
-		self.get_tree().change_scene_to_file("res://stage/stage1.tscn")
+		# Change scene to outside of labyrinth instead
+		self.get_tree().change_scene_to_file("res://stage/outside/outside.tscn")
 	def _on_sound_changed(self, value: float):
-		updown = -80 + (value / 50 * 80)
-		self.music.volume_db = updown
+		# Call the new master volume function on the global AudioPlayer.
+		# The value from the HSlider (0-100) is passed directly.
+		self.get_node("/root/AudioPlayer").call("set_master_volume", value)

@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmv346dxq5u14"]
+[gd_scene load_steps=7 format=3 uid="uid://cmv346dxq5u14"]
 
 [ext_resource type="Script" path="res://main.py" id="1_glbon"]
 [ext_resource type="FontFile" uid="uid://c3xq2g0h1idc6" path="res://font/TA 8 bit.otf" id="3_qe12f"]
-[ext_resource type="AudioStream" uid="uid://coev0y8ow6415" path="res://Sound/mo-fa-shi-itozhen-rizi-shi-ji-128-ytshorts.savetube.me (1).mp3" id="5_fmypw"]
 [ext_resource type="Texture2D" uid="uid://bvvhka477bxcl" path="res://img/Background/BG1_dungeonsotoN.png" id="5_glbon"]
-[ext_resource type="Texture2D" uid="uid://s0d7ud4kr7sh" path="res://img/Logo.png" id="5_s6jwn"]
+[ext_resource type="Texture2D" uid="uid://jkcl5rdtqjms" path="res://img/Logo.png" id="5_s6jwn"]
 
 [sub_resource type="Environment" id="Environment_nlkkf"]
 background_mode = 3
@@ -260,8 +259,6 @@ offset_right = 846.0
 offset_bottom = 185.0
 
 [node name="soundbgm" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_fmypw")
-volume_db = -20.096
 autoplay = true
 
 [node name="Logo" type="Sprite2D" parent="."]
@@ -279,5 +276,5 @@ texture = ExtResource("5_s6jwn")
 [connection signal="pressed" from="Level_select/Hard" to="." method="_on_hard_pressed"]
 [connection signal="pressed" from="Level_select/close_button" to="." method="_on_closepop_pressed"]
 [connection signal="pressed" from="Setting/Back button" to="." method="_on_setting_back_pressed"]
-[connection signal="value_changed" from="Setting/Setting/HSlider" to="." method="_on_music_changed"]
 [connection signal="value_changed" from="Setting/Setting/HSlider" to="." method="_on_sound_changed"]
+[connection signal="value_changed" from="Setting/Setting/HSlider" to="." method="_on_music_changed"]
