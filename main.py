@@ -3,6 +3,7 @@ from py4godot.classes.Control import Control
 #Connect files to charactor
 from stage.charactor import Globals
 from stage.save_reload import load_game
+import math
 
 
 @gdclass
@@ -21,6 +22,7 @@ class main(Control):
 		# Use the centralized AudioPlayer to play the menu music.
 		# "Rosette" is used here as an example menu theme.
 		self.get_node("/root/AudioPlayer").call("play_music", "Rosette")
+
 	def _on_newgame_pressed(self):
 		"""Handles the 'New Game' button press, showing the difficulty/level selection popup."""
 		#open popup
@@ -77,6 +79,19 @@ class main(Control):
 		# Change scene to outside of labyrinth instead
 		self.get_tree().change_scene_to_file("res://stage/outside/outside.tscn")
 	def _on_sound_changed(self, value: float):
-		# Call the new master volume function on the global AudioPlayer.
-		# The value from the HSlider (0-100) is passed directly.
-		self.get_node("/root/AudioPlayer").call("set_master_volume", value)
+		"""
+		Handles the 'value_changed' signal from the sound slider.
+		Converts the linear slider value to decibels for the audio server.
+		"""
+		# The slider's min_value should be set to a very small number (e.g., 0.0001)
+		# instead of 0 to avoid issues with logarithmic conversion.
+		if value <= 0.0001:
+			# A very low dB value effectively mutes the sound.
+			db = -80.0
+		else:
+			# Convert the linear slider value (0.0-1.0) to decibels.
+			# The function is not exposed by py4godot, so we implement it directly.
+			# This is Godot's formula: log(linear) * 20 / log(10)
+			db = math.log(value) * 8.685889638065
+
+		self.get_node("/root/AudioPlayer").call("set_master_volume", db)

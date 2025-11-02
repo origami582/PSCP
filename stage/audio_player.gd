@@ -106,10 +106,9 @@ func _on_music_finished():
 		play()
 
 ## Sets the master volume for all music by controlling the 'Music' audio bus.
-## 'value' is expected to be a slider value from 0 to 100.
+## 'value' is expected to be a volume in decibels (dB), e.g., from -80 to 0.
 func set_master_volume(value: float):
 	var music_bus_idx = AudioServer.get_bus_index("Music")
 	if music_bus_idx != -1:
-		# Convert slider value (0-100) to decibels (-80 to 0)
-		var new_volume_db = linear_to_db(value / 100.0)
-		AudioServer.set_bus_volume_db(music_bus_idx, new_volume_db)
+		# The value is already in decibels, so we can apply it directly.
+		AudioServer.set_bus_volume_db(music_bus_idx, value)

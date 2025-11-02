@@ -257,9 +257,9 @@ offset_left = 109.0
 offset_top = 116.0
 offset_right = 846.0
 offset_bottom = 185.0
-
-[node name="soundbgm" type="AudioStreamPlayer" parent="."]
-autoplay = true
+min_value = 1.0
+max_value = 5.0
+value = 2.0
 
 [node name="Logo" type="Sprite2D" parent="."]
 position = Vector2(921.00006, 149)
@@ -277,4 +277,3 @@ texture = ExtResource("5_s6jwn")
 [connection signal="pressed" from="Level_select/close_button" to="." method="_on_closepop_pressed"]
 [connection signal="pressed" from="Setting/Back button" to="." method="_on_setting_back_pressed"]
 [connection signal="value_changed" from="Setting/Setting/HSlider" to="." method="_on_sound_changed"]
-[connection signal="value_changed" from="Setting/Setting/HSlider" to="." method="_on_music_changed"]
