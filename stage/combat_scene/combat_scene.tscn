@@ -248,6 +248,7 @@ icon = ExtResource("7_n3c6q")
 flat = true
 
 [node name="Textbox" type="Panel" parent="."]
+visible = false
 offset_left = 230.0
 offset_top = 364.0
 offset_right = 891.0
