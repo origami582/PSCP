@@ -1,2 +1,4 @@
 # Normalize EOL for all files that Git considers text files.
 * text=auto eol=lf
+Labyrinth_of_Ruina.console.exe filter=lfs diff=lfs merge=lfs -text
+Labyrinth_of_Ruina.exe filter=lfs diff=lfs merge=lfs -text
